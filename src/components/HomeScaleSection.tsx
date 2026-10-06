@@ -26,21 +26,23 @@ export default function HomeScaleSection() {
         {/* Right Content Section */}
         <div className="w-1/2 pl-4 max-lg:w-[55%] max-md:w-full max-md:pl-0 max-md:mt-0 max-md:flex max-md:flex-col max-md:items-center">
           <h2 className="w-full text-4xl font-bold max-md:text-3xl font-baskervville max-md:block max-md:text-center">
-            Scale Without Losing Control
+            From Factory Setup to Factory Performance
           </h2>
 
           <p className="max-w-xl mt-6 mb-5 text-lg leading-relaxed text-gray-600 max-md:mt-10 max-md:text-justify max-lg:text-base max-md:text-lg">
-            Mid- and large-scale companies face a unique challenge: as you grow,
-            small inefficiencies magnify exponentially. Cash gets locked in
-            systems. Delivery cycles lag behind market demands. Leadership
-            becomes reactive instead of strategic.
+            A manufacturing business can lose money long before a problem appears in the monthly report. A poor layout adds
+            movement for years. A weak production plan creates firefighting every day. Fabric decisions made in isolation quietly
+            erode margin. A dashboard that arrives too late does not help the supervisor recover the shift.
           </p>
 
           <p className="max-w-xl mb-8 text-lg leading-relaxed text-gray-600 max-md:text-justify max-lg:text-base max-md:text-lg">
-            We partner with companies like yours to unlock working capital,
-            optimize operations, and synchronize sales with
-            execution-transforming growth from chaotic to predictable, scalable,
-            and manageable.
+            Madasky works across the factory system - design, engineering, flow, capacity, operations, planning, material, people
+            and digital visibility - so decisions reinforce each other rather than create new constraints.
+          </p>
+          <p className="max-w-xl mb-8 text-lg leading-relaxed text-gray-600 max-md:text-justify max-lg:text-base max-md:text-lg">
+
+            Our core industries are Home Textiles and Apparel. We also support broader Textiles and Technical Textiles where our
+            manufacturing, project and digital capabilities apply.
           </p>
 
           {/* <button className="inline-block px-6 py-3 text-base font-semibold text-white transition-all duration-300 bg-[#e63410] rounded-md hover:bg-[#e63410]/90 max-md:text-sm">

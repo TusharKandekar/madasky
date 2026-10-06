@@ -6,7 +6,7 @@ export default function ProofPoints() {
   return (
     <section className="relative bg-white">
       <h2 className="hidden mt-20 text-4xl font-bold leading-tight text-gray-900 max-md:block font-baskervville max-xl:text-4xl max-lg:text-center">
-        Proof Points: Real Impact, Fast
+        Proof That Manufacturing Problems Can Be Measured
       </h2>
       <div className="relative flex items-center justify-between px-6 py-20 mx-auto overflow-hidden max-w-7xl max-md:p-8 max-md:mb-10 max-lg:flex-col max-lg:gap-12">
         {/* Left Content */}
@@ -33,44 +33,35 @@ export default function ProofPoints() {
         {/* Right Image Section */}
         <div className="relative z-10 w-1/2 max-lg:w-full max-md:flex max-md:flex-col max-md:items-center">
           <h2 className="mb-10 text-4xl font-bold leading-tight text-gray-900 max-md:mb-20 font-baskervville max-xl:text-4xl max-md:hidden max-lg:text-center">
-            Proof Points: Real Impact, Fast
+            Proof That Manufacturing Problems Can Be Measured
           </h2>
 
           {/* Metrics */}
           <div className="grid grid-cols-3 gap-6 mb-10 text-center max-md:grid-cols-1 max-lg:grid-cols-2">
             {/* Metric 1 */}
             <div>
-              <h3 className="mb-2 text-3xl font-bold text-gray-900">₹3‑5Cr</h3>
-              <p className="mb-1 text-xl font-semibold text-gray-800">
-                Cash Freed
-              </p>
+              <h3 className="mb-2 text-3xl font-bold text-gray-900">₹43 lakh</h3>
+              
               <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                Released in working capital within 30‑45 days across
-                manufacturing, pharma, and retail sectors
+               Annual packaging-line overtime cost eliminated in a Home Textile unit.
               </p>
             </div>
 
             {/* Metric 2 */}
             <div>
-              <h3 className="mb-2 text-3xl font-bold text-gray-900">20‑25%</h3>
-              <p className="mb-1 text-xl font-semibold text-gray-800">
-                Lead‑Time Reduction
-              </p>
+              <h3 className="mb-2 text-3xl font-bold text-gray-900">92%</h3>
+
               <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                Operational efficiency gains achieved within six weeks without
-                heavy capital investment
+                Reduction in packaging-line overtime hours after balancing, changeover and planning interventions
               </p>
             </div>
 
             {/* Metric 3 */}
             <div>
-              <h3 className="mb-2 text-3xl font-bold text-gray-900">20%+</h3>
-              <p className="mb-1 text-xl font-semibold text-gray-800">
-                Pipeline Growth
-              </p>
+              <h3 className="mb-2 text-3xl font-bold text-gray-900">82% to 97%</h3>
+              
               <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                Revenue acceleration with zero new headcount additions through
-                strategic alignment
+                 OTIF improvement with fewer paid hours, not more.
               </p>
             </div>
           </div>

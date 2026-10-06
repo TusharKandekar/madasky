@@ -28,12 +28,15 @@ export default function AboutVideo({ vid1, title, des, color = "white", h1 }: Ab
                 </div>
                 <div className="absolute top-0 max-md:top-[4vh] left-0 z-30 flex flex-col items-start justify-end w-full h-full p-20 text-white max-md:p-3 ">
                     <span className={`text-3xl max-md:text-5xl ${color}`}>{title}</span>
-                    <h1 className={`text-6xl font-baskervville text-white  ${color} font-bold max-md:text-xl max-md:w-full max-md:font-thin max-md:pt-4 max-md:pb-8`}>
+                    <h1 className={`text-6xl font-baskervville text-white  ${color} font-bold max-md:text-xl mt-4 max-md:w-full max-md:font-thin max-md:pt-4 max-md:pb-8`}>
                         {/* {des} */}
-                        {h1 ? h1 : des}
+                        {h1}
+                        
+
 
 
                     </h1>
+                    <p className="text-lg ">{des}</p>
                 </div>
             </div>
 

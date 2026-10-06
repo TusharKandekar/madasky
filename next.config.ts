@@ -3,14 +3,14 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-  remotePatterns: [
-    {
-      protocol: "https",
-      hostname: "madasky.trivexait.com",
-      pathname: "/public/uploads/**",
-    },
-  ],
-},
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "madasky-admin.test",
+        pathname: "/public/uploads/**",
+      },
+    ],
+  },
 
   // remotePatterns: [
   //   {
@@ -125,7 +125,7 @@ const nextConfig: NextConfig = {
         destination: '/rapid-cash-generation-consulting',
         permanent: true,
       },
-   
+
       {
         source: '/plant-layout',
         destination: '/plant-layout-consulting',
@@ -151,11 +151,11 @@ const nextConfig: NextConfig = {
         destination: '/talent-acquisition-consulting',
         permanent: true,
       },
-      
-     
-      
-    
-      
+
+
+
+
+
     ];
   },
 

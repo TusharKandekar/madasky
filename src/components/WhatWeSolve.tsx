@@ -1,6 +1,7 @@
 "use client";
-// import { FiArrowRight } from "react-icons/fi";
+
 import Button from "@/components/Button";
+import Link from "next/link";
 import { FaMoneyBillAlt, FaRocket, FaChartLine } from "react-icons/fa";
 
 export default function WhatWeSolveAtScale() {
@@ -8,47 +9,42 @@ export default function WhatWeSolveAtScale() {
     {
       id: 1,
       icon: <FaMoneyBillAlt className="text-[#004A92] text-5xl" />,
-      title: "Release Hidden Cash",
+      title: "Turnkey Factory Projects",
       content:
-        "Growth often stalls not because of opportunity but because capital is trapped in inventory, receivables, and process gaps. We map where it's locked and release it to power your next strategic investment.",
+        "From concept, product mix and capacity through factory layout, engineering, utilities, vendor selection, PMC, commissioning, workforce readiness and operational handover.",
       borderColor: "border-[#004A92]",
+      url: "/",
     },
     {
       id: 2,
       icon: <FaRocket className="text-[#D72B0D] text-5xl" />,
-      title: "Accelerate Execution",
+      title: "Operations Excellence",
       content:
-        "Instead of chasing expensive new machines or systems, we refine workflows, eliminate bottlenecks, and rebalance capacity. You'll see dramatic lead-time drops while leveraging existing assets.",
+        "Improve productivity, capacity utilization, manpower performance, OTIF, quality, WIP, lead time and cost by removing the constraints that prevent existing assets from performing.",
       borderColor: "border-[#D72B0D]",
+      url: "/operations-excellence-consulting",
     },
     {
       id: 3,
       icon: <FaChartLine className="text-[#6B6B6B] text-5xl" />,
-      title: "Intelligent Growth",
+      title: "AI-Enabled Manufacturing Intelligence",
       content:
-        "Pipeline growth that outpaces operational capacity is a ticking time bomb. We design sales systems that respect your delivery capabilities, creating sustainable growth paths.",
+        "Apply AI, optimization, planning systems, MES and IoT to high-value decisions in fabric utilization, production planning, scheduling and real-time shopfloor management.",
       borderColor: "border-[#6B6B6B]",
+      url: "/",
     },
   ];
-  // bg-[#252638]/100
-  return (
-    <section className="relative bg-[#252638] bg-[url('/assets/images/what-we-solve-bg.jpg')]/30 bg-cover bg-center bg-no-repeat py-20 ">
-      {/* <div className="absolute inset-0 bg-[#252638]/80 z-0"></div> */}
-      <div className="px-6 mx-auto max-w-7xl">
 
-        <div className="w-[100%] mx-auto">
+  return (
+    <section className="relative bg-[#252638] bg-[url('/assets/images/what-we-solve-bg.jpg')] bg-cover bg-center bg-no-repeat py-20">
+      <div className="px-6 mx-auto max-w-7xl">
+        <div className="w-full mx-auto">
 
           {/* Heading */}
           <div className="flex flex-col items-center mb-12 text-center">
             <h2 className="mb-2 text-4xl font-bold text-white font-baskervville max-md:text-3xl max-xl:text-4xl">
-              What We Solve at Scale
+              Three Ways We Create Manufacturing Value
             </h2>
-            {/* <div
-            className="w-[40%] h-[3px] bg-blue-300"
-            style={{
-              background: "linear-gradient(to right, #05528a 50%, #d02c22 50%)",
-            }}
-          ></div> */}
           </div>
 
           {/* Card Grid */}
@@ -58,37 +54,34 @@ export default function WhatWeSolveAtScale() {
                 key={card.id}
                 className={`relative bg-white shadow-sm border-t-4 ${card.borderColor} transition-all duration-300 rounded-sm hover:-translate-y-1`}
               >
-                <div className="flex flex-col justify-between h-full p-8">
+                <Link
+                  href={card.url}
+                  className="flex flex-col justify-between h-full p-8"
+                >
                   <div>
-                    <div className="mb-4">{card.icon}</div>
+                    <div className="mb-4">
+                      {card.icon}
+                    </div>
+
                     <h3 className="text-[#0E2C53] text-xl font-bold mb-3">
                       {card.title}
                     </h3>
+
                     <p className="mb-6 text-lg leading-relaxed text-gray-600">
                       {card.content}
                     </p>
                   </div>
-
-                  {/* <div className="flex items-center text-[#0E2C53] font-semibold hover:text-[#D72B0D] transition-colors duration-300">
-                  <span>Read more</span>
-                  <FiArrowRight className="ml-2" />
-                </div> */}
-                </div>
+                </Link>
               </div>
             ))}
           </div>
 
           {/* CTA Button */}
           <div className="flex justify-start mt-12 max-md:justify-center">
-            {/* <button className="bg-[#E1340D] hover:bg-[#C02A0B] transition text-white font-semibold px-6 py-3 rounded-md shadow">
-            Reserve Your Time
-          </button> */}
-
-            <Button text={"Reserve Your Time"} />
+            <Button text="Reserve Your Time" />
           </div>
 
         </div>
-
       </div>
     </section>
   );
