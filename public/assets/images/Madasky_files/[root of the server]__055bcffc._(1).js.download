@@ -1,0 +1,164 @@
+(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/[root of the server]__055bcffc._.js", {
+
+"[turbopack]/browser/dev/hmr-client/hmr-client.ts [app-client] (ecmascript, async loader)": ((__turbopack_context__) => {
+
+var { g: global, __dirname } = __turbopack_context__;
+{
+__turbopack_context__.v((parentImport) => {
+    return Promise.all([
+  "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_61dcf9ba._.js",
+  "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_7ff76b8d._.js"
+].map((chunk) => __turbopack_context__.l(chunk))).then(() => {
+        return parentImport("[turbopack]/browser/dev/hmr-client/hmr-client.ts [app-client] (ecmascript)");
+    });
+});
+}}),
+"[project]/src/components/ImageSlider.tsx [app-client] (ecmascript, next/dynamic entry, async loader)": ((__turbopack_context__) => {
+
+var { g: global, __dirname } = __turbopack_context__;
+{
+__turbopack_context__.v((parentImport) => {
+    return Promise.all([
+  "static/chunks/node_modules_31dcf66a._.js",
+  "static/chunks/src_components_01465c50._.js",
+  {
+    "path": "static/chunks/node_modules_slick-carousel_slick_eab2732a._.css",
+    "included": [
+      "[project]/node_modules/slick-carousel/slick/slick.css [app-client] (css)",
+      "[project]/node_modules/slick-carousel/slick/ajax-loader.gif (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.eot (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.eot? (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.woff (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.ttf (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.svg (static in css)",
+      "[project]/node_modules/slick-carousel/slick/slick-theme.css [app-client] (css)"
+    ],
+    "moduleChunks": [
+      "static/chunks/node_modules_slick-carousel_slick_slick_b52d8e88.css",
+      "static/chunks/node_modules_slick-carousel_slick_ajax-loader_gif_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_eot_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_eot_b479109a._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_woff_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_ttf_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_svg_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_slick-theme_b52d8e88.css"
+    ]
+  },
+  "static/chunks/src_components_ImageSlider_tsx_ad211cd7._.js"
+].map((chunk) => __turbopack_context__.l(chunk))).then(() => {
+        return parentImport("[project]/src/components/ImageSlider.tsx [app-client] (ecmascript, next/dynamic entry)");
+    });
+});
+}}),
+"[project]/src/components/SlidingBlogs.tsx [app-client] (ecmascript, next/dynamic entry, async loader)": ((__turbopack_context__) => {
+
+var { g: global, __dirname } = __turbopack_context__;
+{
+__turbopack_context__.v((parentImport) => {
+    return Promise.all([
+  "static/chunks/node_modules_66a9f5fb._.js",
+  "static/chunks/src_b73806ad._.js",
+  {
+    "path": "static/chunks/node_modules_slick-carousel_slick_eab2732a._.css",
+    "included": [
+      "[project]/node_modules/slick-carousel/slick/slick.css [app-client] (css)",
+      "[project]/node_modules/slick-carousel/slick/ajax-loader.gif (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.eot (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.eot? (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.woff (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.ttf (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.svg (static in css)",
+      "[project]/node_modules/slick-carousel/slick/slick-theme.css [app-client] (css)"
+    ],
+    "moduleChunks": [
+      "static/chunks/node_modules_slick-carousel_slick_slick_b52d8e88.css",
+      "static/chunks/node_modules_slick-carousel_slick_ajax-loader_gif_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_eot_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_eot_b479109a._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_woff_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_ttf_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_svg_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_slick-theme_b52d8e88.css"
+    ]
+  },
+  "static/chunks/src_components_SlidingBlogs_tsx_ad211cd7._.js"
+].map((chunk) => __turbopack_context__.l(chunk))).then(() => {
+        return parentImport("[project]/src/components/SlidingBlogs.tsx [app-client] (ecmascript, next/dynamic entry)");
+    });
+});
+}}),
+"[project]/src/components/VideoPlayer.tsx [app-client] (ecmascript, next/dynamic entry, async loader)": ((__turbopack_context__) => {
+
+var { g: global, __dirname } = __turbopack_context__;
+{
+__turbopack_context__.v((parentImport) => {
+    return Promise.all([
+  "static/chunks/node_modules_31dcf66a._.js",
+  "static/chunks/src_components_0edf398b._.js",
+  {
+    "path": "static/chunks/node_modules_slick-carousel_slick_eab2732a._.css",
+    "included": [
+      "[project]/node_modules/slick-carousel/slick/slick.css [app-client] (css)",
+      "[project]/node_modules/slick-carousel/slick/ajax-loader.gif (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.eot (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.eot? (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.woff (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.ttf (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.svg (static in css)",
+      "[project]/node_modules/slick-carousel/slick/slick-theme.css [app-client] (css)"
+    ],
+    "moduleChunks": [
+      "static/chunks/node_modules_slick-carousel_slick_slick_b52d8e88.css",
+      "static/chunks/node_modules_slick-carousel_slick_ajax-loader_gif_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_eot_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_eot_b479109a._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_woff_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_ttf_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_svg_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_slick-theme_b52d8e88.css"
+    ]
+  },
+  "static/chunks/src_components_VideoPlayer_tsx_ad211cd7._.js"
+].map((chunk) => __turbopack_context__.l(chunk))).then(() => {
+        return parentImport("[project]/src/components/VideoPlayer.tsx [app-client] (ecmascript, next/dynamic entry)");
+    });
+});
+}}),
+"[project]/src/components/Testimonial.tsx [app-client] (ecmascript, next/dynamic entry, async loader)": ((__turbopack_context__) => {
+
+var { g: global, __dirname } = __turbopack_context__;
+{
+__turbopack_context__.v((parentImport) => {
+    return Promise.all([
+  "static/chunks/node_modules_66a9f5fb._.js",
+  "static/chunks/src_c736a6a8._.js",
+  {
+    "path": "static/chunks/node_modules_slick-carousel_slick_eab2732a._.css",
+    "included": [
+      "[project]/node_modules/slick-carousel/slick/slick.css [app-client] (css)",
+      "[project]/node_modules/slick-carousel/slick/ajax-loader.gif (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.eot (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.eot? (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.woff (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.ttf (static in css)",
+      "[project]/node_modules/slick-carousel/slick/fonts/slick.svg (static in css)",
+      "[project]/node_modules/slick-carousel/slick/slick-theme.css [app-client] (css)"
+    ],
+    "moduleChunks": [
+      "static/chunks/node_modules_slick-carousel_slick_slick_b52d8e88.css",
+      "static/chunks/node_modules_slick-carousel_slick_ajax-loader_gif_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_eot_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_eot_b479109a._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_woff_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_ttf_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_fonts_slick_svg_ba3284f5._.css",
+      "static/chunks/node_modules_slick-carousel_slick_slick-theme_b52d8e88.css"
+    ]
+  },
+  "static/chunks/src_components_Testimonial_tsx_ad211cd7._.js"
+].map((chunk) => __turbopack_context__.l(chunk))).then(() => {
+        return parentImport("[project]/src/components/Testimonial.tsx [app-client] (ecmascript, next/dynamic entry)");
+    });
+});
+}}),
+}]);

@@ -1,0 +1,516 @@
+(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/src_c736a6a8._.js", {
+
+"[project]/src/common/api.ts [app-client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+{
+__turbopack_context__.s({
+    "decodeAllCharacters": (()=>decodeAllCharacters),
+    "decodeSpaces": (()=>decodeSpaces),
+    "fetchMetaDataByPageName": (()=>fetchMetaDataByPageName),
+    "filterByWebImage": (()=>filterByWebImage),
+    "formatDate": (()=>formatDate),
+    "getAllBlogs": (()=>getAllBlogs),
+    "getBlogById": (()=>getBlogById),
+    "getDataByPageName": (()=>getDataByPageName),
+    "getEventByPageName": (()=>getEventByPageName),
+    "getEventData": (()=>getEventData),
+    "getImageAltText": (()=>getImageAltText),
+    "getImageData": (()=>getImageData),
+    "getTestimonials": (()=>getTestimonials),
+    "getTestimonialsByPageName": (()=>getTestimonialsByPageName),
+    "getWebBlogs": (()=>getWebBlogs),
+    "truncateText": (()=>truncateText)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/axios/lib/axios.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BaseUrl$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/BaseUrl.tsx [app-client] (ecmascript)"); // Adjust the import based on your project structure
+;
+;
+async function decodeSpaces({ str }) {
+    return str.replace(/%20/g, ' ');
+}
+async function decodeAllCharacters({ id }) {
+    return decodeURIComponent(id);
+}
+async function getImageAltText(obj) {
+    try {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post(`${(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BaseUrl$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])().baseurl}/api/getWebImages`, {
+            imgNames: obj
+        });
+        return response.data;
+    } catch (error) {
+        throw new Error("Server connection failed");
+    }
+}
+async function getTestimonials({ pageName }) {
+    try {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post(`${(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BaseUrl$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])().baseurl}/api/getWebTestimonialsbyPageName`, {
+            data: pageName
+        });
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching testimonials:", error);
+        return null;
+    }
+}
+async function getEventData({ pageName }) {
+    try {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post(`${(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BaseUrl$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])().baseurl}/api/getWebEventsbyPageName`, {
+            data: pageName
+        });
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching event data:", error);
+        return null;
+    }
+}
+async function getAllBlogs({ pageName }) {
+    try {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post(`${(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BaseUrl$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])().baseurl}/api/getWebDataByTitle`, {
+            data: pageName
+        });
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching event data:", error);
+        return null;
+    }
+}
+async function fetchMetaDataByPageName({ pageName }) {
+    try {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post(`${(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BaseUrl$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])().baseurl}/api/getWebMetaDataByPageName`, {
+            data: pageName
+        });
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching Meta data:", error);
+        return null;
+    }
+}
+const formatDate = (dateString)=>{
+    if (dateString && dateString.trim() !== "") {
+        // Create a Date object from the provided date string
+        const date = new Date(dateString);
+        // Define options for formatting the date
+        const options = {
+            day: '2-digit',
+            month: 'long',
+            year: '2-digit'
+        };
+        // Format the date to the desired format: "d F y"
+        const formattedDate = date.toLocaleDateString('en-US', options);
+        return formattedDate;
+    }
+    return "";
+};
+const truncateText = (text, maxLength = 125)=>{
+    if (text.length > maxLength) {
+        return text.slice(0, maxLength) + '...';
+    }
+    return text;
+};
+async function getImageData(images) {
+    return images.data.map((image)=>image.alt_text);
+}
+async function getWebBlogs(obj) {
+    try {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post(`${(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BaseUrl$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])().baseurl}/api/getWebblogs`, {
+            data: obj
+        });
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching blog data:", error);
+        return null;
+    }
+}
+async function getBlogById(arr) {
+    try {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post(`${(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BaseUrl$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])().baseurl}/api/getWebSingleBlogData`, {
+            data: arr
+        });
+        return response.data.data;
+    } catch (error) {
+        console.error("Error fetching blog data:", error);
+        return null;
+    }
+}
+async function getDataByPageName(obj) {
+    try {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post(`${(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BaseUrl$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])().baseurl}/api/getWebdatabyPageName`, {
+            data: obj
+        });
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching page data:", error);
+        return null;
+    }
+}
+async function getTestimonialsByPageName(pageName) {
+    try {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post(`${(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BaseUrl$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])().baseurl}/api/getWebTestimonialsbyPageName `, {
+            data: pageName
+        });
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching testimonial data:", error);
+        return null;
+    }
+}
+async function getEventByPageName(pageName) {
+    try {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post(`${(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BaseUrl$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])().baseurl}/api/getWebEventsbyPageName `, {
+            data: pageName
+        });
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching event data:", error);
+        return null;
+    }
+}
+function filterByWebImage(data, imageName) {
+    return data.filter((item)=>item.webimage === imageName);
+}
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
+"[project]/src/components/Testimonial.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+{
+// import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";  
+// import TestimonialCard from "./TestimonialCard";
+// import { Testimonial } from "@/common/types";
+// // Testimonials Component
+// const Testimonials = ({ testimonialData }: { testimonialData: Testimonial[] }) => {
+//   // testimonialData is already an array, no need to destructure
+//   const testimonials = testimonialData;
+//   const settings = {
+//     dots: true,
+//     infinite: true,
+//     slidesToShow: 3, // Adjust this number based on your design
+//     slidesToScroll: 1,
+//     autoplay: true,
+//     autoplaySpeed: 2000,
+//     pauseOnHover: true,
+//     responsive: [
+//       {
+//         breakpoint: 1024,
+//         settings: {
+//           slidesToShow: 2,
+//           slidesToScroll: 1,
+//           infinite: true,
+//           dots: true
+//         }
+//       },
+//       {
+//         breakpoint: 600,
+//         settings: {
+//           slidesToShow: 1,
+//           slidesToScroll: 1,
+//           initialSlide: 1
+//         }
+//       }
+//     ]
+//   };
+//   return (
+//     <section className="w-full py-12 bg-white">
+//       <div className="container px-4 mx-auto max-md:px-0">
+//         <Slider {...settings}>
+//           {testimonials.map((testimonial:Testimonial, index:number) => (
+//             // <TestimonialCard key={id} text={testimonial.testimonial_content} rating={testimonial.testimonial_stars} name={testimonial.testimonial_by} position={testimonial.testimonial_position} image={testimonial.profile_image} />
+//             <TestimonialCard 
+//             key={testimonial.testimonial_id} 
+//             text={testimonial.testimonial_content || ''} 
+//             rating={String(testimonial.testimonial_stars || 0)}
+//             name={testimonial.testimonial_by || ''}
+//             position={testimonial.testimonial_position || ''} 
+//             image={testimonial.profile_image || ''}
+//           />
+//           ))}
+//         </Slider>
+//       </div>
+//     </section>
+//   );
+// };
+// export default Testimonials;
+// **********************************************
+__turbopack_context__.s({
+    "default": (()=>__TURBOPACK__default__export__)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$slick$2f$lib$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-slick/lib/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-icons/fa/index.mjs [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$common$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/common/api.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BaseUrl$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/BaseUrl.tsx [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+;
+;
+;
+;
+;
+;
+;
+;
+// TestimonialCard Component
+const TestimonialCard = ({ text, rating, name, position, image })=>{
+    _s();
+    const fullStar = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaStar"], {
+        className: "text-yellow"
+    }, void 0, false, {
+        fileName: "[project]/src/components/Testimonial.tsx",
+        lineNumber: 89,
+        columnNumber: 9
+    }, this);
+    const halfStar = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaStarHalfAlt"], {
+        className: "text-yellow"
+    }, void 0, false, {
+        fileName: "[project]/src/components/Testimonial.tsx",
+        lineNumber: 93,
+        columnNumber: 9
+    }, this);
+    const stars = Array(Math.floor(parseInt(rating))).fill(fullStar);
+    if (parseInt(rating) % 1 !== 0) stars.push(halfStar);
+    const [isTruncated, setIsTruncated] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+    const handleReadMoreClick = ()=>{
+        setIsTruncated(!isTruncated);
+    };
+    const fullStars = Math.floor(parseFloat(rating));
+    const hasHalfStar = parseFloat(rating) % 1 !== 0;
+    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "bg-white p-6 w-full h-[50vh] relative max-md:h-[60vh] max-md:p-1",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "relative flex items-center flex-col gap-4 justify-center h-full bg-[#f6f6f6] p-6 shadow-xl",
+            children: [
+                image && // <img src={image} alt="" className="w-[80px] rounded-full absolute top-[-1vh] border-white border-[7px] max-md:top-[-5vh]" />
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                    src: `${(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BaseUrl$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])().baseurl}/${image}`,
+                    alt: "",
+                    className: "w-[80px] rounded-full absolute top-[-1vh] border-white border-[7px] max-md:top-[-5vh]",
+                    fill: true
+                }, void 0, false, {
+                    fileName: "[project]/src/components/Testimonial.tsx",
+                    lineNumber: 117,
+                    columnNumber: 21
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "w-[80px] h-[80px] rounded-full absolute top-[-1vh] border-white border-[5px] max-md:top-[-5vh]",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                        src: `${(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BaseUrl$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])().imgurl}/defaultuser.jpg`,
+                        alt: "",
+                        className: "w-[80px] object-fill rounded-full absolute top-[-1vh] border-white border-[7px] max-md:top-[-5vh]",
+                        fill: true
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Testimonial.tsx",
+                        lineNumber: 121,
+                        columnNumber: 1
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/components/Testimonial.tsx",
+                    lineNumber: 119,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex mt-9",
+                    children: [
+                        [
+                            ...Array(fullStars)
+                        ].map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaStar"], {
+                                className: "text-yellow-500"
+                            }, `full-${i}`, false, {
+                                fileName: "[project]/src/components/Testimonial.tsx",
+                                lineNumber: 127,
+                                columnNumber: 25
+                            }, this)),
+                        hasHalfStar && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaStarHalfAlt"], {
+                            className: "text-yellow-500"
+                        }, "half", false, {
+                            fileName: "[project]/src/components/Testimonial.tsx",
+                            lineNumber: 130,
+                            columnNumber: 37
+                        }, this),
+                        [
+                            ...Array(emptyStars)
+                        ].map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaRegStar"], {
+                                className: "text-yellow-500"
+                            }, `empty-${i}`, false, {
+                                fileName: "[project]/src/components/Testimonial.tsx",
+                                lineNumber: 133,
+                                columnNumber: 25
+                            }, this))
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/components/Testimonial.tsx",
+                    lineNumber: 125,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    style: {
+                        maxHeight: '200px',
+                        overflow: 'auto'
+                    },
+                    className: "custom-scrollbar",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-[#7e8a8d] text-center text-xl",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "text-[#e63611] text-2xl",
+                                children: '"'
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/Testimonial.tsx",
+                                lineNumber: 143,
+                                columnNumber: 25
+                            }, this),
+                            isTruncated ? (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$common$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["truncateText"])(text, 65) : text,
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "text-sm text-blue-500 cursor-pointer",
+                                onClick: handleReadMoreClick,
+                                children: isTruncated ? 'Read More' : 'Show Less'
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/Testimonial.tsx",
+                                lineNumber: 145,
+                                columnNumber: 25
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "text-[#e63611] text-3xl",
+                                children: '"'
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/Testimonial.tsx",
+                                lineNumber: 151,
+                                columnNumber: 25
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/Testimonial.tsx",
+                        lineNumber: 142,
+                        columnNumber: 21
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/components/Testimonial.tsx",
+                    lineNumber: 141,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "text-[#e63611] text-xl font-bold",
+                    children: [
+                        name,
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            className: "text-[#7e8a8d] text-sm",
+                            children: [
+                                ", ",
+                                position
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/Testimonial.tsx",
+                            lineNumber: 158,
+                            columnNumber: 21
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/components/Testimonial.tsx",
+                    lineNumber: 156,
+                    columnNumber: 17
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/Testimonial.tsx",
+            lineNumber: 114,
+            columnNumber: 13
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/components/Testimonial.tsx",
+        lineNumber: 112,
+        columnNumber: 9
+    }, this);
+};
+_s(TestimonialCard, "uF82jnWCCSUpvNXCPQ4j8f4VtcY=");
+_c = TestimonialCard;
+// Testimonials Component
+const Testimonials = ({ testimonialData })=>{
+    const testimonials = testimonialData;
+    const settings = {
+        dots: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1
+                }
+            }
+        ]
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        className: "w-full py-12 bg-white",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "container px-4 mx-auto max-md:px-0",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$slick$2f$lib$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                ...settings,
+                children: testimonials.map((testimonial, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(TestimonialCard, {
+                        text: testimonial.testimonial_content || '',
+                        rating: String(testimonial.testimonial_stars || 0),
+                        name: testimonial.testimonial_by || '',
+                        position: testimonial.testimonial_position || '',
+                        image: testimonial.profile_image || ''
+                    }, testimonial.testimonial_id, false, {
+                        fileName: "[project]/src/components/Testimonial.tsx",
+                        lineNumber: 206,
+                        columnNumber: 25
+                    }, this))
+            }, void 0, false, {
+                fileName: "[project]/src/components/Testimonial.tsx",
+                lineNumber: 204,
+                columnNumber: 17
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/src/components/Testimonial.tsx",
+            lineNumber: 203,
+            columnNumber: 13
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/components/Testimonial.tsx",
+        lineNumber: 202,
+        columnNumber: 9
+    }, this);
+};
+_c1 = Testimonials;
+const __TURBOPACK__default__export__ = Testimonials;
+var _c, _c1;
+__turbopack_context__.k.register(_c, "TestimonialCard");
+__turbopack_context__.k.register(_c1, "Testimonials");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
+"[project]/src/components/Testimonial.tsx [app-client] (ecmascript, next/dynamic entry)": ((__turbopack_context__) => {
+
+var { g: global, __dirname } = __turbopack_context__;
+{
+__turbopack_context__.n(__turbopack_context__.i("[project]/src/components/Testimonial.tsx [app-client] (ecmascript)"));
+}}),
+}]);
+
+//# sourceMappingURL=src_c736a6a8._.js.map

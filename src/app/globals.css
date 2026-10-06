@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --whiteColor: white;
+    --blackColor: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --lineheight1: leading-6;
+  }
+}
+
+
+.bg-custom-gradient-2 {
+  background: linear-gradient(280deg, #152869 0%, #152869 50%, #00548f 100%);
+}
+
+.bg-custom-gradient-3 {
+  background: linear-gradient(280deg, #152869 0%, #152869 50%, #00548f 100%);
+}
+
+
+.slick-prev:before,
+.slick-next:before {
+  color: #152869 !important; /* change to your desired color */
+  font-size: 24px !important; /* optional */
+}
+
+
+
+
+body {
+  /* background: var(--background); */
+  color: var(--blackColor);
+  font-family:  Times New Roman, Times, serif;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(12px); }
+}
+
+@keyframes slide-in-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-20px); }
+}
+
+@keyframes slide-in-down {
+  0% { transform: translateY(-80px); }
+  100% { transform: translateY(100px); }
+}
+
+@keyframes bounce-arrow {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-5px); }
+  50% { transform: translateY(5px); }
+  75% { transform: translateY(-5px); }
+}
+
+@keyframes moveLeft {
+  0% { opacity: 0.3; transform: translateX(60%); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Apply animation classes */
+.animate-slide-in-right {
+  animation: slide-in-right 0.5s ease-in-out;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.5s ease-in-out;
+}
+
+.animate-slide-in-down {
+  animation: slide-in-down 0.5s ease-in-out;
+}
+
+.animate-bounce-arrow {
+  animation: bounce-arrow 1s infinite;
+}
+
+.animate-move-left {
+  animation: moveLeft 1s ease-in-out;
+}
+
+
+.animate-slide {
+  animation: slide 30s linear infinite;
+}
+.blogcontent h1{
+
+    font-size: 5vh;
+}
+.blogcontent h2{
+
+    font-size: 4vh;
+}
+.blogcontent h3{
+
+    font-size: 4vh;
+}
+.blogcontent p,li{
+
+color: #7e8490;
+}

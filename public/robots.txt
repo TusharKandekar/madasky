@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://madasky.com
+
+# Sitemaps
+Sitemap: https://madasky.com/sitemap.xml
