@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 // import { getImagesAltText } from './CommonData';
 import Image from "next/image";
 import BaseUrl from "@/components/BaseUrl";
@@ -17,6 +17,10 @@ interface Details1 {
   altText?: string;
   calendarButton?: boolean;
   btnText?: string;
+  compact?: boolean;
+  contentTopAlign?: boolean;
+  inlineExpanded?: boolean;
+  inlineButton?: boolean;
 }
 export default function CapabilitiesMainCard2({
   details1,
@@ -35,7 +39,6 @@ export default function CapabilitiesMainCard2({
   };
 
   // const [altText, setAltText] = useState("");
-  const image = details1?.img;
 
   // useEffect(() => {
   //     const fetchAltText = async () => {
@@ -48,14 +51,14 @@ export default function CapabilitiesMainCard2({
   // }, []);
   return (
     <>
-      <div className="relative w-full h-auto bg-no-repeat bg-cover py-[9vh]">
+      <div className={`relative w-full h-auto bg-no-repeat bg-cover ${details1.compact ? "py-[3.5vh]" : "py-[9vh]"}`}>
         <div className="absolute inset-0 bg-[url('/assets/images/industrybg.png')] bg-no-repeat bg-cover opacity-20 max-md:bg-none max-md:flex max-md:items-center max-md:justify-center"></div>
         <div className="flex justify-center items-center w-full">
           <div className="relative z-10  h-auto w-[85%] border-gray-200  bg-white shadow-2xl rounded-2xl border-solid border-1 flex items-center flex-col justify-center max-md:w-[90%] max-md:py-[2vh]">
             <div
-              className={`h-auto flex w-full p-0 justify-start ${details1.direction} items-center gap-[2vw] max-md:p-0 max-md:justify-center max-md:items-center max-md:flex-col-reverse max-xl:flex-col`}
+              className={`h-auto flex w-full p-0 justify-start ${details1.direction} ${details1.contentTopAlign ? "items-start" : "items-center"} gap-[2vw] max-md:p-0 max-md:justify-center max-md:items-center max-md:flex-col-reverse max-xl:flex-col`}
             >
-              <div className="w-[55%] h-full pl-14 text-4xl font-bold mb-6 max-md:w-[90%] max-md:pl-0 max-md:flex max-md:justify-center max-md:items-center max-md:flex-col max-xl:w-full max-xl:pl-0">
+              <div className={`w-[55%] h-full pl-14 text-4xl font-bold max-md:w-[90%] max-md:pl-0 max-md:flex max-md:justify-center max-md:items-center max-md:flex-col max-xl:w-full max-xl:pl-0 ${details1.compact ? "mb-0 pt-8 pb-8" : "mb-6"}`} >
                 <h2 className="my-5 text-5xl leading-tight text-gray-800 max-md:w-full max-md:text-4xl max-md:text-center max-md:pt-8 max-md:hidden">
                   {details1.title}
                 </h2>
@@ -70,6 +73,34 @@ export default function CapabilitiesMainCard2({
                     <div key={index}>{item}</div>
                   ))}
                 </div>
+
+                {details1.inlineExpanded && isExpanded && (
+                  <div className="flex flex-col gap-4 mt-4 text-md">
+                    {hdes.map((item, index) => (
+                      <div key={index}>{item}</div>
+                    ))}
+                    {details1.udes ? (
+                      <p className="mb-2 text-xl font-normal text-left text-gray-500">
+                        {details1.udes}
+                      </p>
+                    ) : null}
+                  </div>
+                )}
+
+                {details1.inlineExpanded && hdes.length > 0 && (
+                  <button
+                    onClick={handleToggle}
+                    className="bg-[#152869] text-white px-5 py-2 hover:bg-[#112054] rounded-lg text-sm mt-5 self-start"
+                  >
+                    {isExpanded ? "Show Less" : "Show More"}
+                  </button>
+                )}
+
+                {details1.inlineButton && details1.calendarButton && (
+                  <div className="mt-6 self-start">
+                    <Button text={details1?.btnText || "Book Your Session"} />
+                  </div>
+                )}
               </div>
               <div className="w-[45%] mt-8 mb-4 h-full flex items-center justify-center max-md:w-[95%] max-md:h-auto max-xl:w-full">
                 {/* <img
@@ -99,33 +130,36 @@ export default function CapabilitiesMainCard2({
                 </div>
               </div>
             </div>
-            <div className={`w-[85%] max-md:w-[100%] mt-[-3.5vh] pb-10 `}>
-              {isExpanded && (
-                <div className="flex flex-col gap-4 text-md">
-                  {hdes.map((item, index) => (
-                    <div key={index}>{item}</div>
-                  ))}
-                  <p className="mb-7 text-xl font-normal text-justify text-gray-500">
-                    {details1.udes}
-                  </p>
-                </div>
-              )}
+            {((!details1.inlineExpanded && hdes.length > 0) ||
+              (!details1.inlineButton && details1.calendarButton)) && (
+              <div className={`w-[85%] max-md:w-[100%] mt-[-3.5vh] pb-10 `}>
+                {!details1.inlineExpanded && isExpanded && (
+                  <div className="flex flex-col gap-4 text-md">
+                    {hdes.map((item, index) => (
+                      <div key={index}>{item}</div>
+                    ))}
+                    <p className="mb-7 text-xl font-normal text-justify text-gray-500">
+                      {details1.udes}
+                    </p>
+                  </div>
+                )}
 
-              {hdes.length > 0 && (
-                <button
-                  onClick={handleToggle}
-                  className="bg-[#152869] text-white px-5 py-2 hover:bg-[#112054] rounded-lg text-sm mt-4"
-                >
-                  {isExpanded ? "Show Less" : "Show More"}
-                </button>
-              )}
+                {!details1.inlineExpanded && hdes.length > 0 && (
+                  <button
+                    onClick={handleToggle}
+                    className="bg-[#152869] text-white px-5 py-2 hover:bg-[#112054] rounded-lg text-sm mt-4"
+                  >
+                    {isExpanded ? "Show Less" : "Show More"}
+                  </button>
+                )}
 
-              {details1.calendarButton && (
-                <div className="mt-4">
-                  <Button text={details1?.btnText || "Book Your Session"} />
-                </div>
-              )}
-            </div>
+                {!details1.inlineButton && details1.calendarButton && (
+                  <div className="mt-4">
+                    <Button text={details1?.btnText || "Book Your Session"} />
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>
