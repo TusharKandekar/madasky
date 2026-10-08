@@ -21,20 +21,4 @@ out/
 *.flv
 *.wmv
 *.m4v
-
-# Debug logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-
-# TypeScript
-*.tsbuildinfo
+*.zip

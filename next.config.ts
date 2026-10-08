@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "madasky-admin.test",
+        protocol: "https",
+        hostname: "madasky.trivexait.com",
         pathname: "/public/uploads/**",
       },
     ],
