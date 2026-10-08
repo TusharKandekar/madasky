@@ -2,8 +2,8 @@
 import type { NextPage } from "next";
 // 🚀 Step 1: Import Slider and REQUIRED CSS files
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 import Image from "next/image";
 
@@ -50,37 +50,66 @@ const CommentIcon = () => (
 );
 
 // --- Card Data (Example) ---
+// const cardData = [
+//   {
+//     title: "Textile Exporter, Surat",
+//     content:
+//       "₹2.5 crore unlocked in just 4 weeks - we didn't realize how much cash was dormant in our operational systems. The impact was immediate and measurable.",
+//     link: "https://covid19test.sananto.com",
+//     comments: 25,
+//   },
+//   {
+//     title: "Pharma Manufacturer, Bangalore",
+//     content:
+//       "Lead-times dropped 23% in five weeks. Our clients noticed the improvement immediately. Repeat orders increased significantly as a direct result.",
+//     link: "https://covid19test.sananto.com",
+//     comments: 1,
+//   },
+//   {
+//     title: "Retail Group, Mumbai",
+//     content:
+//       "Sales accelerated dramatically, but operational chaos didn't follow. Our management team regained strategic control while driving growth.",
+//     link: "#",
+//     comments: 12,
+//   },
+//   {
+//     title: "Paper Enterprise, Ahmedabad",
+//     content:
+//       "Executive stress decreased while performance metrics improved across all divisions. This represents what real consulting impact looks like.",
+//     link: "#",
+//     comments: 7,
+//   },
+// ];
 const cardData = [
   {
-    title: "Textile Exporter, Surat",
+    title: "Home Textile packaging line",
     content:
-      "₹2.5 crore unlocked in just 4 weeks - we didn't realize how much cash was dormant in our operational systems. The impact was immediate and measurable.",
+      "₹43 lakh annual overtime eliminated; OTIF 82% to 97%.",
     link: "https://covid19test.sananto.com",
     comments: 25,
   },
   {
-    title: "Pharma Manufacturer, Bangalore",
+    title: "Home Textile diagnostic",
     content:
-      "Lead-times dropped 23% in five weeks. Our clients noticed the improvement immediately. Repeat orders increased significantly as a direct result.",
+      "approximately ₹145 lakh of avoidable losses identified and prioritized.",
     link: "https://covid19test.sananto.com",
     comments: 1,
   },
   {
-    title: "Retail Group, Mumbai",
+    title: "Fabric intelligence case",
     content:
-      "Sales accelerated dramatically, but operational chaos didn't follow. Our management team regained strategic control while driving growth.",
+      "Integrated consumption, marker and roll planning. Use only internally validated saving figures in the card.",
     link: "#",
     comments: 12,
   },
   {
-    title: "Paper Enterprise, Ahmedabad",
+    title: "Digital sewing-floor / productivity transformation",
     content:
-      "Executive stress decreased while performance metrics improved across all divisions. This represents what real consulting impact looks like.",
+      " use only figures that can be substantiated.",
     link: "#",
     comments: 7,
   },
 ];
-
 const SocialFeed: NextPage = () => {
   // Step 2: Configure the settings for the slider
   const settings = {
@@ -119,9 +148,9 @@ const SocialFeed: NextPage = () => {
             </div>
           </div>
           <h2 className="mt-6 text-2xl font-bold text-center">
-            Client Success Stories
+            Factory Transformation Stories
           </h2>
-         
+
           <a
             rel="noopener noreferrer"
             href="/contact-us"
@@ -143,7 +172,7 @@ const SocialFeed: NextPage = () => {
                   <div className="flex items-center text-xl font-semibold text-gray-900">
                     <span>{card.title}</span>
                   </div>
-                  <p className="mt-4 text-sm text-gray-700 ">{card.content}</p>
+                  <p className="mt-4  text-gray-700 ">{card.content}</p>
                 </div>
               </div>
             </div>

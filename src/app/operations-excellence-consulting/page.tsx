@@ -148,27 +148,26 @@ export default async function Project() {
 
   const faqs: Faq[] = [
     {
-      question: `What is Operations Excellence Consulting?`,
-      answer: `Operations Excellence Consulting is a strategic approach aimed at improving the efficiency and effectiveness of manufacturing operations. It involves streamlining processes, adopting new technologies, and fostering a culture of continuous improvement to achieve sustainable growth and competitiveness.`,
+      question: `What is Operations Excellence?`,
+      answer: `Operations Excellence is the disciplined improvement of processes, capacity, people, planning, quality and management routines so the factory produces more reliable output at lower loss.`,
     },
     {
-      question: `Why is Operations Excellence important for manufacturers?`,
-      answer: `In today's fast-paced market, manufacturers face challenges like rising costs, fluctuating demand, and evolving customer expectations. Operations Excellence helps businesses stay competitive by improving productivity, reducing lead times, and integrating innovative technologies to drive growth and sustainability.`,
+      question: `How quickly can results be seen?`,
+      answer: `Timing depends on the constraint. A diagnostic should identify priority opportunities quickly; implementation benefits are then tracked against an agreed baseline rather than promised in advance.`,
     },
     {
-      question: `How does Madasky Consulting help with Operations Excellence?`,
-      answer: `At Madasky Consulting, we focus on enhancing manufacturing operations through strategies like process optimization, technology integration, and workforce empowerment. We help businesses streamline workflows, optimize production cycles, and implement new technologies such as automation, IoT, and AI to boost efficiency and consistency.`,
+      question: `Does Operations Excellence require new machinery?`,
+      answer: `Not necessarily. Many losses come from imbalance, planning, flow, downtime, changeovers, quality and operating routines. Capex should follow a verified need.`,
     },
     {
-      question: `What methodologies does Madasky Consulting use for process optimization?`,
-      answer: `We use proven methodologies such as Lean Manufacturing, Kaizen principles, and value stream mapping to reduce waste, improve efficiency, and enhance productivity across your operations.`,
+      question: `Can Madasky work alongside our internal IE or Lean team?`,
+      answer: `Yes. Madasky can complement internal capability by providing independent diagnosis, cross-functional coordination and implementation support.`,
     },
     {
-      question: `How does technology play a role in Operations Excellence?`,
-      answer: `Technology plays a key role by enabling automation, smart tools, and real-time data analytics. We help businesses deploy robotics and digital systems to improve precision, scalability, and performance, ensuring data-driven decision-making for continuous improvement.`,
+      question: `How do you measure success?`,
+      answer: `KPIs are agreed at the beginning and may include output, capacity utilization, manpower productivity, OTIF, WIP, lead time, quality, downtime and financial impact.`,
     },
   ];
-
   return (
     <>
       <ConsultingNavbar
@@ -196,9 +195,9 @@ export default async function Project() {
       />
       <AboutVideo
         vid1={"/assets/videos/OPERATIONS-PRODUCTIVITY-IMPROVEMENT69.mp4"}
-        title={title}
+        title={"Improve the performance of the factory you already own."}
         des={
-          "Creating and accelerating critical advantages through cutting-edge strategy and operations"
+          "Madasky helps Home Textile and Apparel manufacturers increase output, improve OTIF, reduce WIP and lead time, strengthen manpower productivity and remove operational losses - with implementation on the factory floor."
         }
         pageName={"Project"}
         h1={PageMetadata?.data?.h1tag}
@@ -211,20 +210,20 @@ export default async function Project() {
               updes: [
                 <div key={1} className="text-lg text-justify">
                   <p className="flex max-md:text-3xl max-md:flex max-md:justify-center max-md:text-center my-5 text-[45px] leading-10 font-bold text-gray-800 text-left">
-                    Operations Excellence
+                    Busy Is Not the Same as Productive
                   </p>
 
                   <p className="py-1 pl-5 text-lg font-normal text-gray-500 max-md:px-0">
-                    In today's fast-paced global market, manufacturers face
-                    relentless pressure to enhance efficiency amid rising costs,
-                    fluctuating demands, and evolving customer expectations.
-                    Achieving Operations Excellence a core focus of our
-                    Operations Excellence Consulting expertise, has become
-                    critical to maintaining competitiveness and driving
-                    sustainable growth. At Madasky Consulting, we specialize in
-                    Operations Excellence Services that address technological
-                    shifts, supply chain risks, and sustainability goals,
-                    empowering businesses to thrive in volatile environments.
+
+                    Most factories do not lose performance through one dramatic failure. They lose it through waiting, imbalanced work,
+                    weak scheduling, material delays, changeovers, rework, downtime, excess WIP, poor daily routines and decisions that
+                    arrive too late. Overtime and additional manpower can temporarily hide these losses, but they rarely remove the cause.
+                  </p>
+                  <p className="py-1 pl-5 text-lg font-normal text-gray-500 max-md:px-0">
+                    Madasky begins by establishing the baseline: what the factory should be capable of, what it is actually delivering and
+                    where the gap is created. We then rank opportunities by financial impact, implementation effort and speed. The
+                    objective is not to apply a standard lean toolkit. It is to remove the constraints that matter to that factory.
+
                   </p>
                 </div>,
               ],
@@ -243,16 +242,16 @@ export default async function Project() {
               updes: [
                 <div key={2} className="text-lg">
                   <p className="flex max-md:text-3xl max-md:flex max-md:justify-center max-md:text-center my-5 text-[45px] leading-10 font-bold text-gray-800">
-                    What We Do
+                    What We Improve
                   </p>
 
-                  <div className="pl-10 max-md:px-6 flex flex-col w-full gap-4 max-md:text-xl text-[24px] font-normal text-[#6B7280] font-times">
+                  <div className="pl-10 max-md:px-6 flex flex-col w-full gap-4 max-md:text-xl font-normal text-[#6B7280] font-times">
                     <ul className="flex flex-col gap-4 list-disc">
                       <li>
                         <a href="./productivity-and-efficiency-improvement">
                           {/* <Link to='/productivity-and-efficiency-improvement'> */}
                           <p className="flex items-center font-semibold cursor-pointer hover:underline">
-                            Productivity & Efficiency Improvement
+                            Productivity & Output - process capacity, line balance, methods, standard work and constraint removal.
                           </p>
                           {/* </Link> */}
                         </a>
@@ -262,7 +261,7 @@ export default async function Project() {
                           {/* <Link to='/delivery-performance-program'> */}
                           <p className="flex items-center font-semibold cursor-pointer hover:underline">
                             {" "}
-                            Implementation Support
+                            Capacity Utilization - identify hidden capacity before approving new machines or people.
                           </p>
                           {/* </Link> */}
                         </a>
@@ -272,7 +271,7 @@ export default async function Project() {
                           {/* <Link to='/program-benefits'> */}
 
                           <p className="flex items-center font-semibold cursor-pointer hover:underline">
-                            Deliver Performance & Lead Time Reduction
+                            Manpower Productivity - skill mix, staffing, work content, multi-skilling and supervisor routines.
                           </p>
                           {/* </Link> */}
                         </a>
@@ -283,22 +282,13 @@ export default async function Project() {
                           {/* <Link to='/program-benefits'> */}
 
                           <p className="flex items-center font-semibold cursor-pointer hover:underline">
-                            Sampling - Lead time Reduction
+                            Lead Time & WIP - flow, batch logic, waiting, prioritization and handoffs between departments.
                           </p>
                           {/* </Link> */}
                         </a>
                       </li>
 
-                      <li>
-                        <a href="./leverage-technology-for-innovation-and-efficiency">
-                          {/* <Link to='/program-benefits'> */}
 
-                          <p className="flex items-center font-semibold cursor-pointer hover:underline">
-                            Leverage Technology for Innovation and Efficiency
-                          </p>
-                          {/* </Link> */}
-                        </a>
-                      </li>
                     </ul>
                   </div>
 
@@ -323,7 +313,68 @@ export default async function Project() {
                                     </div> */}
                 </div>,
               ],
+              hdes: [
+                <div
+                  key={2}
+                  className=" list-disc max-md:px-0 space-y-2 mt-2"
+                >
 
+
+                  <li>
+                    <a href="./leverage-technology-for-innovation-and-efficiency">
+                      {/* <Link to='/program-benefits'> */}
+
+                      <p className="flex items-center font-semibold cursor-pointer hover:underline">
+                        OTIF & Delivery Reliability - connect material, planning, production, packing and dispatch risk.
+                      </p>
+                      {/* </Link> */}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./leverage-technology-for-innovation-and-efficiency">
+                      {/* <Link to='/program-benefits'> */}
+
+                      <p className="flex items-center font-semibold cursor-pointer hover:underline">
+                        Quality & Rework - defect loops, first-time-right performance and feedback to root cause.
+                      </p>
+                      {/* </Link> */}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./leverage-technology-for-innovation-and-efficiency">
+                      {/* <Link to='/program-benefits'> */}
+
+                      <p className="flex items-center font-semibold cursor-pointer hover:underline">
+                        Layout & Material Movement - reduce unnecessary travel, congestion and poor adjacency.
+                      </p>
+                      {/* </Link> */}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./leverage-technology-for-innovation-and-efficiency">
+                      {/* <Link to='/program-benefits'> */}
+
+                      <p className="flex items-center font-semibold cursor-pointer hover:underline">
+                        Daily Management - target vs actual, short-interval control, escalation, ownership and review cadence.
+                        {/* </Link> */}
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./leverage-technology-for-innovation-and-efficiency">
+                      {/* <Link to='/program-benefits'> */}
+
+                      <p className="flex items-center font-semibold cursor-pointer hover:underline">
+                        Digital Visibility - add dashboards and alerts after process logic and data ownership are clear.
+
+
+                      </p>
+                      {/* </Link> */}
+                    </a>
+                  </li>
+
+                </div>,
+              ],
               // hdes: [
 
               //     <div className='ml-[-10px]'>
@@ -346,125 +397,102 @@ export default async function Project() {
               updes: [
                 <div key={2} className="text-lg text-justify">
                   <p className="flex max-md:flex max-md:justify-center max-md:text-center max-md:text-3xl my-5 text-[45px] leading-10 font-bold text-gray-800 text-left">
-                    Our Approach
+                    Our Operations Excellence Method
                   </p>
 
                   <p className="py-1 pl-5 text-lg font-normal text-gray-500 max-md:px-0">
-                    Madasky Consulting's Operational Excellence Consulting
-                    framework combines strategic analysis, technology, and
-                    culture-building to deliver measurable results:
+                    1. Baseline the economics. Translate production loss into capacity, cost, delivery, overtime, WIP or margin.
+
+                  </p>
+                  <p className="py-1 pl-5 text-lg font-normal text-gray-500 max-md:px-0">
+                    2. Observe the work. Use floor observation, data and operator/supervisor inputs to understand the actual system rather
+                    than only SOPs.
+                  </p>
+                  <p className="py-1 pl-5 text-lg font-normal text-gray-500 max-md:px-0">
+                    3. Build the loss tree. Separate symptoms from causes and quantify where time, material and capacity are lost.
+
+                  </p> <p className="py-1 pl-5 text-lg font-normal text-gray-500 max-md:px-0">
+                    4. Prioritize. Focus first on the few constraints that control output or cost. Not every inefficiency deserves a project.
+
                   </p>
 
-                  <div className="pl-4 list-disc">
-                    {/* <li className='text-xl font-bold text-gray-500'>Our Comprehensive Approach to Plant Layout Design</li> */}
-
-                    <div className="pl-0 space-y-2 list-disc max-md:px-0">
-                      <div>
-                        <p className="text-xl text-gray-600">
-                          Process Optimization
-                        </p>
-                        <ul className="pl-6 list-disc max-md:px-0">
-                          <li className="py-1 text-lg font-normal text-gray-500">
-                            <p>
-                              <span className="font-semibold">
-                                Lean Manufacturing:{" "}
-                              </span>{" "}
-                              Reduce waste and redundancies through value stream
-                              mapping and Kaizen principles.
-                            </p>
-                          </li>
-
-                          <li className="py-1 text-lg font-normal text-gray-500">
-                            <p>
-                              <span className="font-semibold">
-                                Plant Layout Design{" "}
-                              </span>
-                              Improve material flow and space utilization for
-                              faster operations.
-                            </p>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <p className="text-xl text-gray-600">
-                          Technology Integration
-                        </p>
-                        <ul className="pl-6 list-disc max-md:px-0">
-                          <li className="py-1 text-lg font-normal text-gray-500">
-                            <p>
-                              <span className="font-semibold">
-                                Automation & Smart Tools:{" "}
-                              </span>{" "}
-                              Deploy robotics and digital systems to enhance
-                              precision and scalability.
-                            </p>
-                          </li>
-
-                          <li className="py-1 text-lg font-normal text-gray-500">
-                            <p>
-                              <span className="font-semibold">
-                                Data Analytics:{" "}
-                              </span>{" "}
-                              Monitor performance metrics in real-time for
-                              proactive decision-making.
-                            </p>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
                 </div>,
               ],
 
               hdes: [
                 <div
                   key={2}
-                  className="ml-[-20] list-disc max-md:px-0 space-y-2 mt-2"
+                  className=" list-disc max-md:px-0 space-y-2 mt-2"
                 >
-                  <div>
-                    <p className="text-xl font-semibold text-gray-600">
-                      Workforce Empowerment
-                    </p>
-                    <ul className="pl-6 list-disc max-md:px-0">
-                      <li className="py-1 text-lg font-normal text-gray-500">
-                        <p>
-                          <span className="font-semibold">
-                            Skill Development:{" "}
-                          </span>
-                          Train teams to adopt new technologies and lean
-                          practices.
-                        </p>
-                      </li>
 
-                      <li className="py-1 text-lg font-normal text-gray-500">
-                        <p>
-                          <span className="font-semibold">
-                            Quality Management{" "}
-                          </span>
-                          Embed compliance and defect-reduction strategies into
-                          workflows.
-                        </p>
-                      </li>
-                    </ul>
-                  </div>
 
-                  <div>
-                    <p className="text-xl font-semibold text-gray-600">
-                      Supply Chain Synergy
-                    </p>
-                    <ul className="pl-6 list-disc max-md:px-0">
-                      <li className="py-1 text-lg font-normal text-gray-500">
-                        <p>
-                          <span className="font-semibold">
-                            End-to-End Optimization:{" "}
-                          </span>
-                          Align procurement, production, and logistics for
-                          seamless efficiency.
-                        </p>
-                      </li>
-                    </ul>
-                  </div>
+                  <p className="py-1 text-lg font-normal text-gray-500 max-md:px-0">
+                    5. Implement. Redesign methods, balance work, change planning rules, improve visual control, train teams and
+                    introduce technology only where useful.
+                  </p> <p className="py-1 text-lg font-normal text-gray-500 max-md:px-0">
+                    6. Stabilize. Build ownership into supervisor routines, KPI reviews, standard work and escalation.
+
+                  </p> <p className="py-1 text-lg font-normal text-gray-500 max-md:px-0">
+                    7. Measure the benefit. Compare the agreed baseline with sustained post-implementation performance.
+
+                  </p>
+
+                </div>,
+              ],
+              img: "Our Approach.png",
+              direction: "",
+              altText: imgAltText[1],
+            }}
+          />
+        </div>
+        <div className="px-4 mx-auto max-w-8xl Plant-Layout">
+          <CapabilitiesMainCard2
+            details1={{
+              updes: [
+                <div key={2} className="text-lg text-justify">
+                  <p className="flex max-md:flex max-md:justify-center max-md:text-center max-md:text-xl my-5  leading-10 font-bold text-gray-800 text-left">
+                    Before You Add Capex, Find the Missing Capacity
+                  </p>
+
+                  <p className="py-1 pl-5 text-lg font-normal text-gray-500 max-md:px-0">
+                    Installed capacity is what machines can theoretically produce. Effective capacity is what the complete operating system
+                    can reliably deliver after downtime, changeovers, manpower, quality, material and planning constraints. If a factory is
+                    using only part of its effective potential, buying more equipment may add depreciation without solving the real
+                    bottleneck. Madasky's capacity work separates equipment limitation from operating loss so management can decide
+                    where capital is genuinely required.
+                  </p>
+
+
+                </div>,
+              ],
+
+              hdes: [
+                <div
+                  key={2}
+                  className=" max-md:px-0 space-y-2 mt-2"
+                >
+
+
+                  <p className="flex max-md:flex max-md:justify-center max-md:text-center max-md:text-xl my-5  leading-10 font-bold text-gray-800 text-left">
+                    Operations Excellence for Home Textiles
+
+                  </p>
+                  <p className="py-1 pl-5 text-lg font-normal text-gray-500 max-md:px-0">
+                    Home Textile operations often carry complexity across cutting, quilting, stitching, finishing, packing, style/size variety,
+                    customer-specific packaging and export dispatch. Improvements frequently require coordination across departments
+                    rather than isolated line efficiency. Madasky evaluates the complete flow from material readiness through shipment.
+                  </p>
+                  <p className="flex max-md:flex max-md:justify-center max-md:text-center max-md:text-xl my-5  leading-10 font-bold text-gray-800 text-left">
+                    Operations Excellence for Apparel
+
+                  </p>
+                  <p className="py-1 pl-5 text-lg font-normal text-gray-500 max-md:px-0">
+
+                    Apparel performance is sensitive to style change, line skill, learning curve, feeding, cutting readiness, WIP and daily line
+                    management. Madasky combines industrial-engineering logic with planning, supervisor routines and digital visibility so
+                    improvements remain practical at line level.
+                  </p>
+
                 </div>,
               ],
               img: "Our Approach.png",
@@ -480,72 +508,87 @@ export default async function Project() {
               updes: [
                 <div key={2} className="text-lg text-justify">
                   <p className="flex max-md:flex max-md:justify-center max-md:text-center max-md:text-3xl my-5 text-[45px] leading-10 font-bold text-gray-800 text-left">
-                    Why Partner with Madasky Consulting?
+                    Why Partner with Madasky ?
                   </p>
 
                   <ul className="pl-4 list-disc">
                     {/* <li className='text-xl font-bold text-gray-500'>Our Comprehensive Approach to Plant Layout Design</li> */}
 
                     <ul className="pl-5 list-disc max-md:px-0">
-                      <li className="py-1 text-lg font-normal text-gray-500">
-                        <p>
-                          <span className="font-semibold">
-                            Holistic Expertise:{" "}
-                          </span>
-                          Our Operations Excellence Consulting covers processes,
-                          technology, and culture.
-                        </p>
-                      </li>
+
 
                       <li className="py-1 text-lg font-normal text-gray-500">
                         <p>
                           <span className="font-semibold">
                             Proven Frameworks:{" "}
                           </span>{" "}
-                          Leverage industry-tested strategies from a leader in
-                          Operations Excellence Services.
+                          recommendations are converted into changed operating routines and measurable results.
                         </p>
                       </li>
 
                       <li className="py-1 text-lg font-normal text-gray-500">
                         <p>
                           <span className="font-semibold">
-                            Sustainable Outcomes:{" "}
+                            Sector context:{" "}
                           </span>
-                          Balance cost reduction with quality, compliance, and
-                          scalability.
+                          Home Textiles and Apparel are core industries, not occasional projects.
                         </p>
                       </li>
 
-                      <li className="py-1 text-lg font-normal text-gray-500">
-                        <p>
-                          <span className="font-semibold">
-                            End-to-End Support:{" "}
-                          </span>
-                          From diagnostics to implementation, we ensure lasting
-                          impact.
-                        </p>
-                      </li>
+
                     </ul>
                   </ul>
 
-                  <p className="py-1 pl-5 text-lg font-normal text-gray-500 max-md:px-0">
+
+                </div>,
+              ],
+
+              hdes: [
+                <div
+                  key={2}
+                  className=" list-disc max-md:px-0 space-y-2 mt-2"
+                >
+
+                  <li className="py-1 text-lg font-normal text-gray-500">
+                    <p>
+                      <span className="font-semibold">
+                        Business outcome focus:{" "}
+                      </span>
+                      output, OTIF, cost, capacity, fabric, manpower and lead time are more important than tool deployment
+                    </p>
+                  </li>
+                  <li className="py-1 text-lg font-normal text-gray-500">
+                    <p>
+                      <span className="font-semibold">
+                        Technology-neutral:{" "}
+                      </span>
+                      digital systems support the operating model rather than define it.                        </p>
+                  </li>
+                  <li className="py-1 text-lg font-normal text-gray-500">
+                    <p>
+                      <span className="font-semibold">
+                        Diagnostic-first :{" "}
+                      </span>
+                      management sees the size of the opportunity before committing to a larger transformation.                        </p>
+                  </li>
+
+                  <p className="py-1 text-lg font-normal text-gray-500 max-md:px-0">
                     Transform your operations with Madasky's Operational
                     Excellence Consulting. Let's build a culture of continuous
                     improvement, innovation, and resilience tailored to your
                     manufacturing goals.
                   </p>
-                </div>,
+                </div>
+                ,
               ],
-
-              hdes: [],
               img: "Why Choose Madasky Consulting.png",
               direction: "",
               altText: imgAltText[1],
               calendarButton: true,
-                    btnText: "Plan Your Consultation",
+              btnText: "Plan Your Consultation",
             }}
           />
+
         </div>
 
         <FaqComponent faqs={faqs} />

@@ -99,7 +99,7 @@ export default function CapabilitiesMainCard2({
                 </div>
               </div>
             </div>
-            <div className={`w-[85%] max-md:w-[100%] mt-[-3.5vh] pb-10 `}>
+            <div className={`w-[90%] max-md:w-[100%] mt-[-3.5vh] pb-10 `}>
               {isExpanded && (
                 <div className="flex flex-col gap-4 text-md">
                   {hdes.map((item, index) => (
