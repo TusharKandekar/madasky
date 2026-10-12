@@ -131,7 +131,7 @@ export default function CapabilitiesMainCard2({
               </div>
             </div>
             <div className={`w-[90%] max-md:w-[100%] mt-[-3.5vh] pb-10 `}>
-              {isExpanded && (
+              {!details1.inlineExpanded && isExpanded && (
                 <div className="flex flex-col gap-4 text-md">
                   {hdes.map((item, index) => (
                     <div key={index}>{item}</div>
@@ -157,7 +157,6 @@ export default function CapabilitiesMainCard2({
                   </div>
                 )}
               </div>
-            )}
           </div>
         </div>
       </div>
