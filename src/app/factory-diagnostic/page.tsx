@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import ConsultingNavbar from "@/components/ConsultingNavbar";
 import AboutVideo from "@/components/AboutVideo";
 import FactoryDiagnosticSections from "@/components/FactoryDiagnosticSections";
-import FAQ from "@/components/Faq";
+import FaqComponent from "@/components/FaqComponent";
 import VideoSliderWrapper from "@/components/VideoSliderWrapper";
 import BlogSliderWrapper from "@/components/BlogSliderWrapper";
 import GallerySliderWrapper from "@/components/GallerySliderWrapper";
@@ -172,7 +172,7 @@ export default async function FactoryDiagnosticPage() {
 
       <FactoryDiagnosticSections showValidatedProof={false} />
 
-      <FAQ questions={faqs} />
+      <FaqComponent faqs={faqs} />
 
       {(videos.length > 0 || blogs.length > 0 || gallery.length > 0) && (
         <div className="flex h-auto w-full flex-col items-center justify-center bg-[#bce1fd75] bg-[url('/assets/images/homeblogbg.png')] bg-cover bg-center bg-no-repeat p-6 py-[1vh]">

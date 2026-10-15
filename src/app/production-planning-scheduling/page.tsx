@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import ConsultingNavbar from "@/components/ConsultingNavbar";
 import AboutVideo from "@/components/AboutVideo";
 import ProductionPlanningSections from "@/components/ProductionPlanningSections";
-import FAQ from "@/components/Faq";
+import FaqComponent from "@/components/FaqComponent";
+import LegacyInternalLinks from "@/components/LegacyInternalLinks";
 import VideoSliderWrapper from "@/components/VideoSliderWrapper";
 import BlogSliderWrapper from "@/components/BlogSliderWrapper";
 import GallerySliderWrapper from "@/components/GallerySliderWrapper";
@@ -182,7 +183,20 @@ export default async function ProductionPlanningSchedulingPage() {
         planningImageAlt={planningImageAlt}
       />
 
-      <FAQ questions={faqs} />
+      <LegacyInternalLinks
+        title="Explore Related Services"
+        links={[
+          { label: 'AI-Enabled Manufacturing Intelligence', href: '/ai-manufacturing-intelligence' },
+          { label: 'Digital Factory & MES', href: '/digital-factory-mes' },
+          { label: 'Operations Excellence', href: '/operations-excellence-consulting' },
+          { label: 'Apparel', href: '/industries/apparel' },
+          { label: 'Home Textiles', href: '/industries/home-textiles' },
+        ]}
+      />
+
+
+
+      <FaqComponent faqs={faqs} />
 
       {(videos.length > 0 || blogs.length > 0 || gallery.length > 0) && (
         <div className="flex h-auto w-full flex-col items-center justify-center bg-[#bce1fd75] bg-[url('/assets/images/homeblogbg.png')] bg-cover bg-center bg-no-repeat p-6 py-[1vh]">

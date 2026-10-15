@@ -433,36 +433,7 @@ export default function AIManufacturingSections({
         </div>
       </motion.section>
 
-      <section className="relative bg-[#f7f8fa] py-16 max-md:py-12">
-        <div className="px-6 mx-auto max-w-7xl sm:px-8 lg:px-10">
-          <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-            <div className="max-w-2xl">
-              <p className="mb-3 text-sm font-bold tracking-[0.18em] uppercase text-[#D72B0D]">
-                Related capabilities
-              </p>
-              <h2 className="text-3xl font-bold text-[#0E2C53] font-baskervville max-md:text-2xl">
-                Continue from the use case into the right manufacturing capability.
-              </h2>
-            </div>
-            <div className="grid gap-x-7 gap-y-3 sm:grid-cols-2">
-              {[
-                ["Fabric & Raw Material Optimization", "/fabric-raw-material-optimization"],
-                ["Production Planning & Scheduling", "/production-planning-scheduling"],
-                ["Digital Factory & MES", "/digital-factory-mes"],
-                ["Operations Excellence", "/operations-excellence-consulting"],
-              ].map(([title, link]) => (
-                <Link
-                  key={title}
-                  href={link}
-                  className="inline-flex items-center justify-between gap-3 border-b border-[#ccd6e2] py-2 text-[16px] font-bold text-[#0E2C53] transition-colors hover:text-[#D72B0D]"
-                >
-                  {title} <ArrowUpRight size={17} />
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+
     </main>
   );
 }

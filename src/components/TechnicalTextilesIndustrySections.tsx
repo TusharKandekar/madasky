@@ -109,11 +109,6 @@ const projectLayers = [
   "Digital readiness",
 ];
 
-const relatedLinks = [
-  ["Turnkey Factory Projects", "/turnkey-factory-projects"],
-  ["Operations Excellence", "/operations-excellence-consulting"],
-  ["AI-Enabled Manufacturing Intelligence", "/ai-manufacturing-intelligence"],
-];
 
 export default function TechnicalTextilesIndustrySections({
   industryImageUrl,
@@ -418,36 +413,7 @@ export default function TechnicalTextilesIndustrySections({
         </div>
       </motion.section>
 
-      <motion.section
-        {...reveal}
-        className="relative bg-white py-16 max-md:py-12"
-      >
-        <div className="px-6 mx-auto max-w-7xl sm:px-8 lg:px-10">
-          <div className="rounded-2xl border border-gray-200 bg-[#fafbfc] p-8 max-md:p-6">
-            <div className="flex items-center gap-3">
-              <ShieldCheck className="text-[#D72B0D]" size={26} />
-              <h2 className="text-3xl font-bold text-[#0E2C53] font-baskervville max-md:text-2xl">
-                Connected Manufacturing Capabilities
-              </h2>
-            </div>
-            <div className="grid gap-4 mt-7 md:grid-cols-3">
-              {relatedLinks.map(([title, href]) => (
-                <Link
-                  key={title}
-                  href={href}
-                  className="group flex items-center justify-between rounded-xl border border-gray-200 bg-white px-5 py-4 font-bold text-[#0E2C53] transition-all hover:-translate-y-0.5 hover:border-[#D72B0D]/30 hover:shadow-md"
-                >
-                  <span>{title}</span>
-                  <ArrowUpRight
-                    size={18}
-                    className="text-[#D72B0D] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                  />
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </motion.section>
+
     </div>
   );
 }

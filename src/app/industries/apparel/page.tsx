@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import ConsultingNavbar from "@/components/ConsultingNavbar";
 import AboutVideo from "@/components/AboutVideo";
 import ApparelIndustrySections from "@/components/ApparelIndustrySections";
-import FAQ from "@/components/Faq";
+import FaqComponent from "@/components/FaqComponent";
+import LegacyInternalLinks from "@/components/LegacyInternalLinks";
 import VideoSliderWrapper from "@/components/VideoSliderWrapper";
 import BlogSliderWrapper from "@/components/BlogSliderWrapper";
 import GallerySliderWrapper from "@/components/GallerySliderWrapper";
@@ -186,7 +187,7 @@ export default async function ApparelIndustryPage() {
 
       <AboutVideo
         vid1="/assets/videos/319.mp4"
-        title="Apparel"
+        title="Explore Related Services"
         h1="Manufacturing Transformation for Apparel"
         des="Improve the complete Apparel operating system - from cutting and sewing to planning, digital visibility, workforce and factory projects."
         pageName={pageName}
@@ -197,7 +198,18 @@ export default async function ApparelIndustryPage() {
         apparelImageAlt={apparelImageAlt}
       />
 
-      <FAQ questions={faqs} />
+      <LegacyInternalLinks
+        title="Explore Related Services"
+        links={[
+          { label: 'Turnkey Factory Projects', href: '/turnkey-factory-projects' },
+          { label: 'Operations Excellence', href: '/operations-excellence-consulting' },
+          { label: 'AI-Enabled Manufacturing Intelligence', href: '/ai-manufacturing-intelligence' },
+        ]}
+      />
+
+
+
+      <FaqComponent faqs={faqs} />
 
       {(videos.length > 0 || blogs.length > 0 || gallery.length > 0) && (
         <div className="flex h-auto w-full flex-col items-center justify-center bg-[#bce1fd75] bg-[url('/assets/images/homeblogbg.png')] bg-cover bg-center bg-no-repeat p-6 py-[1vh]">
