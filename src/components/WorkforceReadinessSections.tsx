@@ -319,11 +319,7 @@ export default function WorkforceReadinessSections({
                   these may be designed and delivered through Ananta Mitra
                   Foundation under a separate and clearly defined scope.
                 </p>
-                <p>
-                  This separation keeps Madasky positioned as the manufacturing
-                  transformation partner while enabling clients to access a
-                  structured skilling platform when the project requires it.
-                </p>
+                
               </div>
             </motion.article>
           </div>

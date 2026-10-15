@@ -122,7 +122,7 @@ export default function ApparelIndustrySections({
               Manufacturing Context
             </p>
             <h2 className="text-4xl font-bold leading-tight text-[#0E2C53] font-baskervville max-md:text-3xl">
-              Apparel Performance Depends on the Whole Operating System
+              Apparel Performance Depends on the Whole Operations System
             </h2>
             <p className="mt-7 text-lg leading-relaxed text-gray-600 max-md:text-[17px]">
               Apparel factories operate under constant variability: style
@@ -135,7 +135,7 @@ export default function ApparelIndustrySections({
               predictable.
             </p>
 
-            <div className="flex flex-wrap gap-3 mt-8">
+            <div className="flex flex-wrap gap-3 mt-8 hidden">
               {["Cutting", "Sewing", "Finishing", "Packing"].map((item) => (
                 <span
                   key={item}

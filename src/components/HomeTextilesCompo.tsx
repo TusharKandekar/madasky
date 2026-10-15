@@ -61,7 +61,7 @@ export default async function HomeTextilesCompo({
 
       <AboutVideo
         vid1="assets/videos/364.mp4"
-        title="Manufacturing Transformation for Home Textiles"
+        title="Home Textiles"
         des="Build, improve and digitize Home Textile factories with a team that understands the complete manufacturing system."
         pageName="Home Textiles"
         h1={h1 || 'Manufacturing Transformation for Home Textiles'}

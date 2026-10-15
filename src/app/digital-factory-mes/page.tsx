@@ -154,8 +154,9 @@ export default async function DigitalFactoryMESPage() {
       <AboutVideo
         vid1={HERO_VIDEO}
         title={PAGE_TITLE}
-        des="Turn shopfloor data into faster action. Madasky helps manufacturers implement real-time production visibility, MES, IoT and digital operating routines around the decisions plant teams need to make during the shift."
+        des=" Madasky helps manufacturers implement real-time production visibility, MES, IoT and digital operating routines around the decisions plant teams need to make during the shift."
         h1={PAGE_TITLE}
+        h2="Turn shopfloor data into faster action."
       />
 
       <main className="mx-auto w-[80vw] bg-white max-md:w-[90vw]">

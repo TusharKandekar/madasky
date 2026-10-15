@@ -165,7 +165,8 @@ export default async function FactoryDiagnosticPage() {
         vid1="/assets/videos/OPERATIONS-PRODUCTIVITY-IMPROVEMENT69.mp4"
         title="Factory Diagnostic"
         h1="Factory Performance Diagnostic"
-        des="Find the constraint before you invest in the solution. A focused diagnostic identifies where capacity, cost, fabric, planning, manpower, flow or digital visibility is actually being lost - and which opportunities deserve action first."
+        h2="Find the constraint before you invest in the solution."
+        des=" A focused diagnostic identifies where capacity, cost, fabric, planning, manpower, flow or digital visibility is actually being lost - and which opportunities deserve action first."
         pageName={pageName}
       />
 

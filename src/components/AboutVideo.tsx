@@ -6,10 +6,11 @@ interface AboutVideoProps {
     color?: string;
     pageName?: string;
     h1?: string;
+    h2?: string;
 
 
 }
-export default function AboutVideo({ vid1, title, des, color = "white", h1 }: AboutVideoProps) {
+export default function AboutVideo({ vid1, title, des, color = "white", h1, h2 }: AboutVideoProps) {
     return (
         <div className="relative flex flex-col items-center justify-center w-full h-auto mt-20">
 
@@ -36,6 +37,7 @@ export default function AboutVideo({ vid1, title, des, color = "white", h1 }: Ab
 
 
                     </h1>
+                    <h2 className={`text-2xl font-baskervville text-white  ${color} font-bold max-md:text-xl mt-4 max-md:w-full max-md:font-thin max-md:pt-4 max-md:pb-8`}> {h2}</h2>
                     <p className="text-lg ">{des}</p>
                 </div>
             </div>
