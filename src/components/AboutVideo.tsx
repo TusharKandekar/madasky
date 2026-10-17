@@ -1,7 +1,7 @@
 import Contact from "./Contact";
 interface AboutVideoProps {
     vid1: string;
-    title: string;
+    title: string | null;
     des: string;
     color?: string;
     pageName?: string;
@@ -32,7 +32,7 @@ export default function AboutVideo({ vid1, title, des, color = "white", h1, h2 }
                     <h1 className={`text-6xl font-baskervville text-white  ${color} font-bold max-md:text-xl mt-4 max-md:w-full max-md:font-thin max-md:pt-4 max-md:pb-8`}>
                         {/* {des} */}
                         {h1}
-                        
+
 
 
 

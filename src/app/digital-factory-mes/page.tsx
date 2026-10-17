@@ -29,7 +29,7 @@ const META_DESCRIPTION =
   "MES and Digital Factory implementation for Home Textile and Apparel: real-time production, downtime, quality, material, WIP and delivery visibility.";
 
 // Update these filenames if your CMS or public assets use different names.
-const FACTORY_IMAGE = "Digital Factory & MES.png";
+const FACTORY_IMAGE = "assets/images/digital-factory-mes.png";
 const HERO_VIDEO = "/assets/videos/Digital Factory & MES.mp4";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -180,7 +180,7 @@ export default async function DigitalFactoryMESPage() {
               <div className="relative h-[20rem] w-[40%] overflow-hidden rounded-2xl max-md:h-[15rem] max-md:w-full">
                 <Image
                   fill
-                  src={`${BaseUrl().imgurl}${FACTORY_IMAGE}`}
+                  src={`/${FACTORY_IMAGE}`}
                   alt={
                     imgAltText[0] ||
                     "Digital factory dashboard and manufacturing shopfloor visibility"

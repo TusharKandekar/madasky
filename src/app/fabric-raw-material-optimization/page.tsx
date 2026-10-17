@@ -27,7 +27,7 @@ const META_DESCRIPTION =
   "AI-enabled fabric optimization for Home Textile and Apparel: consumption, markers, order combinations, roll selection, cutting planning and remnants.";
 
 // Make sure this file exists in your webimage uploads. Update the filename if needed.
-const FABRIC_IMAGE = "Fabric & Raw Material Optimization.jpeg";
+const FABRIC_IMAGE = "/assets/images/fabric-raw-material-optimization.png";
 // Make sure this video exists in public/assets/videos. Update the filename if needed.
 const HERO_VIDEO = "/assets/videos/Fabric & Raw Material Optimization.mp4";
 
@@ -132,7 +132,7 @@ export default async function FabricRawMaterialOptimizationPage() {
 
       <AboutVideo
         vid1={HERO_VIDEO}
-        title={PAGE_TITLE}
+        title={null}
         des="Reduce fabric loss by improving the decisions made before, during and after cutting. Madasky connects consumption, pattern and marker logic, fabric requirement, order combination, roll selection, lay planning, cutting and remnant visibility into one optimization approach."
         h1={PAGE_TITLE}
       />
@@ -165,7 +165,7 @@ export default async function FabricRawMaterialOptimizationPage() {
               <div className="relative h-[20rem] w-[40%] overflow-hidden rounded-2xl max-md:h-[15rem] max-md:w-full">
                 <Image
                   fill
-                  src={`${BaseUrl().imgurl}${FABRIC_IMAGE}`}
+                  src={`${FABRIC_IMAGE}`}
                   alt={
                     imgAltText[0] ||
                     "Fabric rolls and cutting-room material optimization"

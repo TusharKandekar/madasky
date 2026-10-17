@@ -11,7 +11,7 @@ type HomeTextilesCompoProps = {
 };
 
 const imageFiles = [
-  'INDIAN MANFACTURING INDUSTRIES.png',
+  '/assets/images/home-textile.jpg',
   'Keychallenges3.png',
   '326.jpg',
 ];
@@ -68,16 +68,15 @@ export default async function HomeTextilesCompo({
       />
 
       <div className="mx-auto max-w-8xl max-md:px-0">
-        <Jewellery
+        
+<CapabilitiesMainCardSecond
           details1={{
             title: 'Manufacturing Context',
-            img: `${imageBaseUrl}/${imageFiles[0]}`,
-            description: intro,
-            altText: imgAltText[0] || 'Home textile manufacturing operations',
+            des: intro,
+            img: `${imageFiles[0]}`,
+            altText: imgAltText[0] || 'Home textile manufacturing improvement solutions',
           }}
-          industries={industries}
         />
-
         <CapabilitiesMainCard
           details1={{
             title: 'Common Manufacturing Challenges',

@@ -11,7 +11,7 @@ type TextilesCompoProps = {
 };
 
 const imageFiles = [
-  'INDIAN MANFACTURING INDUSTRIES.png',
+  '/assets/images/textiles.png',
   'Keychallenges3.png',
   '326.jpg',
 ];
@@ -59,21 +59,22 @@ export default async function TextilesCompo({ h1 }: TextilesCompoProps) {
 
       <AboutVideo
         vid1="assets/videos/364.mp4"
-        title="Extended Manufacturing Capability Across Textiles"
+        title={null}
         des="Apply Madasky’s project, operations and digital manufacturing capability to selected Textile manufacturing requirements."
         pageName="Textiles"
         h1={h1 || 'Extended Manufacturing Capability Across Textiles'}
       />
 
-      <div className="mx-auto max-w-8xl max-md:px-0">
-        <Jewellery
+      <div className="mx-auto max-w-8xl max-md:px-0 mb-10  ">
+        
+        <CapabilitiesMainCardSecond
           details1={{
             title: 'Manufacturing Context',
-            img: `${imageBaseUrl}/${imageFiles[0]}`,
-            description: intro,
-            altText: imgAltText[0] || 'Textile manufacturing facility and operations',
+            des: "Madasky’s core market remains Home Textiles and Apparel. We extend our capabilities into broader Textile manufacturing when the project requirement matches our expertise in facility planning, material flow, operations, planning, automation or digital manufacturing. Where specialized process expertise is needed, Madasky can integrate the right expert while retaining overall project coordination.",
+            img: `${imageFiles[0]}`,
+            altText:
+              imgAltText[0] || 'Textile manufacturing project and operations support',
           }}
-          industries={industries}
         />
 
         <CapabilitiesMainCard
