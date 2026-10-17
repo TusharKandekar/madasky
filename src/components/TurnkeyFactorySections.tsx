@@ -1,10 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  ArrowUpRight,
   BadgeCheck,
   Building2,
   CheckCircle2,
@@ -175,14 +173,6 @@ const whyItems = [
   },
 ];
 
-const relatedLinks = [
-  ["Plant Layout", "/plant-layout-consulting"],
-  ["Process & Material Flow", "/process-and-material-flow-consulting"],
-  ["Digital Factory & MES", "/digital-factory-mes"],
-  ["Workforce Readiness & Key Talent Support", "/workforce-readiness-talent-support"],
-  ["Home Textiles", "/industries/home-textiles"],
-  ["Apparel", "/industries/apparel"],
-];
 
 export default function TurnkeyFactorySections({
   projectImageUrl,
@@ -484,40 +474,7 @@ export default function TurnkeyFactorySections({
         </div>
       </motion.section>
 
-      <section className="py-16 bg-white max-md:py-12">
-        <div className="px-6 mx-auto max-w-7xl sm:px-8 lg:px-10">
-          <div className="flex items-end justify-between gap-8 mb-8 max-md:flex-col max-md:items-start">
-            <div>
-              <p className="mb-2 text-sm font-bold tracking-[0.18em] uppercase text-[#D72B0D]">
-                Explore More
-              </p>
-              <h2 className="text-3xl font-bold text-[#0E2C53] font-baskervville max-md:text-2xl">
-                Related Capabilities & Industries
-              </h2>
-            </div>
-            <p className="max-w-xl text-[16px] leading-relaxed text-gray-600">
-              Continue into the specialist capability or industry page most
-              relevant to your project requirement.
-            </p>
-          </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {relatedLinks.map(([label, href]) => (
-              <Link
-                key={label}
-                href={href}
-                className="group flex items-center justify-between rounded-lg border border-gray-200 bg-white px-5 py-4 text-[17px] font-semibold text-[#0E2C53] transition-all hover:-translate-y-0.5 hover:border-[#9fb4ca] hover:shadow-md"
-              >
-                <span>{label}</span>
-                <ArrowUpRight
-                  size={19}
-                  className="text-[#D72B0D] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                />
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

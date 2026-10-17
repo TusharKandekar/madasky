@@ -85,11 +85,6 @@ const connectedAreas = [
   "Digital visibility",
 ];
 
-const relatedLinks = [
-  ["Turnkey Factory Projects", "/turnkey-factory-projects"],
-  ["Operations Excellence", "/operations-excellence-consulting"],
-  ["AI-Enabled Manufacturing Intelligence", "/ai-manufacturing-intelligence"],
-];
 
 export default function ApparelIndustrySections({
   apparelImageUrl,
@@ -369,35 +364,7 @@ export default function ApparelIndustrySections({
         </div>
       </motion.section>
 
-      <section className="bg-white py-16 max-md:py-12">
-        <motion.div
-          {...reveal}
-          className="px-6 mx-auto max-w-7xl sm:px-8 lg:px-10"
-        >
-          <div className="flex flex-col gap-7 rounded-2xl border border-gray-200 bg-white p-8 shadow-sm md:flex-row md:items-center md:justify-between max-md:p-6">
-            <div>
-              <p className="text-sm font-bold tracking-[0.18em] uppercase text-[#D72B0D]">
-                Related Capabilities
-              </p>
-              <h2 className="mt-2 text-3xl font-bold text-[#0E2C53] font-baskervville max-md:text-2xl">
-                Continue exploring Apparel transformation
-              </h2>
-            </div>
-            <div className="flex flex-wrap gap-3 md:justify-end">
-              {relatedLinks.map(([title, href]) => (
-                <Link
-                  key={href}
-                  href={href}
-                  className="inline-flex items-center gap-2 rounded-full border border-[#0E2C53]/15 px-4 py-2.5 text-sm font-bold text-[#0E2C53] transition hover:border-[#D72B0D]/30 hover:bg-[#fff5f2] hover:text-[#D72B0D]"
-                >
-                  {title}
-                  <ArrowUpRight size={15} />
-                </Link>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-      </section>
+
     </div>
   );
 }

@@ -1,11 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   AlertTriangle,
-  ArrowUpRight,
   BarChart3,
   Boxes,
   CalendarClock,
@@ -346,37 +344,7 @@ export default function ProductionPlanningSections({
         </div>
       </motion.section>
 
-      <section className="bg-white py-16 max-md:py-12">
-        <motion.div {...reveal} className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-          <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm max-md:p-6">
-            <div className="flex flex-wrap items-end justify-between gap-4">
-              <div>
-                <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#D72B0D]">Related capabilities & industries</p>
-                <h2 className="mt-2 text-3xl font-bold text-[#0E2C53] font-baskervville max-md:text-2xl">Continue the Manufacturing Planning Journey</h2>
-              </div>
-            </div>
 
-            <div className="mt-8 grid grid-cols-2 gap-4 max-md:grid-cols-1">
-              {[
-                ["AI-Enabled Manufacturing Intelligence", "/ai-manufacturing-intelligence"],
-                ["Digital Factory & MES", "/digital-factory-mes"],
-                ["Operations Excellence", "/operations-excellence-consulting"],
-                ["Apparel", "/industries/apparel"],
-                ["Home Textiles", "/industries/home-textiles"],
-              ].map(([title, href]) => (
-                <Link
-                  key={title}
-                  href={href}
-                  className="group flex items-center justify-between rounded-xl border border-gray-200 bg-[#fafbfc] px-5 py-4 font-semibold text-[#0E2C53] transition-all hover:-translate-y-0.5 hover:border-[#D72B0D]/30 hover:bg-white hover:shadow-md"
-                >
-                  <span>{title}</span>
-                  <ArrowUpRight size={18} className="text-[#D72B0D] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </Link>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-      </section>
     </main>
   );
 }

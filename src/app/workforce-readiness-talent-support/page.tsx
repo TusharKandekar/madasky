@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import ConsultingNavbar from "@/components/ConsultingNavbar";
 import AboutVideo from "@/components/AboutVideo";
 import WorkforceReadinessSections from "@/components/WorkforceReadinessSections";
-import FAQ from "@/components/Faq";
+import FaqComponent from "@/components/FaqComponent";
+import LegacyInternalLinks from "@/components/LegacyInternalLinks";
 import VideoSliderWrapper from "@/components/VideoSliderWrapper";
 import BlogSliderWrapper from "@/components/BlogSliderWrapper";
 import GallerySliderWrapper from "@/components/GallerySliderWrapper";
@@ -189,7 +190,19 @@ export default async function WorkforceReadinessTalentSupportPage() {
           )}
         />
 
-        <FAQ questions={faqs} />
+        <LegacyInternalLinks
+        title="Explore Related Services"
+        links={[
+          { label: 'Turnkey Factory Projects', href: '/turnkey-factory-projects' },
+          { label: 'Operations Excellence', href: '/operations-excellence-consulting' },
+          { label: 'Apparel', href: '/industries/apparel' },
+          { label: 'Home Textiles', href: '/industries/home-textiles' },
+        ]}
+        />
+
+
+
+        <FaqComponent faqs={faqs} />
 
         {videos.length > 0 && <VideoSliderWrapper videos={videos} />}
         {blogs.length > 0 && <BlogSliderWrapper blogs={blogs} />}
