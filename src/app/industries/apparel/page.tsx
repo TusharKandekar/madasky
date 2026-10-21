@@ -10,6 +10,7 @@ import GallerySliderWrapper from "@/components/GallerySliderWrapper";
 import HelpYou from "@/components/HelpYou";
 import Footer from "@/components/Footer";
 import BaseUrl from "@/components/BaseUrl";
+import LegacyInternalLinks from "@/components/LegacyInternalLinks";
 
 import {
   fetchMetaDataByPageName,
@@ -174,6 +175,20 @@ export default async function ApparelIndustryPage() {
       <ApparelIndustrySections
         apparelImageUrl={`${BaseUrl().imgurl}${apparelImageName}`}
         apparelImageAlt={apparelImageAlt}
+      />
+
+      <LegacyInternalLinks
+        links={[
+          { label: "Turnkey Factory Projects", href: "/turnkey-factory-projects" },
+          {
+            label: "Operations Excellence",
+            href: "/operations-excellence-consulting",
+          },
+          {
+            label: "AI-Enabled Manufacturing Intelligence",
+            href: "/ai-manufacturing-intelligence",
+          },
+        ]}
       />
 
       <FAQ questions={faqs} />

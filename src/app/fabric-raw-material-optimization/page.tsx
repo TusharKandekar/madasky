@@ -12,6 +12,7 @@ import VideoSliderWrapper from "@/components/VideoSliderWrapper";
 import FaqComponent from "@/components/FaqComponent";
 import Button from "@/components/Button";
 import BaseUrl from "@/components/BaseUrl";
+import LegacyInternalLinks from "@/components/LegacyInternalLinks";
 
 import {
   fetchMetaDataByPageName,
@@ -295,6 +296,21 @@ export default async function FabricRawMaterialOptimizationPage() {
             </p>
             <Button text="Discuss a Fabric Optimization Pilot" />
           </section>
+
+          <LegacyInternalLinks
+            links={[
+              {
+                label: "AI-Enabled Manufacturing Intelligence",
+                href: "/ai-manufacturing-intelligence",
+              },
+              {
+                label: "Production Planning & Scheduling",
+                href: "/production-planning-scheduling",
+              },
+              { label: "Home Textiles", href: "/industries/home-textiles" },
+              { label: "Apparel", href: "/industries/apparel" },
+            ]}
+          />
 
           {/* Keep the same shared FAQ accordion component */}
           <FaqComponent faqs={faqs} />
