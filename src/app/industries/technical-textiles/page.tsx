@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 
-import ConsultingNavbar from "@/components/ConsultingNavbar";
+import AboutNavbar from "@/components/Header/AboutNavbar";
 import AboutVideo from "@/components/AboutVideo";
 import TechnicalTextilesIndustrySections from "@/components/TechnicalTextilesIndustrySections";
-import FaqComponent from "@/components/FaqComponent";
-import LegacyInternalLinks from "@/components/LegacyInternalLinks";
+import FAQ from "@/components/Faq";
 import VideoSliderWrapper from "@/components/VideoSliderWrapper";
 import BlogSliderWrapper from "@/components/BlogSliderWrapper";
 import GallerySliderWrapper from "@/components/GallerySliderWrapper";
 import HelpYou from "@/components/HelpYou";
 import Footer from "@/components/Footer";
 import BaseUrl from "@/components/BaseUrl";
+import LegacyInternalLinks from "@/components/LegacyInternalLinks";
 
 import {
   fetchMetaDataByPageName,
@@ -158,32 +158,11 @@ export default async function TechnicalTextilesIndustryPage() {
 
   return (
     <>
-      <ConsultingNavbar
-        url="/industries/technical-textiles"
-        title="Explore Related Services"
-        navItems={[
-          {
-            title: "Manufacturing Context",
-            link: "/industries/technical-textiles#manufacturing-context",
-          },
-          {
-            title: "Challenges",
-            link: "/industries/technical-textiles#technical-textile-challenges",
-          },
-          {
-            title: "How We Help",
-            link: "/industries/technical-textiles#technical-textile-solutions",
-          },
-          {
-            title: "Operations Excellence",
-            link: "/operations-excellence-consulting",
-          },
-        ]}
-      />
+      <AboutNavbar />
 
       <AboutVideo
         vid1="/assets/videos/Automation in Manufacturing.mp4"
-        title="Explore Related Services"
+        title="Technical Textiles"
         h1="Factory & Operations Expertise for Technical Textiles"
         des="Integrate facility, engineering, operations and digital systems around specialized Technical Textile processes."
         pageName={pageName}
@@ -195,17 +174,20 @@ export default async function TechnicalTextilesIndustryPage() {
       />
 
       <LegacyInternalLinks
-        title="Explore Related Services"
         links={[
-          { label: 'Turnkey Factory Projects', href: '/turnkey-factory-projects' },
-          { label: 'Operations Excellence', href: '/operations-excellence-consulting' },
-          { label: 'AI-Enabled Manufacturing Intelligence', href: '/ai-manufacturing-intelligence' },
+          { label: "Turnkey Factory Projects", href: "/turnkey-factory-projects" },
+          {
+            label: "Operations Excellence",
+            href: "/operations-excellence-consulting",
+          },
+          {
+            label: "AI-Enabled Manufacturing Intelligence",
+            href: "/ai-manufacturing-intelligence",
+          },
         ]}
       />
 
-
-
-      <FaqComponent faqs={faqs} />
+      <FAQ questions={faqs} />
 
       {(videos.length > 0 || blogs.length > 0 || gallery.length > 0) && (
         <div className="flex h-auto w-full flex-col items-center justify-center bg-[#bce1fd75] bg-[url('/assets/images/homeblogbg.png')] bg-cover bg-center bg-no-repeat p-6 py-[1vh]">

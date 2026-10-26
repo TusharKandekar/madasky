@@ -13,6 +13,7 @@ import FaqComponent from "@/components/FaqComponent";
 import Button from "@/components/Button";
 import BaseUrl from "@/components/BaseUrl";
 import LegacyInternalLinks from "@/components/LegacyInternalLinks";
+// import LegacyInternalLinks from "@/components/LegacyInternalLinks";
 
 import {
   fetchMetaDataByPageName,

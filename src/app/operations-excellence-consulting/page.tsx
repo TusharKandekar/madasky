@@ -1,180 +1,144 @@
-// import ProEfficient from '../components/ProEfficient';
-// import DeliveryPerformance from '../components/DeliveryPerformance';
-// import ConsultingNavbar from '../components/ConsultingNavbar';
-// import Footer from '../components/Footer.jsx';
-// import ProgramBenefits from '../components/ProgramBenefits';
-// import AboutVideo from '../components/AboutVideo.jsx';
-// import vid1 from "/assets/images/OPERATIONS & PRODUCTIVITY IMPROVEMENT69.mp4";
-// import HelpYou from '../components/HelpYou';
-// import SlidingBlogs from '../components/SlidingBlogs';
-// import VideoPlayer from '../components/VideoPlayer';
-// import Imagetemplate from '../components/Imagesliders';
-// export default function OperationsAndProductivityImprovement() {
-//     return (
-//         <>
-//             <ConsultingNavbar
-//                 url='/operations-and-productivity-improvement'
-//                 title={'Operations & Productivity Improvement'}
-//                 navItems={[
-//                     { title: 'Productivity & Efficiency Improvement', link: '/home' },
-//                     { title: 'Delivery Performance Program', link: '/about' },
-//                     { title: 'Program Benefits', link: '/industries' },
+import type { Metadata } from "next";
 
-//                 ]}
-//             />
-//             <AboutVideo vid1={vid1} title={"Madasky"} des={"Creating and accelerating critical advantages through cutting-edge strategy and operations"} pageName={"Operations & Productivity Improvement"}
-//             />
-
-//             <ProEfficient />
-//             <DeliveryPerformance />
-//             <ProgramBenefits />
-//             <div className="p-6 flex h-auto flex-col w-full py-[1vh] bg-[#bce1fd75] bg-[url('/assets/images/homeblogbg.png')] bg-center bg-no-repeat bg-cover  items-center justify-center">
-
-//                 <VideoPlayer
-
-//                 />
-//                 <div className="w-[90%] h-[2px] bg-gray-300"></div>
-//                 <SlidingBlogs />
-//                 <div className="w-[90%] h-[2px] bg-gray-300"></div>
-
-//                 <Imagetemplate
-
-//                 />
-
-//             </div>
-//             <HelpYou />
-//             <Footer />
-//         </>
-//     )
-// }
-
-// **************************************************************
-
-// import { useState } from 'react';
-import { Metadata } from "next";
 import ConsultingNavbar from "@/components/ConsultingNavbar";
-import Footer from "@/components/Footer";
-// import vid1 from "/assets/images/OPERATIONS & PRODUCTIVITY IMPROVEMENT69.mp4";
 import AboutVideo from "@/components/AboutVideo";
-import CapabilitiesMainCard2 from "@/components/CapabilitiesMainCard2";
-// import TechnicalConsulting from '@/components/TechnicalConsulting';
-// import ManpowerPlanning from '@/components/ManpowerPlanning';
-// import ProcessFlow from '@/components/ProcessFlow';
-// import MaterialFlow from '@/components/MaterialFlow';
-// import WarehouseSolutions from '@/components/WarehouseSolutions';
-import HelpYou from "@/components/HelpYou";
-import GallerySliderWrapper from "@/components/GallerySliderWrapper";
-import BlogSliderWrapper from "@/components/BlogSliderWrapper";
+import OperationsExcellenceSections from "@/components/OperationsExcellenceSections";
+import LegacyInternalLinks from "@/components/LegacyInternalLinks";
+import FaqComponent from "@/components/FaqComponent";
 import VideoSliderWrapper from "@/components/VideoSliderWrapper";
-// import { GoDotFill } from "react-icons/go";
-// import { Link } from "react-router-dom"
+import BlogSliderWrapper from "@/components/BlogSliderWrapper";
+import GallerySliderWrapper from "@/components/GallerySliderWrapper";
+import HelpYou from "@/components/HelpYou";
+import Footer from "@/components/Footer";
 import BaseUrl from "@/components/BaseUrl";
 import type { PageMetaDataResponse } from "@/common/types";
 import FaqComponent from "@/components/FaqComponent";
 import SelectedOperationsImpact from "@/components/SelectedOperationsImpact";
 import LegacyInternalLinks from "@/components/LegacyInternalLinks"
 
-type Faq = {
-  question: string;
-  answer: string;
-};
 import {
-  getImageAltText,
-  getWebBlogs,
   fetchMetaDataByPageName,
   getDataByPageName,
-  filterByWebImage,
-  getImageData,
-  getTestimonials,
-  getTestimonialsByPageName,
-  getEventByPageName,
+  getImageAltText,
 } from "@/common/api";
-import ServerError from "@/components/ServerError";
-const title = "Operations Excellence";
-let PageMetadata: PageMetaDataResponse;
+
+import type { Blog, Gallery, Video } from "@/common/types";
+
+const pageName = "Operations Excellence";
+
+const fallbackMeta = {
+  title: "Operations Excellence for Textile & Apparel | Madasky",
+  description:
+    "Improve productivity, OTIF, capacity, manpower, WIP, lead time and cost in Home Textile and Apparel factories with implementation-led operations consulting.",
+  keywords:
+    "operations excellence textile apparel, manufacturing productivity improvement, textile productivity consultant, apparel efficiency improvement, OTIF improvement, WIP reduction",
+};
 
 export async function generateMetadata(): Promise<Metadata> {
-  PageMetadata = await fetchMetaDataByPageName({
-    pageName: "Operations Excellence",
-  });
-  // console.log("Metaas: ", PageMetadata);
+  try {
+    const response = await fetchMetaDataByPageName({ pageName });
+    const meta = response?.data;
 
-  return {
-    title: PageMetadata.data.meta_title,
-    description: PageMetadata.data.meta_desc,
-    keywords: PageMetadata.data.meta_keyword,
-    authors: {
-      name: `${PageMetadata?.data?.author || "Madasky"}`,
-      url: "https://madasky.com",
-    },
-    alternates: {
-      canonical: `${BaseUrl().mainurl}operations-excellence-consulting`,
-    },
-  };
+    return {
+      title: meta?.meta_title || fallbackMeta.title,
+      description: meta?.meta_desc || fallbackMeta.description,
+      keywords: meta?.meta_keyword || fallbackMeta.keywords,
+      authors: {
+        name: meta?.author || "Madasky",
+        url: "https://madasky.com",
+      },
+      alternates: {
+        canonical: `${BaseUrl().mainurl}/operations-excellence-consulting`,
+      },
+    };
+  } catch {
+    return {
+      title: fallbackMeta.title,
+      description: fallbackMeta.description,
+      keywords: fallbackMeta.keywords,
+      authors: {
+        name: "Madasky",
+        url: "https://madasky.com",
+      },
+      alternates: {
+        canonical: `${BaseUrl().mainurl}/operations-excellence-consulting`,
+      },
+    };
+  }
 }
 
-export default async function Project() {
-  const arr = [
-    "What we do_.png",
-    "Our Approach.png",
-    "Operations excellence.png",
-  ];
+const faqs = [
+  {
+    question: "What is Operations Excellence?",
+    answer:
+      "Operations Excellence is the disciplined improvement of processes, capacity, people, planning, quality and management routines so the factory produces more reliable output at lower loss.",
+  },
+  {
+    question: "How quickly can results be seen?",
+    answer:
+      "Timing depends on the constraint. A diagnostic should identify priority opportunities quickly; implementation benefits are then tracked against an agreed baseline rather than promised in advance.",
+  },
+  {
+    question: "Does Operations Excellence require new machinery?",
+    answer:
+      "Not necessarily. Many losses come from imbalance, planning, flow, downtime, changeovers, quality and operating routines. Capex should follow a verified need.",
+  },
+  {
+    question: "Can Madasky work alongside our internal IE or Lean team?",
+    answer:
+      "Yes. Madasky can complement internal capability by providing independent diagnosis, cross-functional coordination and implementation support.",
+  },
+  {
+    question: "How do you measure success?",
+    answer:
+      "KPIs are agreed at the beginning and may include output, capacity utilization, manpower productivity, OTIF, WIP, lead time, quality, downtime and financial impact.",
+  },
+];
 
-  let images;
-  let blogData;
-  let videoData;
-  let galleryData;
-  let testimonialData;
-  let eventData;
-  let serverError = false;
+type ImageAltResponse = {
+  data?: Array<{ webimage?: string; alt_text?: string }>;
+};
+
+export default async function OperationsExcellencePage() {
+  let productionImageAlt = "Operations excellence on the manufacturing floor";
+  let blogs: Blog[] = [];
+  let videos: Video[] = [];
+  let gallery: Gallery[] = [];
 
   try {
-    images = await getImageAltText(arr);
-    blogData = await getDataByPageName(["Operations Excellence", "blogs"]);
-    videoData = await getDataByPageName(["Operations Excellence", "videos"]);
-    galleryData = await getDataByPageName(["Operations Excellence", "gallery"]);
-    testimonialData = await getTestimonialsByPageName("Operations Excellence");
-    eventData = await getEventByPageName("Operations Excellence");
-  } catch (error) {
-    // console.error("Server Error:", error);
-    serverError = true;
+    const imageResponse = (await getImageAltText([
+      "Operations excellence.png",
+    ])) as ImageAltResponse | null;
+
+    const image = (imageResponse?.data || []).find(
+      (item) => item.webimage === "Operations excellence.png"
+    );
+    productionImageAlt = image?.alt_text || productionImageAlt;
+  } catch {
+    // Keep useful fallback alt text when image metadata is unavailable.
   }
 
-  // console.log("Images", images);
-  if (serverError) {
-    return <div>Server Error</div>;
+  try {
+    const [blogResponse, videoResponse, galleryResponse] = await Promise.all([
+      getDataByPageName([pageName, "blogs"]),
+      getDataByPageName([pageName, "videos"]),
+      getDataByPageName([pageName, "gallery"]),
+    ]);
+
+    blogs = Array.isArray(blogResponse?.data) ? blogResponse.data : [];
+    videos = Array.isArray(videoResponse?.data) ? videoResponse.data : [];
+    gallery = Array.isArray(galleryResponse?.data) ? galleryResponse.data : [];
+  } catch {
+    blogs = [];
+    videos = [];
+    gallery = [];
   }
 
-  const imgAltText = await getImageData(images);
-  // console.log("Image Alt Text", imgAltText);
-
-  const faqs: Faq[] = [
-    {
-      question: `What is Operations Excellence?`,
-      answer: `Operations Excellence is the disciplined improvement of processes, capacity, people, planning, quality and management routines so the factory produces more reliable output at lower loss.`,
-    },
-    {
-      question: `How quickly can results be seen?`,
-      answer: `Timing depends on the constraint. A diagnostic should identify priority opportunities quickly; implementation benefits are then tracked against an agreed baseline rather than promised in advance.`,
-    },
-    {
-      question: `Does Operations Excellence require new machinery?`,
-      answer: `Not necessarily. Many losses come from imbalance, planning, flow, downtime, changeovers, quality and operating routines. Capex should follow a verified need.`,
-    },
-    {
-      question: `Can Madasky work alongside our internal IE or Lean team?`,
-      answer: `Yes. Madasky can complement internal capability by providing independent diagnosis, cross-functional coordination and implementation support.`,
-    },
-    {
-      question: `How do you measure success?`,
-      answer: `KPIs are agreed at the beginning and may include output, capacity utilization, manpower productivity, OTIF, WIP, lead time, quality, downtime and financial impact.`,
-    },
-  ];
   return (
     <>
       <ConsultingNavbar
         url="/operations-excellence-consulting"
-        title={"Operations Excellence"}
+        title={pageName}
         navItems={[
           {
             title: "Productivity & Efficiency Improvement",
@@ -182,19 +146,16 @@ export default async function Project() {
           },
           { title: "Implementation Support", link: "/implementation-support" },
           {
-            title: "Delivery Performance & Lead Time Reduction Program",
+            title: "Delivery Performance & Lead Time Reduction",
             link: "/delivery-performance-and-lead-time-reduction-program",
           },
           {
-            title: "Sampling - Lead time Reduction",
+            title: "Sampling Lead Time Reduction",
             link: "/sampling-lead-time-reduction",
-          },
-          {
-            title: "Leverage technology for Innovation and Efficiency.",
-            link: "/leverage-technology-for-innovation-and-efficiency",
           },
         ]}
       />
+
       <AboutVideo
         vid1={"/assets/videos/OPERATIONS-PRODUCTIVITY-IMPROVEMENT69.mp4"}
         title={"Improve the performance of the factory you already own."}
