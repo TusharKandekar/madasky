@@ -179,7 +179,7 @@ export default function FactoryDiagnosticSections({
           className="relative z-10 px-6 mx-auto max-w-7xl sm:px-8 lg:px-10"
         >
           <div className="max-w-3xl mx-auto text-center">
-            <p className="mb-3 text-sm font-bold tracking-[0.18em] uppercase text-[#ff6a49]">
+            <p className="mb-3 hidden text-sm font-bold tracking-[0.18em] uppercase text-[#ff6a49]">
               What We Assess
             </p>
             <h2 className="text-4xl font-bold text-white font-baskervville max-md:text-3xl">
@@ -241,7 +241,7 @@ export default function FactoryDiagnosticSections({
 
         <div className="relative z-10 px-6 mx-auto max-w-7xl sm:px-8 lg:px-10">
           <div className="max-w-3xl">
-            <p className="mb-3 text-sm font-bold tracking-[0.18em] uppercase text-[#D72B0D]">
+            <p className="mb-3 hidden text-sm font-bold tracking-[0.18em] uppercase text-[#D72B0D]">
               What You Receive
             </p>
             <h2 className="text-4xl font-bold leading-tight text-[#0E2C53] font-baskervville max-md:text-3xl">
@@ -296,7 +296,7 @@ export default function FactoryDiagnosticSections({
           className="relative z-10 grid items-center gap-12 px-6 mx-auto max-w-7xl lg:grid-cols-[1.05fr_0.95fr] sm:px-8 lg:px-10"
         >
           <div>
-            <p className="mb-3 text-sm font-bold tracking-[0.18em] uppercase text-[#ff8b72]">
+            <p className="mb-3 hidden text-sm font-bold tracking-[0.18em] uppercase text-[#ff8b72]">
               Proof / Decision Clarity
             </p>
             <h2 className="text-4xl font-bold leading-tight text-white font-baskervville max-md:text-3xl">

@@ -29,17 +29,17 @@ export default function HomeScaleSection() {
             From Factory Setup to Factory Performance
           </h2>
 
-          <p className="max-w-xl mt-6 mb-5 text-lg leading-relaxed text-gray-600 max-md:mt-10 max-md:text-justify max-lg:text-base max-md:text-lg">
+          <p className="max-w-xl mt-6 mb-5 text-lg leading-relaxed text-gray-600 max-md:mt-10 max-md:text-justify max-lg:text-base max-md:text-lg text-justify">
             A manufacturing business can lose money long before a problem appears in the monthly report. A poor layout adds
             movement for years. A weak production plan creates firefighting every day. Fabric decisions made in isolation quietly
             erode margin. A dashboard that arrives too late does not help the supervisor recover the shift.
           </p>
 
-          <p className="max-w-xl mb-8 text-lg leading-relaxed text-gray-600 max-md:text-justify max-lg:text-base max-md:text-lg">
+          <p className="max-w-xl mb-8 text-lg leading-relaxed text-gray-600 max-md:text-justify max-lg:text-base max-md:text-lg text-justify">
             Madasky works across the factory system - design, engineering, flow, capacity, operations, planning, material, people
             and digital visibility - so decisions reinforce each other rather than create new constraints.
           </p>
-          <p className="max-w-xl mb-8 text-lg leading-relaxed text-gray-600 max-md:text-justify max-lg:text-base max-md:text-lg">
+          <p className="max-w-xl mb-8 text-lg leading-relaxed text-gray-600 max-md:text-justify max-lg:text-base max-md:text-lg text-justify">
 
             Our core industries are Home Textiles and Apparel. We also support broader Textiles and Technical Textiles where our
             manufacturing, project and digital capabilities apply.

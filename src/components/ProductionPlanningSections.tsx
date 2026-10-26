@@ -102,7 +102,7 @@ export default function ProductionPlanningSections({
         <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-14 px-6 sm:px-8 lg:grid-cols-[0.94fr_1.06fr] lg:px-10 max-lg:gap-10">
           <div className="relative min-h-[470px] overflow-hidden rounded-2xl bg-[#eef4fb] shadow-xl max-md:min-h-[320px]">
             <Image
-              src={planningImageUrl}
+              src="/assets/images/Production Planning Control Room.png"
               alt={planningImageAlt}
               fill
               className="object-cover"

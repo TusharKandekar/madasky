@@ -171,7 +171,7 @@ export default async function ProductionPlanningSchedulingPage() {
       />
 
       <AboutVideo
-        vid1="/assets/videos/Digital Tansformation.mp4"
+        vid1="/assets/videos/OPERATIONS-PRODUCTIVITY-IMPROVEMENT69.mp4"
         title={pageName}
         h1="Create plans the factory can actually execute."
         des="Madasky helps Home Textile and Apparel manufacturers move from spreadsheet-driven firefighting toward constraint-aware planning, capacity visibility and dynamic scheduling."

@@ -139,7 +139,7 @@ export default function WorkforceReadinessSections({
         <div className="relative z-10 grid items-center gap-14 px-6 mx-auto max-w-7xl lg:grid-cols-2 sm:px-8 lg:px-10 max-md:gap-9">
           <div className="relative overflow-hidden rounded-2xl shadow-xl min-h-[430px] max-md:min-h-[280px]">
             <Image
-              src={introImageUrl}
+              src="/assets/images/Garment Factory Production Floor.png"
               alt={introImageAlt}
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

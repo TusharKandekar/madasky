@@ -40,7 +40,7 @@ export default function AboutPage() {
         vid1="/assets/videos/HomePageWebsite.mp4"
         title={null}
         des="Madasky Consulting works with owners and manufacturing leaders who need more than recommendations. Our work sits where factory design, operations, engineering, technology and people meet."
-        h2="Manufacturing Experience. Execution Discipline. Smarter Factories."
+        h1="Manufacturing Experience. Execution Discipline. Smarter Factories."
       />
 
       <main className="mx-auto w-[80vw] max-w-7xl bg-white max-md:w-full max-md:px-5">
@@ -49,7 +49,7 @@ export default function AboutPage() {
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#D72B0D]">
             About Madasky
           </p>
-          <h2 className="font-baskervville text-4xl font-bold text-[#0E2C53] max-md:text-3xl">
+          <h2 className="font-baskervville text-4xl font-bold text-black max-md:text-3xl">
             Our Manufacturing Background
           </h2>
           <div className="flex flex-col gap-5 text-justify text-[18px] leading-relaxed text-gray-700">
@@ -65,10 +65,10 @@ export default function AboutPage() {
         {/* Our Model */}
         <section className="grid grid-cols-1 gap-10 border-b border-gray-300 py-14 md:grid-cols-[0.9fr_1.1fr] md:py-16">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#D72B0D]">
+            <p className="mb-3 text-sm hidden font-semibold uppercase tracking-[0.18em] text-[#D72B0D]">
               Our Model
             </p>
-            <h2 className="font-baskervville text-4xl font-bold leading-tight text-[#0E2C53] max-md:text-3xl">
+            <h2 className="font-baskervville text-4xl font-bold leading-tight text-black max-md:text-3xl">
               One Client-Facing Team, Specialist Capability Behind It
             </h2>
           </div>
@@ -85,10 +85,10 @@ export default function AboutPage() {
         {/* What We Believe */}
         <section className="border-b border-gray-300 py-14 md:py-16">
           <div className="mb-8 max-w-3xl">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#D72B0D]">
+            <p className="mb-3 text-sm hidden font-semibold uppercase tracking-[0.18em] text-[#D72B0D]">
               What We Believe
             </p>
-            <h2 className="font-baskervville text-4xl font-bold text-[#0E2C53] max-md:text-3xl">
+            <h2 className="font-baskervville text-4xl font-bold text-black max-md:text-3xl">
               Principles That Guide Our Work
             </h2>
           </div>
@@ -101,7 +101,7 @@ export default function AboutPage() {
                 <span className="font-baskervville text-2xl font-bold text-[#D72B0D]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <p className="text-[17px] font-semibold leading-relaxed text-[#0E2C53]">
+                <p className="text-[17px] font-semibold leading-relaxed text-black">
                   {principle}
                 </p>
               </div>
@@ -111,10 +111,10 @@ export default function AboutPage() {
 
         {/* Industries */}
         <section className="border-b border-gray-300 py-14 md:py-16">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#D72B0D]">
+          <p className="mb-3 text-sm hidden font-semibold uppercase tracking-[0.18em] text-[#D72B0D]">
             Industries
           </p>
-          <h2 className="mb-6 font-baskervville text-4xl font-bold text-[#0E2C53] max-md:text-3xl">
+          <h2 className="mb-6 font-baskervville text-4xl font-bold text-black max-md:text-3xl">
             Where We Focus
           </h2>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
@@ -122,7 +122,7 @@ export default function AboutPage() {
               <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-gray-500">
                 Core industries
               </p>
-              <p className="text-2xl font-semibold text-[#0E2C53]">
+              <p className="text-2xl font-semibold text-black">
                 Home Textiles and Apparel
               </p>
             </div>
@@ -130,7 +130,7 @@ export default function AboutPage() {
               <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-gray-500">
                 Extended capabilities
               </p>
-              <p className="text-2xl font-semibold text-[#0E2C53]">
+              <p className="text-2xl font-semibold text-black">
                 Textiles and Technical Textiles
               </p>
             </div>
@@ -139,10 +139,10 @@ export default function AboutPage() {
 
         {/* CTA */}
         <section className="flex flex-col items-start gap-6 py-14 md:py-16">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#D72B0D]">
+          <p className="text-sm hidden font-semibold uppercase tracking-[0.18em] text-[#D72B0D]">
             Work With Madasky
           </p>
-          <h2 className="max-w-4xl font-baskervville text-4xl font-bold leading-tight text-[#0E2C53] max-md:text-3xl">
+          <h2 className="max-w-4xl font-baskervville text-4xl font-bold leading-tight text-black max-md:text-3xl">
             Build. Improve. Make It Smarter.
           </h2>
           <p className="max-w-4xl text-[18px] leading-relaxed text-gray-700">

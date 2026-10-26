@@ -203,7 +203,7 @@ export default function TechnicalTextilesIndustrySections({
           className="relative z-10 px-6 mx-auto max-w-7xl sm:px-8 lg:px-10"
         >
           <div className="max-w-3xl mx-auto text-center">
-            <p className="mb-3 text-sm font-bold tracking-[0.18em] uppercase text-[#ff6a49]">
+            <p className="mb-3 text-sm hidden font-bold tracking-[0.18em] uppercase text-[#ff6a49]">
               Key Challenges
             </p>
             <h2 className="text-4xl font-bold text-white font-baskervville max-md:text-3xl">
@@ -269,7 +269,7 @@ export default function TechnicalTextilesIndustrySections({
 
         <div className="relative z-10 px-6 mx-auto max-w-7xl sm:px-8 lg:px-10">
           <div className="max-w-3xl">
-            <p className="mb-3 text-sm font-bold tracking-[0.18em] uppercase text-[#D72B0D]">
+            <p className="mb-3 text-sm hidden font-bold tracking-[0.18em] uppercase text-[#D72B0D]">
               Relevant Solutions
             </p>
             <h2 className="text-4xl font-bold leading-tight text-[#0E2C53] font-baskervville max-md:text-3xl">
@@ -333,7 +333,7 @@ export default function TechnicalTextilesIndustrySections({
           className="relative z-10 grid gap-12 px-6 mx-auto max-w-7xl lg:grid-cols-[1.05fr_0.95fr] sm:px-8 lg:px-10"
         >
           <div>
-            <p className="mb-3 text-sm font-bold tracking-[0.18em] uppercase text-[#ff8b72]">
+            <p className="mb-3 text-sm hidden font-bold tracking-[0.18em] uppercase text-[#ff8b72]">
               Why Madasky
             </p>
             <h2 className="text-4xl font-bold leading-tight text-white font-baskervville max-md:text-3xl">
@@ -395,7 +395,7 @@ export default function TechnicalTextilesIndustrySections({
             </motion.div>
 
             <div className="relative z-10 max-w-3xl">
-              <p className="mb-3 text-sm font-bold tracking-[0.18em] uppercase text-[#D72B0D]">
+              <p className="mb-3 text-sm hidden font-bold tracking-[0.18em] uppercase text-[#D72B0D]">
                 Technical Textile Projects
               </p>
               <h2 className="text-4xl font-bold leading-tight text-[#0E2C53] font-baskervville max-md:text-3xl">

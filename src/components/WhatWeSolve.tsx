@@ -13,7 +13,7 @@ export default function WhatWeSolveAtScale() {
       content:
         "From concept, product mix and capacity through factory layout, engineering, utilities, vendor selection, PMC, commissioning, workforce readiness and operational handover.",
       borderColor: "border-[#004A92]",
-      url: "/",
+      url: "/turnkey-factory-projects",
     },
     {
       id: 2,
@@ -31,7 +31,7 @@ export default function WhatWeSolveAtScale() {
       content:
         "Apply AI, optimization, planning systems, MES and IoT to high-value decisions in fabric utilization, production planning, scheduling and real-time shopfloor management.",
       borderColor: "border-[#6B6B6B]",
-      url: "/",
+      url: "/ai-manufacturing-intelligence",
     },
   ];
 

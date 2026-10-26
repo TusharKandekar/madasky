@@ -111,9 +111,9 @@ export async function generateMetadata(): Promise<Metadata> {
   // console.log("Metaas: ", PageMetadata);
 
   return {
-    title: PageMetadata.data.meta_title,
-    description: PageMetadata.data.meta_desc,
-    keywords: PageMetadata.data.meta_keyword,
+    title: "Home Textile & Apparel Manufacturing Consultants | Madasky",
+    description: "Madasky helps Home Textile and Apparel manufacturers with turnkey factory projects, operations excellence, AI-enabled planning, fabric optimization and MES.",
+    keywords:"home textile and apparel manufacturing consultants, textile factory setup consultant, apparel manufacturing consultant, home textile consultant, operations excellence, AI in textile manufacturing",
     authors: {
       name: `${PageMetadata?.data?.author || "Madasky"}`,
       url: "https://madasky.com",
@@ -204,12 +204,11 @@ export default async function Home() {
         vid1={"/assets/videos/HomePageWebsite.mp4"}
         title={"Madasky"}
         des={
-          "Madasky Consulting helps Home Textile and Apparel manufacturers build, improve and digitally transform factories from turnkey project delivery and operations excellence to Al-enabled manufacturing intelligence."
+          "Madasky Consulting helps Home Textile and Apparel manufacturers build, improve and digitally transform factories - from turnkey project delivery and operations excellence to AI-enabled manufacturing intelligence. We work with promoters, CEOs, COOs and plant leaders on the manufacturing decisions that directly affect capacity, cost, fabric utilization, delivery, manpower and future scalability."
         }
         color={""}
-        h1={PageMetadata.data.h1tag}
+        h1={"Build Better Factories. Run Them Smarter"}
       />
-      <h2 className="bg-[#f5f5f6] w-full text-4xl font-bold max-md:text-3xl font-baskervville max-md:block text-center py-10">Trusted across manufacturing and industry</h2>
       <OurClient />
 
       {/* Industries Component */}

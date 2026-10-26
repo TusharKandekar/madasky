@@ -71,6 +71,8 @@ import VideoSliderWrapper from "@/components/VideoSliderWrapper";
 import BaseUrl from "@/components/BaseUrl";
 import type { PageMetaDataResponse } from "@/common/types";
 import FaqComponent from "@/components/FaqComponent";
+import SelectedOperationsImpact from "@/components/SelectedOperationsImpact";
+import LegacyInternalLinks from "@/components/LegacyInternalLinks"
 
 type Faq = {
   question: string;
@@ -229,7 +231,7 @@ export default async function Project() {
               ],
 
               hdes: [],
-              img: "Operations excellence.png",
+              img: "factory-floor.png",
               direction: "",
               altText: imgAltText[2],
             }}
@@ -445,6 +447,7 @@ export default async function Project() {
             }}
           />
         </div>
+        <SelectedOperationsImpact />
         <div className="px-4 mx-auto max-w-8xl Plant-Layout">
           <CapabilitiesMainCard2
             details1={{
@@ -590,7 +593,17 @@ export default async function Project() {
           />
 
         </div>
-
+<LegacyInternalLinks
+        title="Explore Related Services"
+        links={[
+          { label: 'Factory Diagnostic', href: '/factory-diagnostic' },
+          { label: 'Production Planning & Scheduling', href: '/production-planning-scheduling' },
+          { label: 'Digital Factory & MES', href: '/digital-factory-mes' },
+          { label: 'Plant Layout', href: '/plant-layout-consulting' },
+          { label: 'Home Textiles', href: '/industries/home-textiles' },
+          { label: 'Apparel', href: '/industries/apparel' },
+        ]}
+      />
         <FaqComponent faqs={faqs} />
       </div>
 

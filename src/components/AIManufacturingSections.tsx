@@ -23,6 +23,45 @@ import {
 } from "lucide-react";
 
 import Button from "@/components/Button";
+import ShowMoreList from "@/components/ShowMoreList";
+const approachSteps = [
+  {
+    title: "Define the Business Problem and KPI",
+    text: "Identify the business challenge, desired outcome and key performance indicators that will measure success.",
+  },
+  {
+    title: "Assess Process Maturity and Data Availability",
+    text: "Evaluate existing processes, data quality, systems and operational readiness.",
+  },
+  {
+    title: "Map Decisions, Users and Current Delays",
+    text: "Understand who makes decisions, how frequently they act and where delays occur.",
+  },
+  {
+    title: "Select or Configure the Right Technology",
+    text: "Choose and configure an appropriate technology platform based on business requirements.",
+  },
+  {
+    title: "Pilot a Measurable Use Case",
+    text: "Test a contained use case against a clearly defined baseline and measurable outcomes.",
+  },
+  {
+    title: "Integrate Required Data Sources",
+    text: "Connect the necessary ERP, CAD, MES and machine data to support the use case.",
+  },
+  {
+    title: "Train Users and Change Operating Routines",
+    text: "Prepare teams to use the solution and incorporate it into daily operating practices.",
+  },
+  {
+    title: "Measure Adoption and Business Benefit",
+    text: "Track user adoption, performance improvements and the business value delivered.",
+  },
+  {
+    title: "Scale Only After the Use Case Is Proven",
+    text: "Expand the solution when measurable results demonstrate that it is ready to scale.",
+  },
+];
 
 type AIManufacturingSectionsProps = {
   digitalImageUrl: string;
@@ -155,7 +194,7 @@ export default function AIManufacturingSections({
               src={digitalImageUrl}
               alt={digitalImageAlt}
               fill
-              className="object-cover"
+              className="object-contain"
               sizes="(max-width: 1024px) 100vw, 45vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#07182e]/75 via-[#07182e]/10 to-transparent" />
@@ -244,69 +283,12 @@ export default function AIManufacturingSections({
         </motion.div>
       </section>
 
-      <motion.section
-        id="implementation"
-        {...reveal}
-        className="relative overflow-hidden bg-white py-20 max-md:py-14"
-      >
-        <motion.div
-          aria-hidden="true"
-          animate={{ y: [0, -16, 0], rotate: [0, -3, 0] }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -right-8 -top-10 h-[240px] w-[190px] opacity-[0.07] max-md:hidden"
-        >
-          <Image
-            src="/assets/images/shape-2.png"
-            alt=""
-            fill
-            className="object-contain"
-          />
-        </motion.div>
-
-        <div className="relative z-10 px-6 mx-auto max-w-7xl sm:px-8 lg:px-10">
-          <div className="max-w-3xl">
-            <p className="mb-3 text-sm font-bold tracking-[0.18em] uppercase text-[#D72B0D]">
-              Implementation method
-            </p>
-            <h2 className="text-4xl font-bold leading-tight text-[#0E2C53] font-baskervville max-md:text-3xl">
-              How Madasky Implements Manufacturing Intelligence
-            </h2>
-            <p className="mt-5 text-lg leading-relaxed text-gray-600 max-md:text-[17px]">
-              Technology is introduced in controlled steps, with a measurable business problem and adoption path defined before scale.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-3 gap-5 mt-12 max-lg:grid-cols-2 max-md:grid-cols-1">
-            {implementationSteps.map((step, index) => {
-              const Icon = step.icon;
-              return (
-                <motion.article
-                  key={step.number}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.16 }}
-                  transition={{ duration: 0.45, delay: Math.min(index * 0.04, 0.2) }}
-                  className="relative overflow-hidden rounded-2xl border border-gray-200 bg-[#fafbfc] p-6 transition-all hover:-translate-y-1 hover:bg-white hover:shadow-lg"
-                >
-                  <span className="absolute right-5 top-4 text-5xl font-bold text-[#0E2C53]/[0.06]">
-                    {step.number}
-                  </span>
-                  <div className="relative z-10 flex h-11 w-11 items-center justify-center rounded-xl bg-[#0E2C53] text-white">
-                    <Icon size={21} strokeWidth={1.9} />
-                  </div>
-                  <h3 className="relative z-10 mt-5 text-2xl font-bold text-[#0E2C53] font-baskervville">
-                    {step.title}
-                  </h3>
-                  <p className="relative z-10 mt-3 text-[16px] leading-relaxed text-gray-600">
-                    {step.text}
-                  </p>
-                </motion.article>
-              );
-            })}
-          </div>
-        </div>
-      </motion.section>
-
+      <ShowMoreList
+        items={approachSteps}
+        visibleCount={5}
+        image=""
+        className=" my-12 w-full flex items-center justify-center" 
+      />
       <section id="ai-fit" className="relative bg-[#f5f5f6] py-20 max-md:py-14">
         <div className="absolute inset-0 bg-[url('/assets/images/industrybg.png')] bg-cover bg-center opacity-[0.06]" />
         <motion.div

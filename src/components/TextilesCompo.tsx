@@ -58,7 +58,7 @@ export default async function TextilesCompo({ h1 }: TextilesCompoProps) {
       <AboutNavbar />
 
       <AboutVideo
-        vid1="assets/videos/364.mp4"
+        vid1="/assets/videos/364.mp4"
         title={null}
         des="Apply Madasky’s project, operations and digital manufacturing capability to selected Textile manufacturing requirements."
         pageName="Textiles"

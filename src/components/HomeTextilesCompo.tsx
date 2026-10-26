@@ -60,7 +60,7 @@ export default async function HomeTextilesCompo({
       <AboutNavbar />
 
       <AboutVideo
-        vid1="assets/videos/364.mp4"
+        vid1="/assets/videos/364.mp4"
         title="Home Textiles"
         des="Build, improve and digitize Home Textile factories with a team that understands the complete manufacturing system."
         pageName="Home Textiles"

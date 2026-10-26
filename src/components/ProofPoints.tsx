@@ -37,7 +37,7 @@ export default function ProofPoints() {
           </h2>
 
           {/* Metrics */}
-          <div className="grid grid-cols-3 gap-6 mb-10 text-center max-md:grid-cols-1 max-lg:grid-cols-2">
+          <div className="grid grid-cols-2 gap-6 mb-10 text-center max-md:grid-cols-1 max-lg:grid-cols-2">
             {/* Metric 1 */}
             <div>
               <h3 className="mb-2 text-3xl font-bold text-gray-900">₹43 lakh</h3>
@@ -64,10 +64,17 @@ export default function ProofPoints() {
                  OTIF improvement with fewer paid hours, not more.
               </p>
             </div>
+            <div>
+              <h3 className="mb-2 text-3xl font-bold text-gray-900">61% to 88%</h3>
+              
+              <p className="mt-4 text-lg leading-relaxed text-gray-600">
+                  Improvement in line balancing efficiency
+              </p>
+            </div>
           </div>
 
           {/* Description */}
-          <p className="max-w-2xl mb-8 text-lg leading-relaxed text-gray-600 max-md:w-full max-md:text-justify">
+          <p className="max-w-2xl mb-8 text-lg leading-relaxed text-gray-600 max-md:w-full text-justify">
             These aren’t theoretical projections or consulting promises. They’re
             verified results delivered for companies across manufacturing,
             pharmaceutical, export, and retail sectors operating at scale.

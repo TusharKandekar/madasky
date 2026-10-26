@@ -172,8 +172,8 @@ export default async function AIManufacturingIntelligencePage() {
 
       <AboutVideo
         vid1="/assets/videos/Digital Tansformation.mp4"
-        title={pageName}
-        h1="Use AI, optimization and real-time data where they improve manufacturing decisions - not because AI is fashionable."
+        title={null}
+        h1={pageName}
         des="Madasky focuses on high-value decisions in fabric utilization, production planning, scheduling and shopfloor visibility."
         pageName={pageName}
       />

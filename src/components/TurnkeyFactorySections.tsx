@@ -1,7 +1,55 @@
 "use client";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown, ArrowUpRight } from "lucide-react";
+ const manageItems = [
+      {
+        title: "Project Definition & Business Case",
+      text: "Product mix, capacity, phase strategy, investment logic and future expansion.",
+  },
+      {
+        title: "Process Flow & Capacity Planning",
+      text: "Route, takt/throughput, process capacities, buffers and bottleneck logic.",
+  },
+      {
+        title: "Factory Layout & Space Planning",
+      text: "Machinery, storage, movement, ergonomics, safety, utilities and expansion zones.",
+  },
+      {
+        title: "Architecture, Civil, Structural & MEP Coordination",
+      text: "Translate manufacturing requirements into coordinated engineering packages.",
+  },
+      {
+        title: "Utilities & Infrastructure",
+      text: "Electrical load, compressed air, HVAC/ventilation, water, drainage, fire systems and other process utilities.",
+  },
+      {
+        title: "Machinery & Technology Selection",
+      text: "Specifications, performance requirements, automation level and technical comparisons.",
+  },
+      {
+        title: "Vendor Identification & Finalization",
+      text: "RFQ, techno-commercial evaluation, negotiation support and recommendation.",
+  },
+      {
+        title: "PMC & Project Controls",
+      text: "Schedule, dependencies, site coordination, review meetings, quality, documentation and escalation.",
+  },
+      {
+        title: "Digital & AI Readiness",
+      text: "Data points, network, MES/IoT requirements, planning-system interfaces and future digital architecture.",
+  },
+      {
+        title: "Workforce Readiness",
+      text: "Organization, manpower plan, critical-role support, skill requirements, training and ramp-up planning.",
+  },
+      {
+        title: "Commissioning & Operational Handover",
+      text: "Installation readiness, trials, performance checks, SOPs, training and production stabilization.",
+  },
+      ];
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 import {
   BadgeCheck,
   Building2,
@@ -33,63 +81,6 @@ const reveal = {
   transition: { duration: 0.65, ease: "easeOut" },
 } as const;
 
-const manageItems = [
-  {
-    icon: ClipboardList,
-    title: "Project Definition & Business Case",
-    text: "Product mix, capacity, phase strategy, investment logic and future expansion.",
-  },
-  {
-    icon: Workflow,
-    title: "Process Flow & Capacity Planning",
-    text: "Route, takt/throughput, process capacities, buffers and bottleneck logic.",
-  },
-  {
-    icon: Ruler,
-    title: "Factory Layout & Space Planning",
-    text: "Machinery, storage, movement, ergonomics, safety, utilities and expansion zones.",
-  },
-  {
-    icon: Building2,
-    title: "Architecture, Civil, Structural & MEP Coordination",
-    text: "Translate manufacturing requirements into coordinated engineering packages.",
-  },
-  {
-    icon: Zap,
-    title: "Utilities & Infrastructure",
-    text: "Electrical load, compressed air, HVAC/ventilation, water, drainage, fire systems and other process utilities.",
-  },
-  {
-    icon: Cog,
-    title: "Machinery & Technology Selection",
-    text: "Specifications, performance requirements, automation level and technical comparisons.",
-  },
-  {
-    icon: Handshake,
-    title: "Vendor Identification & Finalization",
-    text: "RFQ, techno-commercial evaluation, negotiation support and recommendation.",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "PMC & Project Controls",
-    text: "Schedule, dependencies, site coordination, review meetings, quality, documentation and escalation.",
-  },
-  {
-    icon: Cpu,
-    title: "Digital & AI Readiness",
-    text: "Data points, network, MES/IoT requirements, planning-system interfaces and future digital architecture.",
-  },
-  {
-    icon: Users,
-    title: "Workforce Readiness",
-    text: "Organization, manpower plan, critical-role support, skill requirements, training and ramp-up planning.",
-  },
-  {
-    icon: BadgeCheck,
-    title: "Commissioning & Operational Handover",
-    text: "Installation readiness, trials, performance checks, SOPs, training and production stabilization.",
-  },
-];
 
 const projectStages = [
   {
@@ -178,6 +169,12 @@ export default function TurnkeyFactorySections({
   projectImageUrl,
   projectImageAlt,
 }: TurnkeyFactorySectionsProps) {
+  
+  const [expanded, setExpanded] = useState(false);
+      const visibleItems = expanded
+      ? manageItems
+      : manageItems.slice(0, 4);
+
   return (
     <div className="overflow-hidden bg-white">
       <motion.section
@@ -201,7 +198,7 @@ export default function TurnkeyFactorySections({
         <div className="relative z-10 grid items-center gap-14 px-6 mx-auto max-w-7xl lg:grid-cols-2 sm:px-8 lg:px-10 max-md:gap-9">
           <div className="relative overflow-hidden rounded-2xl shadow-xl min-h-[430px] max-md:min-h-[270px]">
             <Image
-              src={projectImageUrl}
+              src={"/assets/images/turnkey-factory-project.png"}
               alt={projectImageAlt}
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -257,50 +254,117 @@ export default function TurnkeyFactorySections({
         </div>
       </motion.section>
 
-      <section className="relative py-20 bg-[#252638] bg-[url('/assets/images/what-we-solve-bg.jpg')] bg-cover bg-center bg-no-repeat max-md:py-14">
-        <div className="absolute inset-0 bg-[#10172d]/80" />
-        <motion.div {...reveal} className="relative z-10 px-6 mx-auto max-w-7xl sm:px-8 lg:px-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="mb-3 text-sm font-bold tracking-[0.18em] uppercase text-[#ff6a49]">
-              Complete Project Scope
-            </p>
-            <h2 className="text-4xl font-bold text-white font-baskervville max-md:text-3xl">
-              What We Manage
-            </h2>
-            <p className="mt-5 text-lg leading-relaxed text-white/75 max-md:text-[17px]">
-              One integrated project view across manufacturing, engineering,
-              infrastructure, technology, people and commissioning.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-3 gap-5 mt-12 max-lg:grid-cols-2 max-md:grid-cols-1">
-            {manageItems.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <motion.article
-                  key={item.title}
-                  initial={{ opacity: 0, y: 18 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.15 }}
-                  transition={{ duration: 0.45, delay: Math.min(index * 0.035, 0.2) }}
-                  whileHover={{ y: -5 }}
-                  className="group rounded-xl border border-white/10 bg-white/[0.96] p-6 shadow-lg transition-shadow hover:shadow-2xl"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#eef4fb] text-[#0E2C53] transition-colors group-hover:bg-[#D72B0D] group-hover:text-white">
-                    <Icon size={23} strokeWidth={1.9} />
-                  </div>
-                  <h3 className="mt-5 text-xl font-bold leading-snug text-[#0E2C53]">
-                    {item.title}
+
+
+     
+      <section className="relative overflow-hidden bg-[#f6f7f9] py-20 max-md:py-14">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+          <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+
+            {/* Left: Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.5 }}
+            >
+              <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-[#D72B0D]">
+                Complete Project Scope
+              </p>
+
+              <h2 className="font-baskervville text-4xl font-bold leading-tight text-[#0E2C53] max-md:text-3xl">
+                What We Manage
+              </h2>
+
+              <p className="mt-5 max-w-2xl text-lg leading-relaxed text-gray-600">
+                One integrated project view across manufacturing, engineering,
+                infrastructure, technology, people and commissioning.
+              </p>
+
+              <div className="mt-9 divide-y divide-gray-200 border-y border-gray-200">
+                <AnimatePresence initial={false}>
+                  {visibleItems.map((item, index) => (
+                    <motion.div
+                      key={item.title}
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.25 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="group flex gap-4 py-5">
+                        <span className="mt-1 shrink-0 font-baskervville text-lg font-bold text-[#D72B0D]">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+
+                        <div>
+                          <h3 className="text-lg font-bold leading-snug text-[#0E2C53] transition-colors group-hover:text-[#D72B0D]">
+                            {item.title}
+                          </h3>
+
+                          <p className="mt-2 text-[15px] leading-relaxed text-gray-600">
+                            {item.text}
+                          </p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </AnimatePresence>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setExpanded((prev) => !prev)}
+                aria-expanded={expanded}
+                className="mt-7 inline-flex items-center gap-2 rounded-md bg-[#0E2C53] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#D72B0D]"
+              >
+                {expanded ? "Show Less" : "Read More"}
+                <ChevronDown
+                  size={18}
+                  className={`transition-transform duration-300 ${expanded ? "rotate-180" : ""
+                    }`}
+                />
+              </button>
+            </motion.div>
+
+            {/* Right: Factory Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 25 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.6 }}
+              className="relative lg:sticky lg:top-24"
+            >
+              <div className="relative overflow-hidden rounded-2xl">
+                <img
+                  src="/assets/images/what-we-manage-turnkey.png"
+                  alt="Industrial factory planning, construction and production"
+                  className="h-[420px] w-full object-cover sm:h-[520px] lg:h-[650px]"
+                  loading="lazy"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0E2C53]/65 via-transparent to-transparent" />
+
+                <div className="absolute bottom-0 left-0 right-0 p-7 sm:p-9">
+                  <div className="mb-3 h-1 w-12 rounded-full bg-[#D72B0D]" />
+                  <h3 className="max-w-sm font-baskervville text-2xl font-bold leading-snug text-white sm:text-3xl">
+                    From Factory Concept to Production Ramp-Up
                   </h3>
-                  <p className="mt-3 text-[16px] leading-relaxed text-gray-600">
-                    {item.text}
+                  <p className="mt-3 max-w-md text-sm leading-relaxed text-white/85">
+                    Manufacturing-led planning, project integration and
+                    operational readiness under one coordinated approach.
                   </p>
-                </motion.article>
-              );
-            })}
+                </div>
+              </div>
+
+              <div className="absolute -bottom-4 -right-4 -z-10 h-32 w-32 rounded-2xl bg-[#D72B0D]/10" />
+            </motion.div>
+
           </div>
-        </motion.div>
+        </div>
       </section>
+
 
       <motion.section
         {...reveal}
