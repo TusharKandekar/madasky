@@ -7,8 +7,7 @@ import AboutNavbar from "@/components/Header/AboutNavbar";
 import AboutVideo from "@/components/AboutVideo";
 // import Industries from "@/components/Industries";
 import ConsultingHome from "@/components/ConsultingHome";
-import BusinessAchievements from "@/components/BusinessAcheivements";
-import MeetTheFounder from "@/components/MeetTheFounder";
+import HomepageExperience from "@/components/HomepageExperience";
 import HelpYou from "@/components/HelpYou";
 import Footer from "@/components/Footer";
 import EventComponent from "@/components/EventComponent";
@@ -24,7 +23,8 @@ import BaseUrl from "@/components/BaseUrl";
 import OurCoreCapabilitiesImageSection from "@/components/OurCoreCapabilitiesImageSection"
 // import axios from "axios";
 import Button from "@/components/Button";
-import FAQ from "@/components/Faq";
+import FaqComponent from "@/components/FaqComponent";
+import LegacyInternalLinks from "@/components/LegacyInternalLinks";
 import Button2 from "@/components/Button2";
 import Image from "next/image";
 import type { PageMetaDataResponse } from "@/common/types";
@@ -479,7 +479,7 @@ export default async function Home() {
       </section>
 
       {/* Client Success Stories  */}
-      <div className="bg-[#9a9a9a] w-full h-[40vh] mt-60 relative max-md:mt-20">
+      <div id="case-studies" className="bg-[#9a9a9a] w-full h-[40vh] mt-60 relative max-md:mt-20">
 
         <div className="relative -top-40">
 
@@ -579,9 +579,7 @@ export default async function Home() {
 
 
       {/* Meet the founder */}
-      <MeetTheFounder image={"/Untitled design (2).png"} altText={imgAltText[2]} />
-
-      <BusinessAchievements />
+      <HomepageExperience image={"/Untitled design (2).png"} altText={imgAltText[2]} />
 
       <div className="p-6 flex h-auto flex-col w-full py-[1vh] bg-[#bce1fd75] bg-[url('/assets/images/homeblogbg.png')] bg-center bg-no-repeat bg-cover  items-center justify-center">
         <VideoSliderWrapper videos={videoData.data} />
@@ -618,8 +616,18 @@ export default async function Home() {
       </div> */}
 
       {/* HelpYou  */}
-      <HelpYou />
-<FAQ questions={faqData} />
+      <HelpYou showDiagnosticCTA />
+      <LegacyInternalLinks
+        links={[
+          { label: "Turnkey Factory Projects", href: "/turnkey-factory-projects" },
+          { label: "Operations Excellence", href: "/operations-excellence-consulting" },
+          { label: "AI-Enabled Manufacturing Intelligence", href: "/ai-manufacturing-intelligence" },
+          { label: "Home Textiles", href: "/industries/home-textiles" },
+          { label: "Apparel", href: "/industries/apparel" },
+          { label: "Factory Diagnostic", href: "/factory-diagnostic" },
+        ]}
+      />
+      <FaqComponent faqs={faqData} />
       {/* Footer  */}
       <Footer />
     </div>

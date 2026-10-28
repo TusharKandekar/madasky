@@ -36,7 +36,8 @@ export default function WhatWeSolveAtScale() {
   ];
 
   return (
-    <section className="relative bg-[#252638] bg-[url('/assets/images/what-we-solve-bg.jpg')] bg-cover bg-center bg-no-repeat py-20">
+    <section className="relative py-20"
+      style={{ background: "linear-gradient(120deg, #0d203b 0%, #22446a 52%, #132742 100%)" }}>
       <div className="px-6 mx-auto max-w-7xl">
         <div className="w-full mx-auto">
 
