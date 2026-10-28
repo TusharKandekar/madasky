@@ -49,7 +49,7 @@ export default function HomeScaleSection() {
                         Schedule Expert Call
                     </button> */}
 
-          <Button text={"Schedule Expert Call"} />
+          <Button text={"Discuss Your Factory Challenge"} />
         </div>
       </div>
 

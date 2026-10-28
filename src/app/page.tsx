@@ -200,15 +200,39 @@ export default async function Home() {
   return (
     <div className="w-full">
       <AboutNavbar />
+      {/* Homepage-only hero: approved copy and CTAs stay inside the video block. */}
       <AboutVideo
-        vid1={"/assets/videos/HomePageWebsite.mp4"}
-        title={"Madasky"}
-        des={
-          "Madasky Consulting helps Home Textile and Apparel manufacturers build, improve and digitally transform factories - from turnkey project delivery and operations excellence to AI-enabled manufacturing intelligence. We work with promoters, CEOs, COOs and plant leaders on the manufacturing decisions that directly affect capacity, cost, fabric utilization, delivery, manpower and future scalability."
-        }
-        color={""}
-        h1={"Build Better Factories. Run Them Smarter"}
-      />
+        vid1="/assets/videos/HomePageWebsite.mp4"
+        title="Madasky"
+        des=""
+        h1="Build Better Factories. Run Them Smarter."
+      >
+        <div className="mt-5 space-y-4 text-base leading-relaxed text-white/95 sm:text-lg">
+          <p>
+            Madasky Consulting helps Home Textile and Apparel manufacturers build, improve and digitally transform factories - from turnkey project delivery and operations excellence to AI-enabled manufacturing intelligence.
+          </p>
+          <p>
+            We work with promoters, CEOs, COOs and plant leaders on the manufacturing decisions that directly affect capacity, cost, fabric utilization, delivery, manpower and future scalability.
+          </p>
+        </div>
+        <div className="mt-7 flex flex-wrap items-center gap-3 sm:gap-4">
+          <a
+            href="https://calendar.app.google/UMVkRH1hG1f5nNcV7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-12 items-center justify-center rounded-md bg-[#E1340D] px-5 py-3 text-center text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#C02A0B] sm:px-6 sm:text-base"
+          >
+            Book a Factory Diagnostic
+          </a>
+          <a
+            href="#solutions"
+            className="inline-flex min-h-12 items-center justify-center rounded-md border border-white/80 bg-white/10 px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-white hover:text-[#0E2C53] sm:px-6 sm:text-base"
+          >
+            Explore Our Solutions
+          </a>
+        </div>
+      </AboutVideo>
+
       <OurClient />
 
       {/* Industries Component */}
@@ -241,7 +265,9 @@ export default async function Home() {
       /> */}
 
       <HomeScaleSection />
-      <WhatWeSolve />
+      <div id="solutions" className="scroll-mt-24">
+        <WhatWeSolve />
+      </div>
 
       <ProofPoints />
 
