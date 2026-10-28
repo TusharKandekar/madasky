@@ -1,237 +1,146 @@
 "use client";
+
 import Link from "next/link";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 
-import React, { useState, useEffect, useCallback } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+// Homepage Block 6: titles and descriptions match the approved Word handoff.
+// The document asks each tile to link to Factory Diagnostic or a relevant service page.
+const diagnostics = [
+  {
+    title: "Operations Excellence Diagnostic",
+    description: "productivity, utilization, WIP, quality, manpower, downtime and operating routines.",
+    href: "/operations-excellence-consulting",
+  },
+  {
+    title: "Factory Capacity Diagnostic",
+    description: "installed vs effective capacity, bottlenecks and real need for capex.",
+    href: "/factory-diagnostic",
+  },
+  {
+    title: "Factory Layout & Flow Diagnostic",
+    description: "movement, adjacency, storage, safety and expansion constraints.",
+    href: "/plant-layout-consulting",
+  },
+  {
+    title: "Fabric & Raw Material Diagnostic",
+    description: "consumption, markers, widths, roll utilization, cutting losses and remnants.",
+    href: "/fabric-raw-material-optimization",
+  },
+  {
+    title: "Production Planning Health Check",
+    description: "capacity logic, material readiness, line loading, schedule adherence and OTIF risk.",
+    href: "/production-planning-scheduling",
+  },
+  {
+    title: "Digital Factory / MES Diagnostic",
+    description: "current data, visibility, reason codes, alerts, integrations and management use cases.",
+    href: "/digital-factory-mes",
+  },
+  {
+    title: "Turnkey Project Readiness Review",
+    description: "product mix, capacity, site, utilities, project packages, schedule and risks.",
+    href: "/turnkey-factory-projects",
+  },
+  {
+    title: "Workforce Readiness Review",
+    description: "organization, critical roles, manpower plan, skill matrix, ramp-up and training needs.",
+    href: "/workforce-readiness-talent-support",
+  },
+] as const;
 
-const CarouselSlider = () => {
-  // const banners = [
-  //   {
-  //     id: 1,
-  //     src: "/assets/images/banner/Automation Audit (1).png",
-  //     title: "Industrial Efficiency",
-  //   },
-  //   {
-  //     id: 2,
-  //     src: "/assets/images/banner/Bisiness Health Chck.png",
-  //     title: "Safety Standards",
-  //   },
-  //   {
-  //     id: 3,
-  //     src: "/assets/images/banner/Finance & Cashflow Audit.png",
-  //     title: "Process Automation",
-  //   },
-  //   {
-  //     id: 4,
-  //     src: "/assets/images/banner/Go-To-Market Audit.png",
-  //     title: "Quality Control",
-  //   },
-  //   {
-  //     id: 5,
-  //     src: "/assets/images/banner/Operations Excellence Audits.png",
-  //     title: "Supply Chain",
-  //   },
-  //   {
-  //     id: 6,
-  //     src: "/assets/images/banner/People & Organisational Performance Audit.png",
-  //     title: "Org Performance",
-  //   },
-  //   {
-  //     id: 7,
-  //     src: "/assets/images/banner/Productivity Audit.png",
-  //     title: "Productivity",
-  //   },
-  //   {
-  //     id: 8,
-  //     src: "/assets/images/banner/Sales Process Audit.png",
-  //     title: "Sales Process",
-  //   },
-  // ];
+export default function BannerSlide() {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [paused, setPaused] = useState(false);
 
-  // /assets/images/banner/Automation Audit (1).png
+  const move = useCallback((direction: -1 | 1) => {
+    const track = trackRef.current;
+    if (!track) return;
 
-  const banners = [
-    {
-      id: 1,
-      src: "/assets/images/banner/Sales Process Audit.png",
-      title: "Industrial Efficiency",
-      sectionId: "automation-audit",
-    },
-    {
-      id: 2,
-      src: "/assets/images/banner/Bisiness Health Chck.png",
-      title: "Safety Standards",
-      sectionId: "business-health",
-    },
-    {
-      id: 3,
-      src: "/assets/images/banner/FinanceCashflowAudit.png",
-      title: "Process Automation",
-      sectionId: "finance-cashflow",
-    },
-    {
-      id: 4,
-      src: "/assets/images/banner/Operations Excellence Audits.png",
-      title: "Quality Control",
-      sectionId: "operations-excellence",
-    },
-    {
-      id: 5,
-      src: "/assets/images/banner/Go-To-Market Audit.png",
-      title: "Supply Chain",
-      sectionId: "go-to-market",
-    },
-    {
-      id: 6,
-      src: "/assets/images/banner/Automation Audit (1).png",
-      title: "Org Performance",
-      sectionId: "people-performance",
-    },
-    {
-      id: 7,
-      src: "/assets/images/banner/People Organisational Performance Audit.png",
-      title: "Productivity",
-      sectionId: "productivity",
-    },
-    {
-      id: 8,
-      src: "/assets/images/banner/Productivity Audit.png",
-      title: "Sales Process",
-      sectionId: "sales-process",
-    },
-  ];
+    const card = track.querySelector<HTMLElement>("[data-diagnostic-card]");
+    const step = card?.offsetWidth ?? track.clientWidth;
+    const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
+    const nextPosition = track.scrollLeft + direction * step;
 
-  // Configuration
-  const autoPlayInterval = 3000; // 3 seconds
+    if (direction === 1 && track.scrollLeft >= maxScroll - 4) {
+      track.scrollTo({ left: 0, behavior: "smooth" });
+    } else if (direction === -1 && track.scrollLeft <= 4) {
+      track.scrollTo({ left: maxScroll, behavior: "smooth" });
+    } else {
+      track.scrollTo({ left: Math.max(0, Math.min(maxScroll, nextPosition)), behavior: "smooth" });
+    }
+  }, []);
 
-  const [curr, setCurr] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-
-  // Determine how many items to show based on logic (We will handle responsive via CSS,
-  // but logically we need to know when to stop scrolling).
-  // For this logic, we assume we show 3 at a time on desktop.
-  // The max index we can scroll to is (total - 3).
-  // To make it loop, when we pass max, we go back to 0.
-
-  const next = useCallback(() => {
-    setCurr((curr) => {
-      // If we are at the end (total - 3 visible), loop back to 0
-      // Note: On mobile where 1 is visible, this logic might need adjustment or CSS snapping.
-      // This is a simplified "Desktop First" logic for the requested 3-column view.
-      return curr === banners.length - 3 ? 0 : curr + 1;
-    });
-  }, [banners.length]);
-
-  const prev = () => {
-    setCurr((curr) => (curr === 0 ? banners.length - 3 : curr - 1));
-  };
-
-  // Auto-play effect
+  // Retain the original carousel's automatic progression; pause for interaction.
   useEffect(() => {
-    if (isPaused) return;
-    const slideInterval = setInterval(next, autoPlayInterval);
-    return () => clearInterval(slideInterval);
-  }, [isPaused, next]);
+    if (paused) return;
+    const timer = window.setInterval(() => move(1), 5000);
+    return () => window.clearInterval(timer);
+  }, [paused, move]);
 
   return (
-    <section
-      className="py-20 overflow-hidden bg-gray-100  max-md:py-10"
-    >
-      <div
-        className="px-6 mx-auto mb-10 text-center max-w-7xl"
-      >
-        <h2
-          className="text-4xl font-bold text-slate-900"
-        >
-          Audit Series
-        </h2>
-      </div>
-
-      {/* Carousel Container */}
-      <div
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-        className="relative px-6 mx-auto max-w-7xl group"
-      >
-        {/* Left Arrow */}
-        <button
-          onClick={prev}
-          className="absolute z-20 p-3 transition-all -translate-y-1/2 rounded-full shadow-lg opacity-0 text-slate-800 bg-white/90 left-2 top-1/2 hover:bg-blue-600 hover:text-white group-hover:opacity-100 disabled:opacity-0"
-        >
-          <ChevronLeft size={24} />
-        </button>
-
-        {/* Right Arrow */}
-        <button
-          onClick={next}
-          className="absolute z-20 p-3 transition-all -translate-y-1/2 rounded-full shadow-lg opacity-0 text-slate-800 bg-white/90 right-2 top-1/2 hover:bg-blue-600 hover:text-white group-hover:opacity-100"
-        >
-          <ChevronRight size={24} />
-        </button>
-
-        {/* Viewport (Mask) */}
-        <div
-          className="pb-4 overflow-hidden rounded-2xl"
-        >
-          {/* Track */}
-          <div
-            style={{ transform: `translateX(-${curr * (100 / 3)}%)` }}
-            className="flex transition-transform duration-700 ease-out "
-          >
-            {banners.map((item) => (
-              <div
-                key={item.id}
-                className="
-                  min-w-full
-                  px-3
-                  md:min-w-[50%]
-                  lg:min-w-[33.333%]
-                "
-              >
-                <Link href={`/audit#${item.sectionId}`}>
-                  <div
-                    className="
-                      overflow-hidden
-                      h-[450px]
-                      p-2
-                      bg-white
-                      rounded-2xl border border-slate-100
-                      cursor-pointer shadow-md
-                      relative group/card
-                    "
-                  >
-                    <img
-                      src={item.src}
-                      alt={item.title}
-                      className="object-contain w-full h-full transition-transform duration-700 bg-white group-hover/card:scale-105"
-                    />
-                  </div>
-
-                  <div className="flex items-center justify-center w-full">
-                    <button className="py-2 px-4 text-white bg-[#152869] hover:bg-[#152869]/90 rounded-2xl w-fit mx-auto mt-8 hover:cursor-pointer">Free Audit</button>
-                  </div>
-                </Link>
-              </div>
-            ))}
+    <section id="diagnostics" className="bg-[#f5f5f6] py-14 md:py-20" aria-labelledby="diagnostics-heading">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="mb-8 flex flex-wrap items-center justify-between gap-4 md:mb-10">
+          <h2 id="diagnostics-heading" className="font-baskervville text-3xl font-bold text-[#102e55] md:text-4xl">
+            Start with the Right Diagnostic
+          </h2>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              aria-label="Previous diagnostics"
+              onClick={() => move(-1)}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-[#102e55] shadow-sm transition hover:border-[#102e55] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#102e55]"
+            >
+              <ChevronLeft size={21} aria-hidden="true" />
+            </button>
+            <button
+              type="button"
+              aria-label="Next diagnostics"
+              onClick={() => move(1)}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-[#102e55] shadow-sm transition hover:border-[#102e55] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#102e55]"
+            >
+              <ChevronRight size={21} aria-hidden="true" />
+            </button>
           </div>
         </div>
 
-        {/* Pagination Dots */}
-        {/* <div className="flex justify-center gap-2 mt-8">
-          {Array.from({ length: banners.length - 2 }).map((_, i) => (
+        <div
+          ref={trackRef}
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+          onFocusCapture={() => setPaused(true)}
+          onBlurCapture={() => setPaused(false)}
+          className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth pb-4"
+          aria-label="Manufacturing diagnostic services"
+        >
+          {diagnostics.map((diagnostic, index) => (
             <div
-              key={i}
-              onClick={() => setCurr(i)}
-              className={`
-                transition-all duration-300 cursor-pointer rounded-full
-                ${curr === i ? "w-8 h-2 bg-blue-600" : "w-2 h-2 bg-slate-300 hover:bg-slate-400"}
-              `}
-            />
+              key={diagnostic.title}
+              data-diagnostic-card
+              className="w-full shrink-0 snap-start px-2 sm:w-1/2 lg:w-1/3"
+            >
+              <Link
+                href={diagnostic.href}
+                className="group flex h-full min-h-[265px] flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-[#d6a093] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#102e55] sm:p-7"
+              >
+                <span className="mb-6 text-sm font-bold tracking-[0.16em] text-[#d93616]">
+                  {String(index + 1).padStart(2, "0")} / 08
+                </span>
+                <h3 className="mb-3 font-baskervville text-[23px] font-bold leading-snug text-[#102e55]">
+                  {diagnostic.title}
+                </h3>
+                <p className="mb-6 flex-1 text-base leading-relaxed text-slate-600">
+                  {diagnostic.description}
+                </p>
+                <span className="inline-flex items-center gap-2 self-start text-sm font-semibold text-[#d93616] group-hover:underline">
+                  Explore Diagnostic <ArrowUpRight size={17} aria-hidden="true" />
+                </span>
+              </Link>
+            </div>
           ))}
-        </div> */}
+        </div>
       </div>
     </section>
   );
-};
-
-export default CarouselSlider;
+}
