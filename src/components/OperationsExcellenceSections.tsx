@@ -297,6 +297,14 @@ export default function OperationsExcellenceSections({
               <p className="mt-6 text-lg leading-relaxed text-gray-600 max-md:text-[17px]">
                 The important point was not the overtime saving alone. The operation achieved better delivery performance with fewer paid hours by fixing line balance, changeover, visibility and planning.
               </p>
+              <Link
+                href="https://madasky.com/show-blog/operations-excellence-case-study-how-a-kolkata-packaging-line-eliminated-43-lakh-in-annual-overtime-cost"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-7 inline-flex items-center justify-center rounded-md bg-[#0E2C53] px-6 py-3 font-semibold text-white shadow-sm transition-colors hover:bg-[#D72B0D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D72B0D]"
+              >
+                Read Full Case Study
+              </Link>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
@@ -385,7 +393,7 @@ export default function OperationsExcellenceSections({
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.45, delay: Math.min(index * 0.045, 0.18) }}
                 whileHover={{ y: -6 }}
-                className="group relative min-h-[220px] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.075] p-6 backdrop-blur-sm transition-all hover:border-white/20 hover:bg-white/[0.11] hover:shadow-2xl"
+                className="group relative min-h-[220px] overflow-hidden rounded-2xl border border-[#7396B6]/60 bg-[#355577] p-6 shadow-[0_12px_28px_rgba(0,0,0,0.16)] transition-all hover:border-[#A8C6DE] hover:bg-[#42678C] hover:shadow-[0_16px_32px_rgba(0,0,0,0.22)]"
               >
                 <div className="absolute right-4 top-4 h-14 w-14 rounded-full bg-white/[0.035] transition-transform duration-300 group-hover:scale-125" />
                 <div className="relative z-10">
