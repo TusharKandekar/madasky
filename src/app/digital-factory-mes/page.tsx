@@ -86,7 +86,25 @@ export default async function DigitalFactoryMESPage() {
   return (
     <>
       <ConsultingNavbar2 url={PAGE_PATH} title={PAGE_TITLE} />
-      <AboutVideo vid1={HERO_VIDEO} des="Madasky helps manufacturers implement real-time production visibility, MES, IoT and digital operating routines around the decisions plant teams need to make during the shift." h1={PAGE_TITLE} h2="Turn shopfloor data into faster action." />
+      <AboutVideo
+        vid1={HERO_VIDEO}
+        des=""
+        h1={PAGE_TITLE}
+        h2="Turn shopfloor data into faster action."
+      />
+
+      {/* Client feedback (Point 7): show the approved supporting copy BELOW the hero video. */}
+      <section className="relative overflow-hidden border-b border-[#e1e8ef] bg-gradient-to-br from-[#f5f8fc] via-white to-[#edf3f9] py-12 sm:py-16">
+        <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full border-[40px] border-[#0E2C53]/[0.035]" aria-hidden="true" />
+        <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+          <div className="max-w-5xl border-l-4 border-[#D72B0D] pl-5 sm:pl-8">
+            <p className="font-baskervville text-[clamp(1.4rem,2.5vw,2.1rem)] font-semibold leading-snug text-[#0E2C53]">
+              Madasky helps manufacturers implement real-time production visibility, MES, IoT and digital operating routines around the decisions plant teams need to make during the shift.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <DigitalFactorySections imageAlt={imgAltText[0]} />
       <div className="mx-auto w-[80vw] max-md:w-[90vw]">
         <section className="border-t border-gray-200 py-14">
