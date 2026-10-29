@@ -127,14 +127,14 @@ export default function FabricSections({imageAlt}:{imageAlt?:string}) {
       </motion.div>
     </section>
 
-    <section className="relative bg-[#0E2C53] bg-[url('/assets/images/what-we-solve-bg.jpg')] bg-cover bg-center py-20 max-md:py-14">
-      <div className="absolute inset-0 bg-[#081b34]/90" />
+    <section className="relative bg-gradient-to-br from-[#0d203b] via-[#22446a] to-[#132742] py-20 max-md:py-14">
+      <div className="pointer-events-none absolute -right-16 top-0 h-60 w-60 rounded-full border-[35px] border-white/[0.035]" aria-hidden="true" />
       <motion.div {...reveal} className={`${wrap} grid items-center gap-12 lg:grid-cols-[0.85fr_1.15fr]`}>
         <div>
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-[#ff6a49]">Why Madasky</p>
           <h2 className="font-baskervville text-4xl font-bold text-white max-md:text-3xl">Why Madasky for Fabric & Raw Material Optimization</h2>
         </div>
-        <div className="grid gap-4">{reasons.map(reason=><div key={reason} className="flex gap-4 rounded-xl border border-white/15 bg-white/[0.12] p-5 backdrop-blur-sm"><CheckCircle2 className="mt-0.5 shrink-0 text-[#ff6a49]" size={22}/><p className="text-[16px] leading-relaxed text-white/90">{reason}</p></div>)}</div>
+        <div className="grid gap-4">{reasons.map(reason=><div key={reason} className="flex gap-4 rounded-xl border border-white/25 bg-[#355577]/85 p-5 shadow-[0_12px_30px_rgba(0,0,0,0.12)]"><CheckCircle2 className="mt-0.5 shrink-0 text-[#ff6a49]" size={22}/><p className="text-[16px] leading-relaxed text-white/90">{reason}</p></div>)}</div>
       </motion.div>
     </section>
 

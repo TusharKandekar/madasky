@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
 import FabricSections from "@/components/FabricOptimizationSections";
-import { FaArrowRight } from "react-icons/fa";
 
 import ConsultingNavbar2 from "@/components/ConsultingNavbar2";
 import Footer from "@/components/Footer";
-import AboutVideo from "@/components/AboutVideo";
+import Contact from "@/components/Contact";
 import HelpYou from "@/components/HelpYou";
 import GallerySliderWrapper from "@/components/GallerySliderWrapper";
 import BlogSliderWrapper from "@/components/BlogSliderWrapper";
 import VideoSliderWrapper from "@/components/VideoSliderWrapper";
 import FaqComponent from "@/components/FaqComponent";
-import Button from "@/components/Button";
 import BaseUrl from "@/components/BaseUrl";
 import LegacyInternalLinks from "@/components/LegacyInternalLinks";
-// import LegacyInternalLinks from "@/components/LegacyInternalLinks";
 
 import {
   fetchMetaDataByPageName,
@@ -48,7 +45,7 @@ export async function generateMetadata(): Promise<Metadata> {
         url: "https://madasky.com",
       },
       alternates: {
-        canonical: `${BaseUrl().mainurl}${PAGE_PATH}`,
+        canonical: `${BaseUrl().mainurl.replace(/\/$/, "")}/${PAGE_PATH}`,
       },
     };
   } catch {
@@ -58,7 +55,7 @@ export async function generateMetadata(): Promise<Metadata> {
       keywords:
         "fabric optimization apparel home textiles, fabric waste reduction, marker optimization, cutting room optimization, fabric consumption optimization, AI fabric optimization",
       alternates: {
-        canonical: `${BaseUrl().mainurl}${PAGE_PATH}`,
+        canonical: `${BaseUrl().mainurl.replace(/\/$/, "")}/${PAGE_PATH}`,
       },
     };
   }
@@ -68,13 +65,6 @@ type Faq = {
   question: string;
   answer: string;
 };
-
-const SectionHeading = ({ title }: { title: string }) => (
-  <div className="flex items-start gap-2 font-bold text-2xl text-gray-600 leading-tight max-md:text-xl">
-    <FaArrowRight className="mt-1 shrink-0 text-[20px]" />
-    <h2>{title}</h2>
-  </div>
-);
 
 export default async function FabricRawMaterialOptimizationPage() {
   let blogData: any = { data: [] };
@@ -132,27 +122,56 @@ export default async function FabricRawMaterialOptimizationPage() {
     <>
       <ConsultingNavbar2 url={`/${PAGE_PATH}`} title={PAGE_TITLE} />
 
-      <AboutVideo
-        vid1={HERO_VIDEO}
-        title={null}
-        des=" Madasky connects consumption, pattern and marker logic, fabric requirement, order combination, roll selection, lay planning, cutting and remnant visibility into one optimization approach."
-        h1={PAGE_TITLE}
-        h2="Reduce fabric loss by improving the decisions made before, during and after cutting."
-      />
+      {/* Page-specific hero: keep the video and H1 here; place the approved copy UNDER the hero. */}
+      <section className="relative isolate mt-20 flex min-h-[420px] items-end overflow-hidden bg-[#0E2C53] sm:min-h-[480px] lg:min-h-[560px]">
+        <video
+          src={HERO_VIDEO}
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#07172d]/95 via-[#0b2748]/80 to-[#0b2748]/35" />
+        <div className="relative mx-auto w-full max-w-7xl px-6 pb-14 pt-24 sm:px-8 sm:pb-20 lg:px-10 lg:pb-24">
+          <div className="mb-6 h-1 w-16 rounded-full bg-[#e63818]" aria-hidden="true" />
+          <h1 className="max-w-4xl font-baskervville text-[clamp(2.35rem,5vw,4.5rem)] font-bold leading-[1.12] tracking-tight text-white">
+            Fabric &amp; Raw Material Optimization
+          </h1>
+        </div>
+      </section>
+      <Contact />
+
+      {/* Both paragraphs are reproduced verbatim from the approved Word document. */}
+      <section className="relative overflow-hidden border-b border-[#e1e8ef] bg-gradient-to-br from-[#f5f8fc] via-white to-[#edf3f9] py-12 sm:py-16 lg:py-20">
+        <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full border-[40px] border-[#0E2C53]/[0.035]" aria-hidden="true" />
+        <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+          <div className="max-w-5xl border-l-4 border-[#dc3216] pl-5 sm:pl-8">
+            <p className="font-baskervville text-[clamp(1.5rem,2.8vw,2.35rem)] font-semibold leading-snug text-[#0E2C53]">
+              Reduce fabric loss by improving the decisions made before, during and after cutting.
+            </p>
+            <p className="mt-6 max-w-4xl text-[17px] leading-[1.85] text-[#42536a] sm:text-lg">
+              Madasky connects consumption, pattern/marker logic, fabric requirement, order combination, roll selection, lay planning, cutting and remnant visibility into one optimization approach.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <FabricSections imageAlt={imgAltText[0]} />
+      <LegacyInternalLinks
+        title="Explore Related Services"
+        links={[
+          { label: "AI-Enabled Manufacturing Intelligence", href: "/ai-manufacturing-intelligence" },
+          { label: "Production Planning & Scheduling", href: "/production-planning-scheduling" },
+          { label: "Home Textiles", href: "/industries/home-textiles" },
+          { label: "Apparel", href: "/industries/apparel" },
+        ]}
+      />
       <div className="mx-auto max-w-6xl px-6 pb-20 sm:px-8 lg:px-10">
         <FaqComponent faqs={faqs} />
       </div>
- <LegacyInternalLinks
-        title="Explore Related Services"
-        links={[
-          { label: 'AI-Enabled Manufacturing Intelligence', href: '/ai-manufacturing-intelligence' },
-          { label: 'Production Planning & Scheduling', href: '/production-planning-scheduling' },
-          { label: 'Home Textiles', href: '/industries/home-textiles' },
-          { label: 'Apparel', href: '/industries/apparel' },
-        ]}
-      />
       {hasMedia && (
         <div className="flex h-auto w-full flex-col items-center justify-center bg-[#bce1fd75] bg-[url('/assets/images/homeblogbg.png')] bg-cover bg-center p-6 py-[1vh]">
           {hasVideos && <VideoSliderWrapper videos={videoData.data} />}
