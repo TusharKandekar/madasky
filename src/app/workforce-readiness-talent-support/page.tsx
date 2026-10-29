@@ -165,11 +165,26 @@ export default async function WorkforceReadinessTalentSupportPage() {
 
       <AboutVideo
         vid1="/assets/videos/People Skilling Header Video.mp4"
+        heroImageSrc="/assets/images/Garment Factory Production Floor.png"
+        heroImageAlt="Manufacturing production floor and factory workforce"
+        compactHeroTitle
         title={pageName}
         h1="A factory is not ready at commissioning if the operating team is not ready."
-        des="Madasky integrates manpower planning, critical-role support, skill requirements and workforce ramp-up into factory projects and operations transformation."
+        des=""
         pageName={pageName}
       />
+
+      {/* Same below-hero paragraph treatment as Digital Factory & MES. */}
+      <section className="relative overflow-hidden border-b border-[#e1e8ef] bg-gradient-to-br from-[#f5f8fc] via-white to-[#edf3f9] py-12 sm:py-16">
+        <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full border-[40px] border-[#0E2C53]/[0.035]" aria-hidden="true" />
+        <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+          <div className="max-w-5xl border-l-4 border-[#D72B0D] pl-5 sm:pl-8">
+            <p className="font-baskervville text-[clamp(1.4rem,2.5vw,2.1rem)] font-semibold leading-snug text-[#0E2C53]">
+              Madasky integrates manpower planning, critical-role support, skill requirements and workforce ramp-up into factory projects and operations transformation.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <main>
         <WorkforceReadinessSections

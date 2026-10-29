@@ -1,5 +1,5 @@
-import type { ReactNode } from "react";
 import Contact from "./Contact";
+import Image from "next/image";
 interface AboutVideoProps {
     vid1: string;
     title: string | null;
@@ -8,40 +8,15 @@ interface AboutVideoProps {
     pageName?: string;
     h1?: string;
     h2?: string;
-    // Optional homepage-only overlay. Existing service-page heroes stay unchanged.
-    children?: ReactNode;
-}
-export default function AboutVideo({ vid1, title, des, color = "white", h1, h2, children }: AboutVideoProps) {
-    // Homepage needs two full paragraphs and CTAs over the video rather than
-    // in a separate white section. Keep all other AboutVideo usages untouched.
-    if (children) {
-        return (
-            <div className="relative mt-20 w-full">
-                <section className="relative isolate flex min-h-[640px] w-full items-center overflow-hidden py-12 sm:min-h-[680px] sm:py-16 lg:min-h-[720px]" aria-label="Madasky homepage hero">
-                    <video
-                        src={vid1}
-                        className="absolute inset-0 z-0 h-full w-full object-cover"
-                        loop
-                        autoPlay
-                        muted
-                        playsInline
-                    />
-                    <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-[#07152a]/90 via-[#07152a]/80 to-[#07152a]/50" />
-                    <div className="relative z-20 mx-auto w-full max-w-7xl px-6 sm:px-10 lg:px-12">
-                        <div className="max-w-4xl lg:max-w-[calc(100%-26rem)]">
-                            {title && <span className="text-2xl font-semibold text-white sm:text-3xl">{title}</span>}
-                            <h1 className="mt-4 font-baskervville text-4xl font-bold leading-tight text-white sm:text-5xl xl:text-[3.5rem]">
-                                {h1}
-                            </h1>
-                            {children}
-                        </div>
-                    </div>
-                </section>
-                <Contact />
-            </div>
-        );
-    }
+    /** Optional photo hero for pages where video footage is not appropriate. */
+    heroImageSrc?: string;
+    heroImageAlt?: string;
+    /** Constrain long hero headings without changing other service pages. */
+    compactHeroTitle?: boolean;
 
+
+}
+export default function AboutVideo({ vid1, title, des, color = "white", h1, h2, heroImageSrc, heroImageAlt, compactHeroTitle = false }: AboutVideoProps) {
     return (
         <div className="relative flex flex-col items-center justify-center w-full h-auto mt-20">
 
@@ -49,18 +24,29 @@ export default function AboutVideo({ vid1, title, des, color = "white", h1, h2, 
                 <div className={`absolute top-0 left-0 w-full h-full bg-[#0006] z-20  ${vid1 === "/assets/images/Careers69.mp4" || vid1 === "/assets/images/Historyheader.mp4" ? 'hidden' : 'visible'}`}></div>
 
                 <div className="absolute top-0 left-0 z-10 flex flex-col items-start justify-start w-full h-full max-md:relative">
-                    <video
-                        src={vid1}
-                        className="object-cover w-full h-full"
-                        loop
-                        autoPlay
-                        muted
-                        playsInline
-                    />
+                    {heroImageSrc ? (
+                        <Image
+                            src={heroImageSrc}
+                            alt={heroImageAlt || "Manufacturing workforce"}
+                            fill
+                            priority
+                            sizes="100vw"
+                            className="object-cover"
+                        />
+                    ) : (
+                        <video
+                            src={vid1}
+                            className="object-cover w-full h-full"
+                            loop
+                            autoPlay
+                            muted
+                            playsInline
+                        />
+                    )}
                 </div>
                 <div className="absolute top-0 max-md:top-[4vh] left-0 z-30 flex flex-col items-start justify-end w-full h-full p-20 text-white max-md:p-3 ">
-                    <span className={`text-3xl max-md:text-5xl ${color}`}>{title}</span>
-                    <h1 className={`text-6xl font-baskervville text-white  ${color} font-bold max-md:text-xl mt-4 max-md:w-full max-md:font-thin max-md:pt-4 max-md:pb-8`}>
+                    <span className={`text-3xl max-md:text-5xl ${color} ${compactHeroTitle ? "max-md:!text-lg" : ""}`}>{title}</span>
+                    <h1 className={`text-6xl font-baskervville text-white ${color} font-bold max-md:text-xl mt-4 max-md:w-full max-md:font-thin max-md:pt-4 max-md:pb-8 ${compactHeroTitle ? "!max-w-[900px] !text-[clamp(1.8rem,3.1vw,3.25rem)] !leading-[1.13] max-md:!text-[1.7rem] max-md:!font-semibold max-md:!pt-0 max-md:!pb-0 break-words" : ""}`}>
                         {/* {des} */}
                         {h1}
 
@@ -69,7 +55,7 @@ export default function AboutVideo({ vid1, title, des, color = "white", h1, h2, 
 
                     </h1>
                     <h2 className={`text-2xl font-baskervville text-white  ${color} font-bold max-md:text-xl mt-4 max-md:w-full max-md:font-thin max-md:pt-4 max-md:pb-8`}> {h2}</h2>
-                    <p className="text-lg ">{des}</p>
+                    {des && <p className="text-lg">{des}</p>}
                 </div>
             </div>
 
