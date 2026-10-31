@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Button from "@/components/Button";
+
 
 export default function ProofPoints() {
   return (
@@ -74,10 +74,8 @@ export default function ProofPoints() {
           </div>
 
           {/* Description */}
-          <p className="max-w-2xl mb-8 text-lg leading-relaxed text-gray-600 max-md:w-full text-justify">
-            These aren’t theoretical projections or consulting promises. They’re
-            verified results delivered for companies across manufacturing,
-            pharmaceutical, export, and retail sectors operating at scale.
+          <p className="max-w-2xl mb-8 text-lg leading-relaxed text-gray-600 max-md:w-full">
+            Home Textile packaging-line case study: results from balancing, changeover and planning improvements.
           </p>
 
 
@@ -88,7 +86,14 @@ export default function ProofPoints() {
 
          
 
-          <Button text={"Book Your Session"} />
+          <a
+            href="https://madasky.com/show-blog/operations-excellence-case-study-how-a-kolkata-packaging-line-eliminated-43-lakh-in-annual-overtime-cost"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex rounded-md bg-[#D72B0D] px-6 py-3 font-bold text-white transition-colors hover:bg-[#b92710]"
+          >
+            Read Full Case Study
+          </a>
         </div>
       </div>
 

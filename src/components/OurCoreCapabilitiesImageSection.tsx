@@ -49,72 +49,30 @@ const CommentIcon = () => (
   </svg>
 );
 
-// --- Card Data (Example) ---
-// const cardData = [
-//   {
-//     title: "Textile Exporter, Surat",
-//     content:
-//       "₹2.5 crore unlocked in just 4 weeks - we didn't realize how much cash was dormant in our operational systems. The impact was immediate and measurable.",
-//     link: "https://covid19test.sananto.com",
-//     comments: 25,
-//   },
-//   {
-//     title: "Pharma Manufacturer, Bangalore",
-//     content:
-//       "Lead-times dropped 23% in five weeks. Our clients noticed the improvement immediately. Repeat orders increased significantly as a direct result.",
-//     link: "https://covid19test.sananto.com",
-//     comments: 1,
-//   },
-//   {
-//     title: "Retail Group, Mumbai",
-//     content:
-//       "Sales accelerated dramatically, but operational chaos didn't follow. Our management team regained strategic control while driving growth.",
-//     link: "#",
-//     comments: 12,
-//   },
-//   {
-//     title: "Paper Enterprise, Ahmedabad",
-//     content:
-//       "Executive stress decreased while performance metrics improved across all divisions. This represents what real consulting impact looks like.",
-//     link: "#",
-//     comments: 7,
-//   },
-// ];
+// Published manufacturing proof has a verified URL. Other case studies stay unlinked
+// until the client provides a validated case-study page and approved figures.
 const cardData = [
   {
     title: "Home Textile packaging line",
-    content:
-      "₹43 lakh annual overtime eliminated; OTIF 82% to 97%.",
-    link: "https://covid19test.sananto.com",
-    comments: 25,
-  },
-  {
-    title: "Home Textile diagnostic",
-    content:
-      "approximately ₹145 lakh of avoidable losses identified and prioritized.",
-    link: "https://covid19test.sananto.com",
-    comments: 1,
+    content: "₹43 lakh annual overtime eliminated; OTIF 82% to 97%.",
+    link: "https://madasky.com/show-blog/operations-excellence-case-study-how-a-kolkata-packaging-line-eliminated-43-lakh-in-annual-overtime-cost",
   },
   {
     title: "Fabric intelligence case",
-    content:
-      "Integrated consumption, marker and roll planning. Use only internally validated saving figures in the card.",
-    link: "#",
-    comments: 12,
+    content: "Integrated consumption, marker and roll planning.",
+    link: null,
   },
   {
     title: "Digital sewing-floor / productivity transformation",
-    content:
-      " use only figures that can be substantiated.",
-    link: "#",
-    comments: 7,
+    content: "Digital sewing-floor / productivity transformation.",
+    link: null,
   },
 ];
 const SocialFeed: NextPage = () => {
   // Step 2: Configure the settings for the slider
   const settings = {
     dots: false,
-    infinite: true, // Set to false if you have few items
+    infinite: cardData.length > 2,
     speed: 500,
     slidesToShow: 2, // Show 2 cards on desktop
     slidesToScroll: 1,
@@ -133,7 +91,7 @@ const SocialFeed: NextPage = () => {
   };
 
   return (
-    <div className="max-md:flex-col max-md:w-full flex items-center min-h-[300px] mt-40 mb-20 w-[80%] mx-auto overflow-hidden bg-gray-100 shadow-lg rounded-xl">
+    <div className="max-md:flex-col max-md:w-full flex items-center min-h-[300px] w-[90%] max-w-7xl mx-auto overflow-hidden bg-gray-100 shadow-lg rounded-xl">
       {/* --- Left Fixed Panel (No changes here) --- */}
       <aside className="flex justify-center w-1/3 max-md:w-full  p-8 text-white bg-[#00548f]">
         <div className="flex flex-col items-center justify-center h-full text-center">
@@ -170,7 +128,13 @@ const SocialFeed: NextPage = () => {
               <div className="flex flex-col justify-between h-[200px] p-6 bg-white rounded-lg shadow-md">
                 <div>
                   <div className="flex items-center text-xl font-semibold text-gray-900">
-                    <span>{card.title}</span>
+                    {card.link ? (
+                      <a href={card.link} className="hover:text-[#D72B0D] hover:underline" target="_blank" rel="noopener noreferrer">
+                        {card.title}
+                      </a>
+                    ) : (
+                      <span>{card.title}</span>
+                    )}
                   </div>
                   <p className="mt-4  text-gray-700 ">{card.content}</p>
                 </div>

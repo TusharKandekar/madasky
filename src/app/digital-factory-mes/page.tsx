@@ -18,7 +18,7 @@ const PAGE_TITLE = "Digital Factory & MES";
 const SEO_TITLE = "MES for Textile & Apparel Manufacturing | Madasky";
 const META_DESCRIPTION = "MES and Digital Factory implementation for Home Textile and Apparel: real-time production, downtime, quality, material, WIP and delivery visibility.";
 const FACTORY_IMAGE = "assets/images/digital-factory-mes.png";
-const HERO_VIDEO = "/assets/videos/OPERATIONS-PRODUCTIVITY-IMPROVEMENT69.mp4";
+const HERO_VIDEO = "/assets/videos/digital-factory-mes-client.mp4";
 
 type Faq = { question: string; answer: string };
 
