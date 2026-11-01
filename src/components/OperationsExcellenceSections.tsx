@@ -112,13 +112,8 @@ const methodSteps = [
   },
   {
     number: "06",
-    title: "Stabilize",
-    text: "Build ownership into supervisor routines, KPI reviews, standard work and escalation.",
-  },
-  {
-    number: "07",
-    title: "Measure the benefit",
-    text: "Compare the agreed baseline with sustained post-implementation performance.",
+    title: "Stabilize & Measure the Benefit",
+    text: "Build ownership into supervisor routines, KPI reviews, standard work and escalation. Compare the agreed baseline with sustained post-implementation performance.",
   },
 ];
 

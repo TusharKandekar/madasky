@@ -63,8 +63,8 @@ const supportItems = [
   },
   {
     icon: Workflow,
-    title: "Multi-Skilling Design",
-    text: "Multi-skilling and manpower-flexibility design for changing demand.",
+    title: "Multi-Skilling Design & Structured Skilling",
+    text: "Design multi-skilling and manpower flexibility for changing demand, with coordination of structured skilling programs where manufacturing requirements justify them.",
   },
   {
     icon: Settings2,
@@ -80,11 +80,6 @@ const supportItems = [
     icon: ShieldCheck,
     title: "Workforce Productivity",
     text: "Workforce productivity and staffing analysis before simply adding headcount.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Structured Skilling",
-    text: "Coordination of structured skilling programs where the manufacturing requirement justifies them.",
   },
 ];
 

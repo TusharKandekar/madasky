@@ -26,9 +26,8 @@ const principles = [
   "Manufacturing problem first. Technology second.",
   "Capex should follow a verified capacity requirement.",
   "AI creates value only when process and data are ready.",
-  "Implementation matters more than presentation.",
+  "Implementation matters more than presentation. Every assignment should have a measurable business or project outcome.",
   "The client should never have to assemble the transformation themselves.",
-  "Every assignment should have a measurable business or project outcome.",
 ];
 
 export default function AboutPage() {

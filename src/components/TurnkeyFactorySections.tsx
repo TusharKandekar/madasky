@@ -110,13 +110,8 @@ const projectStages = [
   },
   {
     number: "06",
-    title: "Commission",
-    text: "Check utilities, equipment, safety, systems, documentation, training and trials against agreed acceptance criteria.",
-  },
-  {
-    number: "07",
-    title: "Ramp Up & Handover",
-    text: "Support initial production, identify early constraints, stabilize routines and hand over an operating factory rather than only a completed project.",
+    title: "Commission, Ramp-Up & Handover",
+    text: "Check utilities, equipment, safety, systems, documentation, training and trials against agreed acceptance criteria. Support initial production, identify early constraints, stabilize routines and hand over an operating factory rather than only a completed project.",
   },
 ];
 
@@ -143,8 +138,8 @@ const longFormItems = [
 
 const whyItems = [
   {
-    title: "Manufacturing-led design",
-    text: "Factory decisions are driven by process, capacity and operating economics.",
+    title: "Sector-Focused Manufacturing Design",
+    text: "Factory decisions are driven by process, capacity and operating economics. Layouts, storage, cutting, sewing, finishing, packing and supporting operations are approached with Home Textile & Apparel sector context.",
   },
   {
     title: "One client-facing project authority",
@@ -157,10 +152,6 @@ const whyItems = [
   {
     title: "Operational handover",
     text: "The engagement can continue through trials, ramp-up and early factory stabilization.",
-  },
-  {
-    title: "Home Textile & Apparel depth",
-    text: "Layouts, storage, cutting, sewing, finishing, packing and supporting operations are approached with sector context.",
   },
 ];
 
@@ -393,7 +384,7 @@ export default function TurnkeyFactorySections({
               How the Turnkey Project Runs
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-gray-600 max-md:text-[17px]">
-              The project moves through seven controlled stages, with decisions
+              The project moves through six controlled stages, with decisions
               frozen in the right sequence so downstream execution does not have
               to correct upstream design mistakes.
             </p>

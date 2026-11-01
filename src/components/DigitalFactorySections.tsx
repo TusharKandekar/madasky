@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Activity, AlertTriangle, BarChart3, CheckCircle2, ClipboardCheck, Gauge, Layers3, RadioTower, Settings2, ShieldCheck, Timer, Workflow } from "lucide-react";
+import { Activity, BarChart3, CheckCircle2, ClipboardCheck, Gauge, Layers3, RadioTower, Settings2, ShieldCheck, Timer, Workflow } from "lucide-react";
 import ShowMoreList from "@/components/ShowMoreList";
 import Button from "@/components/Button";
 
@@ -37,8 +37,7 @@ const screens = [
   { icon: BarChart3, label: "SCREEN 01", title: "Output vs target", text: "See whether each line is tracking to its production plan." },
   { icon: Timer, label: "SCREEN 02", title: "Downtime and why", text: "Make recurring stoppages and their reasons visible." },
   { icon: ShieldCheck, label: "SCREEN 03", title: "Quality and rework", text: "Spot defects and rework before they compound." },
-  { icon: Layers3, label: "SCREEN 04", title: "Material and WIP risk", text: "Identify shortages and work-in-progress constraints." },
-  { icon: AlertTriangle, label: "SCREEN 05", title: "Orders at risk", text: "Prioritize orders that may miss delivery commitments." },
+  { icon: Layers3, label: "SCREEN 04", title: "Material, WIP & Delivery Risk", text: "Identify material shortages, work-in-progress constraints and orders at risk of missing delivery commitments." },
 ];
 
 const reasons = [
@@ -96,9 +95,9 @@ export default function DigitalFactorySections({ imageAlt }: { imageAlt?: string
         <motion.div {...reveal} className={wrap}>
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-[#D72B0D]">Decision-ready visibility</p>
-            <h2 className="font-baskervville text-4xl font-bold text-[#0E2C53] max-md:text-3xl">The Five Screens a Plant Head Should See</h2>
+            <h2 className="font-baskervville text-4xl font-bold text-[#0E2C53] max-md:text-3xl">The Four Screens a Plant Head Should See</h2>
           </div>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2">
             {screens.map(({ icon: Icon, label, title, text }) => <article key={label} className="rounded-2xl border border-[#dbe4ee] bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#0E2C53] text-white"><Icon size={23} /></div>
               <p className="mt-5 text-xs font-bold tracking-[0.15em] text-[#D72B0D]">{label}</p>
