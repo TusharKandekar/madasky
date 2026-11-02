@@ -200,21 +200,14 @@ export default async function Home() {
   return (
     <div className="w-full">
       <AboutNavbar />
-      {/* Homepage-only hero: approved copy and CTAs stay inside the video block. */}
+      {/* Homepage hero retains the approved headline and CTAs. Supporting copy appears below the video. */}
       <AboutVideo
         vid1="/assets/videos/HomePageWebsite.mp4"
         title="Madasky"
         des=""
         h1="Build Better Factories. Run Them Smarter."
+        alignContentToBottom
       >
-        <div className="mt-5 space-y-4 text-base leading-relaxed text-white/95 sm:text-lg">
-          <p>
-            Madasky Consulting helps Home Textile and Apparel manufacturers build, improve and digitally transform factories - from turnkey project delivery and operations excellence to AI-enabled manufacturing intelligence.
-          </p>
-          <p>
-            We work with promoters, CEOs, COOs and plant leaders on the manufacturing decisions that directly affect capacity, cost, fabric utilization, delivery, manpower and future scalability.
-          </p>
-        </div>
         <div className="mt-7 flex flex-wrap items-center gap-3 sm:gap-4">
           <a
             href="https://calendar.app.google/UMVkRH1hG1f5nNcV7"
@@ -232,6 +225,21 @@ export default async function Home() {
           </a>
         </div>
       </AboutVideo>
+
+      {/* Approved homepage paragraphs are placed immediately below the hero, matching Production Planning. */}
+      <section className="relative overflow-hidden border-b border-[#e1e8ef] bg-gradient-to-br from-[#f5f8fc] via-white to-[#edf3f9] py-12 sm:py-16">
+        <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full border-[40px] border-[#0E2C53]/[0.035]" aria-hidden="true" />
+        <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+          <div className="max-w-5xl border-l-4 border-[#D72B0D] pl-5 sm:pl-8">
+            <p className="font-baskervville text-[clamp(1.4rem,2.5vw,2.1rem)] font-semibold leading-snug text-[#0E2C53]">
+              Madasky Consulting helps Home Textile and Apparel manufacturers build, improve and digitally transform factories - from turnkey project delivery and operations excellence to AI-enabled manufacturing intelligence.
+            </p>
+            <p className="mt-5 text-[17px] leading-relaxed text-[#42536a] sm:text-lg">
+              We work with promoters, CEOs, COOs and plant leaders on the manufacturing decisions that directly affect capacity, cost, fabric utilization, delivery, manpower and future scalability.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <OurClient />
 
