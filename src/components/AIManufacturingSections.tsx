@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import WhyMadaskySection from "@/components/WhyMadaskySection";
 import { motion } from "framer-motion";
 import {
   ArrowUpRight,
   BarChart3,
   Brain,
   CalendarClock,
-  CheckCircle2,
   Cpu,
   Database,
   Factory,
@@ -352,41 +352,11 @@ export default function AIManufacturingSections({
         </motion.div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#0E2C53] bg-[url('/assets/images/what-we-solve-bg.jpg')] bg-cover bg-center py-20 max-md:py-14">
-        <div className="absolute inset-0 bg-[#081b34]/88" />
-        <motion.div
-          {...reveal}
-          className="relative z-10 grid items-center gap-12 px-6 mx-auto max-w-7xl lg:grid-cols-[0.85fr_1.15fr] sm:px-8 lg:px-10"
-        >
-          <div>
-            <p className="mb-3 text-sm font-bold tracking-[0.18em] uppercase text-[#ff6a49]">
-              Why Madasky
-            </p>
-            <h2 className="text-4xl font-bold leading-tight text-white font-baskervville max-md:text-3xl">
-              Why Madasky for AI-Enabled Manufacturing Intelligence
-            </h2>
-            <p className="mt-5 text-lg leading-relaxed text-white/70 max-md:text-[17px]">
-              The technology remains connected to manufacturing economics, process ownership and measurable operating behaviour.
-            </p>
-          </div>
-
-          <div className="grid gap-4">
-            {whyMadasky.map((item, index) => (
-              <motion.div
-                key={item}
-                initial={{ opacity: 0, x: 24 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.45, delay: index * 0.06 }}
-                className="flex gap-4 rounded-xl border border-white/10 bg-white/[0.07] p-5 backdrop-blur-sm"
-              >
-                <CheckCircle2 className="mt-0.5 shrink-0 text-[#ff6a49]" size={22} />
-                <p className="text-[16px] leading-relaxed text-white/85">{item}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
+      <WhyMadaskySection
+        title="Why Madasky for AI-Enabled Manufacturing Intelligence"
+        description="The technology remains connected to manufacturing economics, process ownership and measurable operating behaviour."
+        items={whyMadasky.map(text => ({ text }))}
+      />
 
       <motion.section
         {...reveal}

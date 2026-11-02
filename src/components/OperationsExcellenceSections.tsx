@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import WhyMadaskySection from "@/components/WhyMadaskySection";
 import { motion } from "framer-motion";
 import {
   Activity,
@@ -16,7 +17,6 @@ import {
   TimerReset,
   UsersRound,
   Wrench,
-  CheckCircle2,
 } from "lucide-react";
 
 type OperationsExcellenceSectionsProps = {
@@ -364,53 +364,7 @@ export default function OperationsExcellenceSections({
         </div>
       </motion.section>
 
-      <section className="relative overflow-hidden bg-[#0B2F55] py-20 max-md:py-14">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(77,139,190,0.22),transparent_28%),radial-gradient(circle_at_86%_78%,rgba(255,106,73,0.12),transparent_24%)]" />
-        <div className="absolute -left-24 top-16 h-72 w-72 rounded-full border border-white/[0.04]" />
-        <div className="absolute -right-20 -top-24 h-80 w-80 rounded-full border border-white/[0.04]" />
-
-        <motion.div {...reveal} className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-[#ff7352]">
-              Why Madasky
-            </p>
-            <h2 className="font-baskervville text-4xl font-bold leading-tight text-white max-md:text-3xl">
-              Why Partner with Madasky
-            </h2>
-          </div>
-
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {whyItems.map((item, index) => (
-              <motion.article
-                key={item.title}
-                initial={{ opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.45, delay: Math.min(index * 0.045, 0.18) }}
-                whileHover={{ y: -6 }}
-                className="group relative min-h-[220px] overflow-hidden rounded-2xl border border-[#7396B6]/60 bg-[#355577] p-6 shadow-[0_12px_28px_rgba(0,0,0,0.16)] transition-all hover:border-[#A8C6DE] hover:bg-[#42678C] hover:shadow-[0_16px_32px_rgba(0,0,0,0.22)]"
-              >
-                <div className="absolute right-4 top-4 h-14 w-14 rounded-full bg-white/[0.035] transition-transform duration-300 group-hover:scale-125" />
-                <div className="relative z-10">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#ff7352]/40 bg-[#ff7352]/10 text-[#ff7352]">
-                    <CheckCircle2 size={19} strokeWidth={2.1} />
-                  </div>
-
-                  <h3 className="mt-5 font-baskervville text-xl font-bold leading-snug text-white">
-                    {item.title}
-                  </h3>
-
-                  <div className="mt-4 h-px w-10 bg-[#ff7352]/55 transition-all duration-300 group-hover:w-16" />
-
-                  <p className="mt-4 text-[15px] leading-relaxed text-white/75">
-                    {item.text}
-                  </p>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-        </motion.div>
-      </section>
+      <WhyMadaskySection title="Why Partner with Madasky" items={whyItems} />
 
       <motion.section {...reveal} className="bg-[#f5f6f8] py-20 max-md:py-14">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">

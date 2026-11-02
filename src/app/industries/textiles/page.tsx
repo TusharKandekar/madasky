@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import TextilesCompo from '@/components/TextilesCompo';
+import WhyMadaskySection from '@/components/WhyMadaskySection';
 import HelpYou from '@/components/HelpYou';
 import FaqComponent from '@/components/FaqComponent';
 import Button from '@/components/Button';
@@ -88,18 +89,11 @@ export default async function TextilesPage() {
     <div>
       <TextilesCompo h1={pageTitle} />
 
+      <WhyMadaskySection
+        title="Why Madasky in This Industry"
+        description="The positioning is deliberately selective rather than claiming equal depth in every spinning, weaving, processing or specialty process. Scope is confirmed after technical fit assessment."
+      />
       <section className="mx-auto w-[80vw] py-14 max-md:w-full max-md:px-5">
-        <div className="flex flex-col gap-5 border-b border-gray-300 pb-10">
-          <h2 className="text-4xl font-bold text-black max-md:text-3xl">
-            Why Madasky in This Industry
-          </h2>
-          <p className="text-[18px] leading-relaxed text-gray-700">
-            The positioning is deliberately selective rather than claiming equal
-            depth in every spinning, weaving, processing or specialty process.
-            Scope is confirmed after technical fit assessment.
-          </p>
-        </div>
-
         <div className="flex flex-col gap-5 border-b border-gray-300 py-10">
           <h2 className="text-4xl font-bold text-black max-md:text-3xl">
             Have a Textile manufacturing project that crosses engineering and operations?

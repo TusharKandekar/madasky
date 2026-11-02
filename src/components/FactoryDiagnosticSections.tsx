@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import WhyMadaskySection from "@/components/WhyMadaskySection";
 import { motion } from "framer-motion";
 import {
   BarChart3,
@@ -277,62 +278,20 @@ export default function FactoryDiagnosticSections({
         </div>
       </motion.section>
 
-      <section
+      <WhyMadaskySection
         id="diagnosis-matters"
-        className="relative overflow-hidden bg-[#0E2C53] py-20 text-white max-md:py-14"
-      >
-        <div className="absolute inset-0 bg-[url('/assets/images/homeblogbg.png')] bg-cover bg-center opacity-[0.08]" />
-        <motion.div
-          {...reveal}
-          className="relative z-10 grid items-center gap-12 px-6 mx-auto max-w-7xl lg:grid-cols-[1.05fr_0.95fr] sm:px-8 lg:px-10"
-        >
-          <div>
-            <p className="mb-3 hidden text-sm font-bold tracking-[0.18em] uppercase text-[#ff8b72]">
-              Proof / Decision Clarity
-            </p>
-            <h2 className="text-4xl font-bold leading-tight text-white font-baskervville max-md:text-3xl">
-              Why Diagnosis Matters
-            </h2>
-            <p className="mt-7 text-xl leading-relaxed text-white/80 max-md:text-lg">
-              The value of a diagnostic is not a long list of observations. It
-              is the sequence it gives management: what to solve first, what
-              requires deeper work and what does not justify immediate
-              investment.
-            </p>
-            {showValidatedProof && (
-              <p className="mt-6 text-[17px] leading-relaxed text-white/75">
-                In one Home Textile diagnostic, multiple losses across the
-                operation were quantified into approximately ₹145 lakh of
-                avoidable opportunity.
-              </p>
-            )}
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2">
-            {[
-              ["01", "See the baseline", "Separate perception from measured performance."],
-              ["02", "Find the constraint", "Identify the few losses controlling the economics."],
-              ["03", "Sequence the response", "Prioritize no-capex, pilot and investment actions."],
-              ["04", "Decide with evidence", "Commit resources only after the opportunity is clear."],
-            ].map(([number, title, text]) => (
-              <div
-                key={number}
-                className="rounded-2xl border border-white/12 bg-white/[0.08] p-6 backdrop-blur-sm"
-              >
-                <span className="text-sm font-bold tracking-[0.16em] text-[#ff8b72]">
-                  {number}
-                </span>
-                <h3 className="mt-3 text-xl font-bold font-baskervville">
-                  {title}
-                </h3>
-                <p className="mt-3 text-[15.5px] leading-relaxed text-white/70">
-                  {text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
+        title="Why Diagnosis Matters"
+        description={<>
+          <p>The value of a diagnostic is not a long list of observations. It is the sequence it gives management: what to solve first, what requires deeper work and what does not justify immediate investment.</p>
+          {showValidatedProof && <p className="mt-4">In one Home Textile diagnostic, multiple losses across the operation were quantified into approximately ₹145 lakh of avoidable opportunity.</p>}
+        </>}
+        items={[
+          { title: "See the baseline", text: "Separate perception from measured performance." },
+          { title: "Find the constraint", text: "Identify the few losses controlling the economics." },
+          { title: "Sequence the response", text: "Prioritize no-capex, pilot and investment actions." },
+          { title: "Decide with evidence", text: "Commit resources only after the opportunity is clear." },
+        ]}
+      />
 
       <motion.section
         {...reveal}

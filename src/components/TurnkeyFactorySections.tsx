@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ArrowUpRight } from "lucide-react";
+import WhyMadaskySection from "@/components/WhyMadaskySection";
  const manageItems = [
       {
         title: "Project Definition & Business Case",
@@ -53,7 +54,6 @@ import Image from "next/image";
 import {
   BadgeCheck,
   Building2,
-  CheckCircle2,
   ClipboardCheck,
   ClipboardList,
   Cog,
@@ -462,45 +462,11 @@ export default function TurnkeyFactorySections({
         </motion.div>
       </section>
 
-      <section className="relative py-20 overflow-hidden bg-[#0e2c53] bg-[url('/assets/images/what-we-solve-bg.jpg')] bg-cover bg-center max-md:py-14">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0E2C53]/95 via-[#152869]/92 to-[#07182d]/92" />
-        <motion.div {...reveal} className="relative z-10 grid gap-12 px-6 mx-auto max-w-7xl lg:grid-cols-[0.8fr_1.2fr] sm:px-8 lg:px-10">
-          <div>
-            <p className="mb-3 text-sm font-bold tracking-[0.18em] uppercase text-[#ff7b5e]">
-              Why Madasky
-            </p>
-            <h2 className="text-4xl font-bold leading-tight text-white font-baskervville max-md:text-3xl">
-              Why Madasky for Turnkey Factory Projects
-            </h2>
-            <p className="max-w-xl mt-6 text-lg leading-relaxed text-white/75 max-md:text-[17px]">
-              Turnkey value comes from making factory design, engineering,
-              execution and operating readiness work as one system rather than
-              separate consulting packages.
-            </p>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2">
-            {whyItems.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, scale: 0.97 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.45, delay: index * 0.06 }}
-                className="rounded-xl border border-white/15 bg-white/[0.08] p-6 backdrop-blur-sm"
-              >
-                <CheckCircle2 className="text-[#ff6a49]" size={25} />
-                <h3 className="mt-4 text-xl font-bold text-white">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-[16px] leading-relaxed text-white/70">
-                  {item.text}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
+      <WhyMadaskySection
+        title="Why Madasky for Turnkey Factory Projects"
+        description="Turnkey value comes from making factory design, engineering, execution and operating readiness work as one system rather than separate consulting packages."
+        items={whyItems}
+      />
 
       <motion.section
         {...reveal}

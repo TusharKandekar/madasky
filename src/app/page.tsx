@@ -24,6 +24,7 @@ import OurCoreCapabilitiesImageSection from "@/components/OurCoreCapabilitiesIma
 // import axios from "axios";
 import Button from "@/components/Button";
 import FaqComponent from "@/components/FaqComponent";
+import WhyMadaskySection from "@/components/WhyMadaskySection";
 import LegacyInternalLinks from "@/components/LegacyInternalLinks";
 import Button2 from "@/components/Button2";
 import Image from "next/image";
@@ -480,83 +481,19 @@ export default async function Home() {
         <OurCoreCapabilitiesImageSection />
       </section>
 
-      {/* Your Next Strategic Move  */}
-      <section className="bg-[#f5f5f6] ">
-        <h2 className="hidden mt-20 text-4xl font-bold leading-tight text-gray-900 max-md:block font-baskervville max-md:text-3xl max-xl:text-4xl max-lg:text-center">
-          Why Madasky
-        </h2>
-        <div className="relative max-md:mt-24 flex items-center justify-between h-auto gap-10 px-6 py-20 mx-auto overflow-hidden max-w-7xl max-md:py-10 max-lg:flex-col max-lg:gap-12">
-          {/* LEFT IMAGE SIDE */}
-          <div className="flex relative items-center justify-start w-[40%] h-[30rem] max-md:h-[18rem] max-lg:w-full">
-            <Image
-              src="/assets/images/project-phoenix.png"
-              alt="Project"
-              fill
-              className="object-cover w-full h-[60%] rounded-lg"
-            />
-          </div>
-
-          {/* RIGHT CONTENT SIDE */}
-          <div className="w-1/2 max-lg:w-full">
-            <h2 className="mb-6 text-4xl font-semibold leading-snug text-gray-900 max-md:hidden max-xl:text-4xl">
-              Why Madasky
-            </h2>
-
-            <p className="hidden max-w-xl mb-8 text-xl leading-relaxed text-gray-600">
-              You already possess the numbers, understand the challenges, and
-              hold the strategic vision. A focused conversation can map exactly
-              where growth potential is constrained and demonstrate what
-              systematic unlocking looks like in practice.
-            </p>
-
-            {/* Three key points (vertical timeline style) */}
-            <div className="relative pl-8 mb-10 space-y-8 border-l border-gray-300">
-              {/* #1 */}
-              <div className="relative">
-                <div className="absolute -left-[46px] top-1 flex items-center justify-center w-8 h-8 bg-gray-900 text-white font-semibold rounded-sm">
-                  1
-                </div>
-
-                <p className="text-lg leading-relaxed text-gray-600 max-md:text-justify">
-                  We Execute, Not Just Recommend - Our work continues into implementation, project coordination, operating routines,
-                  commissioning or benefit tracking depending on the assignment.
-                </p>
-              </div>
-
-              {/* #2 */}
-              <div className="relative">
-                <div className="absolute -left-[46px] top-1 flex items-center justify-center w-8 h-8 bg-[#D72B0D] text-white font-semibold rounded-sm">
-                  2
-                </div>
-
-                <p className="text-lg leading-relaxed text-gray-600 max-md:text-justify">
-                  Manufacturing Problem First - We do not begin with a software product or a machine. We begin with the constraint, economics
-                  and operating requirement.
-
-                </p>
-              </div>
-
-              {/* #3 */}
-              <div className="relative max-md:w-full">
-                <div className="absolute -left-[46px] top-1 flex items-center justify-center w-8 h-8 bg-[#6B6B6B] text-white font-semibold rounded-sm">
-                  3
-                </div>
-                <h3 className=" hidden mb-2 text-lg font-semibold text-gray-900">
-                  Leadership Reality
-                </h3>
-                <p className="text-lg leading-relaxed text-gray-600 max-md:text-justify">
-                  One Integrated View - Factory design, flow, planning, material, people and digital systems are treated as one manufacturing
-                  system rather than separate consulting topics.                </p>
-              </div>
-            </div>
-
-            <p className="max-w-xl mb-8 text-lg leading-relaxed text-gray-600 max-md:text-justify">
-              Ready to transform growth constraints into competitive advantages?
-              Let’s map your path to predictable, scalable performance.
-            </p>
-
-            <Button text={"Unlock Your Next Chapter"} />
-          </div>
+      {/* Consistent Why Madasky presentation; approved copy preserved. */}
+      <WhyMadaskySection
+        title="Why Madasky"
+        items={[
+          { title: "We Execute, Not Just Recommend", text: "Our work continues into implementation, project coordination, operating routines, commissioning or benefit tracking depending on the assignment." },
+          { title: "Manufacturing Problem First", text: "We do not begin with a software product or a machine. We begin with the constraint, economics and operating requirement." },
+          { title: "One Integrated View", text: "Factory design, flow, planning, material, people and digital systems are treated as one manufacturing system rather than separate consulting topics." },
+        ]}
+      />
+      <section className="bg-[#f5f5f6] py-12">
+        <div className="mx-auto flex max-w-7xl flex-col items-start gap-6 px-6 sm:px-8 lg:px-10">
+          <p className="max-w-3xl text-lg leading-relaxed text-[#0E2C53]">Ready to transform growth constraints into competitive advantages? Let’s map your path to predictable, scalable performance.</p>
+          <Button text="Unlock Your Next Chapter" />
         </div>
       </section>
 

@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import WhyMadaskySection from "@/components/WhyMadaskySection";
 import { motion } from "framer-motion";
 import {
   ArrowUpRight,
   Bot,
   Building2,
-  CheckCircle2,
   Cpu,
   Factory,
   Gauge,
@@ -326,52 +326,14 @@ export default function TechnicalTextilesIndustrySections({
         </div>
       </motion.section>
 
-      <section className="relative overflow-hidden bg-[#0E2C53] py-20 text-white max-md:py-14">
-        <div className="absolute inset-0 bg-[url('/assets/images/homeblogbg.png')] bg-cover bg-center opacity-[0.08]" />
-        <motion.div
-          {...reveal}
-          className="relative z-10 grid gap-12 px-6 mx-auto max-w-7xl lg:grid-cols-[1.05fr_0.95fr] sm:px-8 lg:px-10"
-        >
-          <div>
-            <p className="mb-3 text-sm hidden font-bold tracking-[0.18em] uppercase text-[#ff8b72]">
-              Why Madasky
-            </p>
-            <h2 className="text-4xl font-bold leading-tight text-white font-baskervville max-md:text-3xl">
-              Why Madasky in This Industry
-            </h2>
-            <p className="mt-7 text-xl leading-relaxed text-white/80 max-md:text-lg">
-              Madasky provides one manufacturing/project interface while
-              remaining transparent about specialist process responsibilities.
-            </p>
-            <p className="mt-5 text-[17px] leading-relaxed text-white/70">
-              The objective is not to claim equal depth in every Technical
-              Textile process. It is to define the manufacturing scope clearly,
-              integrate the right process expertise and keep facility,
-              engineering, project and operating decisions coordinated.
-            </p>
-          </div>
-
-          <div className="grid gap-3 sm:grid-cols-2">
-            {projectLayers.map((item, index) => (
-              <motion.div
-                key={item}
-                initial={{ opacity: 0, x: 14 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.06] p-4"
-              >
-                <CheckCircle2
-                  size={20}
-                  className="shrink-0 text-[#ff8b72]"
-                  strokeWidth={2}
-                />
-                <span className="font-semibold text-white/90">{item}</span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
+      <WhyMadaskySection
+        title="Why Madasky in This Industry"
+        description={<>
+          <p>Madasky provides one manufacturing/project interface while remaining transparent about specialist process responsibilities.</p>
+          <p className="mt-4">The objective is not to claim equal depth in every Technical Textile process. It is to define the manufacturing scope clearly, integrate the right process expertise and keep facility, engineering, project and operating decisions coordinated.</p>
+        </>}
+        items={projectLayers.map(text => ({ text }))}
+      />
 
       <motion.section
         {...reveal}

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import HomeTextilesCompo from '@/components/HomeTextilesCompo';
+import WhyMadaskySection from '@/components/WhyMadaskySection';
 import HelpYou from '@/components/HelpYou';
 import FaqComponent from '@/components/FaqComponent';
 import Button from '@/components/Button';
@@ -93,19 +94,11 @@ export default async function HomeTextilesPage() {
     <div>
       <HomeTextilesCompo h1={pageTitle} />
 
+      <WhyMadaskySection
+        title="Why Madasky in This Industry"
+        description="Madasky combines long Home Textile manufacturing experience with project implementation and operating improvement. That makes it possible to discuss layout, fabric, planning, packing, utilities, manpower and digital systems in one manufacturing language."
+      />
       <section className="mx-auto w-[80vw] py-14 max-md:w-full max-md:px-5">
-        <div className="flex flex-col gap-5 border-b border-gray-300 pb-10">
-          <h2 className="text-4xl font-bold text-black max-md:text-3xl">
-            Why Madasky in This Industry
-          </h2>
-          <p className="text-[18px] leading-relaxed text-gray-700">
-            Madasky combines long Home Textile manufacturing experience with
-            project implementation and operating improvement. That makes it
-            possible to discuss layout, fabric, planning, packing, utilities,
-            manpower and digital systems in one manufacturing language.
-          </p>
-        </div>
-
         <div className="flex flex-col gap-5 border-b border-gray-300 py-10">
           <h2 className="text-4xl font-bold text-black max-md:text-3xl">
             Planning a Home Textile facility or trying to improve an existing one?

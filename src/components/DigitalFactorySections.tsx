@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Activity, BarChart3, CheckCircle2, ClipboardCheck, Gauge, Layers3, RadioTower, Settings2, ShieldCheck, Timer, Workflow } from "lucide-react";
+import { Activity, BarChart3, ClipboardCheck, Gauge, Layers3, RadioTower, Settings2, ShieldCheck, Timer, Workflow } from "lucide-react";
 import ShowMoreList from "@/components/ShowMoreList";
 import Button from "@/components/Button";
+import WhyMadaskySection from "@/components/WhyMadaskySection";
 
 const scope = [
   "Target vs actual production by line, process and order",
@@ -122,16 +123,7 @@ export default function DigitalFactorySections({ imageAlt }: { imageAlt?: string
         </motion.div>
       </section>
 
-      <section className="relative bg-[#0E2C53] bg-[url('/assets/images/what-we-solve-bg.jpg')] bg-cover bg-center py-20 max-md:py-14">
-        <div className="absolute inset-0 bg-[#081b34]/90" />
-        <motion.div {...reveal} className={`${wrap} grid items-center gap-12 lg:grid-cols-[0.85fr_1.15fr]`}>
-          <div>
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-[#ff6a49]">Why Madasky</p>
-            <h2 className="font-baskervville text-4xl font-bold text-white max-md:text-3xl">Digital Factory Built Around Manufacturing Decisions</h2>
-          </div>
-          <div className="grid gap-4">{reasons.map((reason) => <div key={reason} className="flex gap-4 rounded-xl border border-white/15 bg-white/[0.12] p-5 backdrop-blur-sm"><CheckCircle2 className="mt-0.5 shrink-0 text-[#ff6a49]" size={22} /><p className="text-[16px] leading-relaxed text-white/90">{reason}</p></div>)}</div>
-        </motion.div>
-      </section>
+      <WhyMadaskySection title="Digital Factory Built Around Manufacturing Decisions" items={reasons.map(text => ({ text }))} />
 
       <section className="relative bg-white py-20 max-md:py-14">
         <motion.div {...reveal} className={`${wrap} max-w-6xl`}>

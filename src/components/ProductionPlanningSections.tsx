@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import WhyMadaskySection from "@/components/WhyMadaskySection";
 import { motion } from "framer-motion";
 import {
   AlertTriangle,
@@ -295,38 +296,11 @@ export default function ProductionPlanningSections({
         </motion.div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#0c1d36] py-20 text-white max-md:py-14">
-        <div className="absolute inset-0 bg-[url('/assets/images/what-we-solve-bg.jpg')] bg-cover bg-center opacity-[0.12]" />
-        <motion.div {...reveal} className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-            <div>
-              <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-[#ff6a49]">Why Madasky</p>
-              <h2 className="text-4xl font-bold leading-tight font-baskervville max-md:text-3xl">Planning That Connects to the Real Factory</h2>
-              <p className="mt-5 text-lg leading-relaxed text-white/75 max-md:text-[17px]">
-                Planning improvement works when capacity, operations, technology and implementation governance use one manufacturing logic.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-5 max-md:grid-cols-1">
-              {whyMadasky.map((item, index) => (
-                <motion.div
-                  key={item}
-                  initial={{ opacity: 0, y: 18 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.16 }}
-                  transition={{ duration: 0.45, delay: index * 0.05 }}
-                  className="rounded-2xl border border-white/10 bg-white/[0.07] p-6 backdrop-blur-sm"
-                >
-                  <div className="flex gap-4">
-                    <CheckCircle2 size={22} className="mt-0.5 flex-shrink-0 text-[#ff6a49]" />
-                    <p className="text-[16px] leading-relaxed text-white/90">{item}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-      </section>
+      <WhyMadaskySection
+        title="Planning That Connects to the Real Factory"
+        description="Planning improvement works when capacity, operations, technology and implementation governance use one manufacturing logic."
+        items={whyMadasky.map(text => ({ text }))}
+      />
 
       <motion.section {...reveal} className="relative overflow-hidden bg-[#f5f5f6] py-20 max-md:py-14">
         <div className="absolute inset-0 bg-[url('/assets/images/industrybg.png')] bg-cover bg-center opacity-[0.05]" />
