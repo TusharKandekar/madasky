@@ -42,9 +42,9 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function HomeTextilesPage() {
-  let blogData: any = { data: [] };
-  let videoData: any = { data: [] };
-  let galleryData: any = { data: [] };
+  let blogData: { data: import("@/common/types").Blog[] } = { data: [] };
+  let videoData: { data: import("@/common/types").Video[] } = { data: [] };
+  let galleryData: { data: import("@/common/types").Gallery[] } = { data: [] };
 
   // Keep the main industry page usable if optional CMS slider data is unavailable.
   try {

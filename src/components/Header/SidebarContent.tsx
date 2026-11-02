@@ -344,6 +344,7 @@ export default function SidebarContent() {
   const [currentSection, setCurrentSection] = useState<string | null>(null);
 
   const AboutItems: SectionItem[] = [
+    { title: 'About Madasky', link: '/about' },
     {
       title: 'Who we are',
       subItems: [
@@ -357,39 +358,41 @@ export default function SidebarContent() {
   ];
 
   const CapabilitiesItems: SectionItem[] = [
-    { title: 'Advisory', link: '/advisory-consulting', isHeadingWithLink: true },
     {
-      title: 'Consulting ',
+      title: 'Manufacturing Solutions',
       subItems: [
-        { title: 'Business Strategy', link: '/business-strategy-consulting' },
-        { title: 'Growth, Marketing & Sales', link: '/growth-marketing-consulting' },
-        { title: 'Project - Factory Technical Design', link: '/factory-technical-design-consulting' },
-        { title: 'Warehousing Solutions', link: '/warehousing-solutions-consulting' },
+        { title: 'Turnkey Factory Projects', link: '/turnkey-factory-projects' },
         { title: 'Operations Excellence', link: '/operations-excellence-consulting' },
-        { title: ' Automation In Manufacturing', link: '/automation-in-manufacturing-consulting' },
-        { title: 'Supply Chain Management', link: '/supply-chain-management-consulting' },
-        { title: 'People & Organisational Performance', link: '/people-and-organisational-performance-consulting' },
-        { title: 'Sustainability', link: '/sustainability-consulting' },
-        { title: 'Financial Strategy', link: '/financial-strategy-consulting' },
-        { title: 'MSME GrowX', link: '/msme-growx-consulting' },
+        { title: 'AI-Enabled Manufacturing Intelligence', link: '/ai-manufacturing-intelligence' },
+        { title: 'Workforce Readiness & Key Talent Support', link: '/workforce-readiness-talent-support' },
       ]
     },
-    { title: 'Digital Transformation', link: '/digital-transformation', isHeadingWithLink: true },
-    { title: 'People', link: '/people', isHeadingWithLink: true },
+    {
+      title: 'Intelligence Solutions',
+      subItems: [
+        { title: 'Fabric & Raw Material Optimization', link: '/fabric-raw-material-optimization' },
+        { title: 'Production Planning & Scheduling', link: '/production-planning-scheduling' },
+        { title: 'Digital Factory & MES', link: '/digital-factory-mes' },
+      ]
+    },
+    {
+      title: 'Factory & Diagnostic Support',
+      subItems: [
+        { title: 'Plant Layout', link: '/plant-layout-consulting' },
+        { title: 'Process & Material Flow', link: '/process-and-material-flow-consulting' },
+        { title: 'Factory Diagnostic', link: '/factory-diagnostic' },
+      ]
+    },
   ];
 
   const sections: SectionsType = {
     about: AboutItems,
     capabilities: CapabilitiesItems,
     industries: [
-      { title: 'Manufacturing', link: '/manufacturing', img: "/assets/images/339.png" },
-      { title: 'Fashion & Jewellery', link: '/fashion-jewellery', img: "/assets/images/manufacturing.png" },
-      { title: 'E-Commerce', link: '/e-commerce-consulting', img: "/assets/images/manufacturing.png" },
-      { title: 'Construction', link: '/construction-consulting', img: "/assets/images/manufacturing.png" },
-      { title: 'Packaging & Paper', link: '/packaging-and-paper', img: "/assets/images/manufacturing.png" },
-      { title: 'Tourism', link: '/tourism', img: "/assets/images/manufacturing.png" },
-      { title: 'Consumer Products', link: '/consumer-products-consulting', img: "/assets/images/manufacturing.png" },
-      { title: 'Financial Services', link: '/financial-services-consulting', img: "/assets/images/manufacturing.png" },
+      { title: 'Home Textiles', link: '/industries/home-textiles' },
+      { title: 'Apparel', link: '/industries/apparel' },
+      { title: 'Textiles', link: '/industries/textiles' },
+      { title: 'Technical Textiles', link: '/industries/technical-textiles' },
     ],
     career: [
       { title: 'Home', link: '/careers-home' },
@@ -398,7 +401,9 @@ export default function SidebarContent() {
       { title: 'Jobs', link: '/careers-jobs' },
     ],
     insights: [
-      { title: 'Blogs', link: '/blog' },
+      { title: 'Insights', link: '/blog' },
+      { title: 'Case Studies', link: '/case-studies' },
+      { title: 'Factory Diagnostic', link: '/factory-diagnostic' },
       { title: 'Events', link: '/events' },
       { title: 'Gallery', link: '/gallery' },
       { title: 'Videos', link: '/video' },
@@ -428,7 +433,7 @@ export default function SidebarContent() {
             <>
               <SidebarNav title="Home" onClick={() => window.location.href = '/'} />
               <SidebarNav title="About Us" onClick={() => handleNavClick('about')} />
-              <SidebarNav title="Capabilities" onClick={() => handleNavClick('capabilities')} />
+              <SidebarNav title="Services" onClick={() => handleNavClick('capabilities')} />
               <SidebarNav title="Audit Series" onClick={() => window.location.href = '/audit'} />
               <SidebarNav title="Industries" onClick={() => handleNavClick('industries')} />
 

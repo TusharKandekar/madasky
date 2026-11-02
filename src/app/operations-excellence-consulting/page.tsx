@@ -166,7 +166,9 @@ export default async function OperationsExcellencePage() {
           { label: "Factory Diagnostic", href: "/factory-diagnostic" },
           { label: "Production Planning & Scheduling", href: "/production-planning-scheduling" },
           { label: "Digital Factory & MES", href: "/digital-factory-mes" },
+          { label: "Fabric & Raw Material Optimization", href: "/fabric-raw-material-optimization" },
           { label: "Plant Layout", href: "/plant-layout-consulting" },
+          { label: "Case Studies", href: "/case-studies" },
           { label: "Home Textiles", href: "/industries/home-textiles" },
           { label: "Apparel", href: "/industries/apparel" },
         ]}

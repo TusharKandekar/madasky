@@ -52,7 +52,7 @@ const serviceGroups = [
   },
   {
     title: "Turnkey Factory Projects",
-    href: "/factory-technical-design-consulting",
+    href: "/turnkey-factory-projects",
     description: "Plan and design factory facilities, layouts and material flows.",
     links: [
       { title: "Plant Layout", href: "/plant-layout-consulting" },
@@ -63,16 +63,17 @@ const serviceGroups = [
   },
   {
     title: "AI-Enabled Manufacturing Intelligence",
-    href: "/digital-transformation",
+    href: "/ai-manufacturing-intelligence",
     description: "Apply technology and automation to improve manufacturing intelligence.",
     links: [
-      { title: "Automation in Manufacturing", href: "/automation-in-manufacturing-consulting" },
-      { title: "Technology for Innovation & Efficiency", href: "/leverage-technology-for-innovation-and-efficiency" },
+      { title: "Fabric & Raw Material Optimization", href: "/fabric-raw-material-optimization" },
+      { title: "Production Planning & Scheduling", href: "/production-planning-scheduling" },
+      { title: "Digital Factory & MES", href: "/digital-factory-mes" },
     ],
   },
   {
     title: "Workforce Readiness & Key Talent Support",
-    href: "/people-and-organisational-performance-consulting",
+    href: "/workforce-readiness-talent-support",
     description: "Build the skills, talent and organisational capabilities factories need.",
     links: [
       { title: "Talent Acquisition", href: "/talent-acquisition-consulting" },
@@ -107,6 +108,7 @@ export default function AboutNavbar({ position = "fixed" }: { position?: "fixed"
                       <h2>Who We Are</h2>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-3">
+                      <AboutItems link="/about" title="About Madasky" />
                       <AboutItems link="/our-people" title="Our Leadership and People" />
                       <AboutItems link="/purpose-vision" title="Purpose, Mission, Vision and Values" />
                       <AboutItems link="/history" title="Our History" />
@@ -185,7 +187,7 @@ export default function AboutNavbar({ position = "fixed" }: { position?: "fixed"
       case "industries":
         return (
           <div className="fixed left-0 top-20 z-50 flex h-auto w-screen items-center justify-center">
-            <div className="flex h-[25vh] w-[75%] items-start justify-center border-2 border-slate-200 bg-white p-6 shadow-xl">
+            <div className="flex w-[88%] items-start justify-center border-2 border-slate-200 bg-white p-6 shadow-xl">
               <div className="flex h-full w-full items-center justify-center">
                 <IndustriesNav />
               </div>
@@ -209,9 +211,9 @@ export default function AboutNavbar({ position = "fixed" }: { position?: "fixed"
         return (
           <div className="absolute left-1/2 top-full z-50 w-56 -translate-x-1/2 transform border-2 border-slate-200 bg-white shadow-xl">
             <ul className="py-2">
-              <DropdownItem title="Blog / Insights" href="/blog" />
-              {/* Case Studies page URL was not present in the supplied component.
-                  Add its verified existing URL here once confirmed; do not guess a slug. */}
+              <DropdownItem title="Insights" href="/blog" />
+              <DropdownItem title="Case Studies" href="/case-studies" />
+              <DropdownItem title="Factory Diagnostic" href="/factory-diagnostic" />
               <DropdownItem title="Events" href="/events" />
               <DropdownItem title="Gallery" href="/gallery" />
               <DropdownItem title="Videos" href="/video" />

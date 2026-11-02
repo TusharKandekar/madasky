@@ -1,63 +1,32 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
-import { 
-  faMapMarkedAlt, 
-  faHome, 
-  faGem, 
-  faHardHat, 
-  faChartLine, 
-  faMoneyBillWave, 
-  faShoppingCart, 
-  faIndustry ,
-  faBox,
-
-} from '@fortawesome/free-solid-svg-icons';
-import { faProductHunt } from '@fortawesome/free-brands-svg-icons';
+import { faIndustry, faShirt, faLayerGroup, faGears } from '@fortawesome/free-solid-svg-icons';
 
 
 const IndustriesNav = () => {
   const industries = [
-    [
-        { icon: faIndustry, text: 'Manufacturing',link:'/manufacturing-consulting' },
-        { icon: faGem, text: 'Fashion & Jewellery',link:'/fashion-jewellery' },
-        { icon: faShoppingCart, text: 'E-commerce',link:'/e-commerce-consulting' },
-      
-    ],
-    [
-      { icon: faHardHat, text: 'Construction',link:'/construction-consulting' },
-      // { icon: faChartLine, text: 'Trading Wholesale',link:'./tranding-wholesale' },
-      { icon: faBox, text: 'Packaging & Paper',link:'/packaging-and-paper' },
-      { icon: faMapMarkedAlt, text: 'Tourism',link:'/tourism' },
-
-    ],
-    [
-        // { icon: faHome, text: 'Real Estate',link:'./real-estate' },
-        { icon: faProductHunt, text: 'Consumer Products',link:'/consumer-products-consulting' },
-        { icon: faMoneyBillWave, text: 'Financial Services',link:'/financial-services-consulting' },
-    ],
+    { icon: faIndustry, text: 'Home Textiles', link: '/industries/home-textiles', description: 'Factory transformation for Home Textile manufacturers' },
+    { icon: faShirt, text: 'Apparel', link: '/industries/apparel', description: 'Complete apparel manufacturing systems' },
+    { icon: faLayerGroup, text: 'Textiles', link: '/industries/textiles', description: 'Selected broader textile manufacturing projects' },
+    { icon: faGears, text: 'Technical Textiles', link: '/industries/technical-textiles', description: 'Specialized manufacturing, engineering and operations' },
   ];
 
   return (
-    <div className="flex items-center justify-center w-full p-5">
-    <div className="relative flex items-center justify-center w-full p-5 mx-auto ">
-      {/* Vertical lines */}
-      <div className="absolute top-5 bottom-5 left-[28.33%] w-px bg-gray-300"></div>
-      <div className="absolute top-5 bottom-5 right-[39.33%] w-px bg-gray-300"></div>
-
-      {industries.map((column, columnIndex) => (
-        <div key={columnIndex} className="flex flex-col items-start justify-center w-1/3">
-          {column.map((item, itemIndex) => (
-            <a href={item.link} key={itemIndex}>
-            <div key={itemIndex} className="flex items-center justify-start mb-5">
-              <FontAwesomeIcon icon={item.icon} className="w-6 h-6 mr-2.5 text-blue-600" />
-              <span className="text-sm">{item.text}</span>
-            </div>
-            </a>
-          ))}
-        </div>
+    <div className="grid w-full grid-cols-2 gap-4 lg:grid-cols-4">
+      {industries.map((item) => (
+        <Link
+          href={item.link}
+          key={item.link}
+          className="flex min-h-28 flex-col gap-2 rounded-lg border border-slate-200 p-4 transition-colors hover:border-[#D72B0D] hover:bg-slate-50"
+        >
+          <span className="flex items-center gap-2 text-sm font-semibold text-[#0E2C53]">
+            <FontAwesomeIcon icon={item.icon} className="h-5 w-5 text-[#D72B0D]" />
+            {item.text}
+          </span>
+          <span className="text-xs leading-5 text-slate-600">{item.description}</span>
+        </Link>
       ))}
     </div>
-  </div>
   );
 };
 

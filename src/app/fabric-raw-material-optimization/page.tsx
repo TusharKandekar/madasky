@@ -67,9 +67,9 @@ type Faq = {
 };
 
 export default async function FabricRawMaterialOptimizationPage() {
-  let blogData: any = { data: [] };
-  let videoData: any = { data: [] };
-  let galleryData: any = { data: [] };
+  let blogData: { data: import("@/common/types").Blog[] } = { data: [] };
+  let videoData: { data: import("@/common/types").Video[] } = { data: [] };
+  let galleryData: { data: import("@/common/types").Gallery[] } = { data: [] };
   let imgAltText: string[] = [];
 
   try {

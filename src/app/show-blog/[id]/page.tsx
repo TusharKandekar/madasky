@@ -51,6 +51,23 @@ export default async function BlogContent({ params }: { params: Params }) {
 
   const response = await getBlogById([decodedId, "title", "blogs"]);
   const recentBlogs = await getAllBlogs({ pageName: "blogs" });
+  const articleTopic = `${response?.blog_title || ""} ${response?.blog_desc || ""}`.toLowerCase();
+  const relatedService = /digital|ai|mes|automation|technology|intelligence/.test(articleTopic)
+    ? { title: "AI-Enabled Manufacturing Intelligence", href: "/ai-manufacturing-intelligence" }
+    : /fabric|raw material|cutting|marker/.test(articleTopic)
+      ? { title: "Fabric & Raw Material Optimization", href: "/fabric-raw-material-optimization" }
+      : /planning|schedule|capacity/.test(articleTopic)
+        ? { title: "Production Planning & Scheduling", href: "/production-planning-scheduling" }
+        : /project|layout|factory design|turnkey/.test(articleTopic)
+          ? { title: "Turnkey Factory Projects", href: "/turnkey-factory-projects" }
+          : { title: "Operations Excellence", href: "/operations-excellence-consulting" };
+  const relatedIndustry = /technical textile/.test(articleTopic)
+    ? { title: "Technical Textiles", href: "/industries/technical-textiles" }
+    : /apparel|garment|sewing/.test(articleTopic)
+      ? { title: "Apparel", href: "/industries/apparel" }
+      : /textile|fabric|made.up|towel|bedding|home/.test(articleTopic)
+        ? { title: "Home Textiles", href: "/industries/home-textiles" }
+        : { title: "Manufacturing Industries", href: "/industries/textiles" };
   console.log("yele", response);
   // console.log("data2", recentBlogs);
 
@@ -90,6 +107,15 @@ export default async function BlogContent({ params }: { params: Params }) {
                 className="w-full prose max-w-none blogcontent"
                 dangerouslySetInnerHTML={{ __html: response?.blog_content }}
               ></div>
+              <section className="rounded-xl border border-slate-200 bg-slate-50 p-6">
+                <h2 className="mb-3 text-2xl font-semibold text-[#0E2C53]">Explore the Manufacturing Context</h2>
+                <p className="mb-4 text-slate-600">Continue with relevant Madasky capabilities and industry expertise.</p>
+                <div className="flex flex-wrap gap-3">
+                  <Link href={relatedService.href} className="rounded border border-slate-300 bg-white px-4 py-3 font-semibold text-[#0E2C53] hover:border-[#D72B0D]">{relatedService.title}</Link>
+                  <Link href={relatedIndustry.href} className="rounded border border-slate-300 bg-white px-4 py-3 font-semibold text-[#0E2C53] hover:border-[#D72B0D]">{relatedIndustry.title}</Link>
+                  <Link href="/factory-diagnostic" className="rounded bg-[#D72B0D] px-4 py-3 font-semibold text-white hover:bg-[#BA280D]">Factory Diagnostic</Link>
+                </div>
+              </section>
             </div>
           </div>
 

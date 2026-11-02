@@ -111,8 +111,8 @@ export default async function GrowthMarketingAndSales() {
 
 
             <ConsultingNavbar
-                url='/factory-technical-design-consulting'
-                title='Project - Factory Technical Design'
+                url='/turnkey-factory-projects'
+                title='Turnkey Factory Projects'
                 navItems={[
                     { title: 'Plant Layout', link: '/plant-layout-consulting' },
                     { title: 'Technical Consulting', link: '/technical-consulting' },

@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export interface ShowMoreItem {
   title: string;
-  text: string;
+  text?: string;
 }
 
 interface ShowMoreListProps {
@@ -55,9 +55,11 @@ export default function ShowMoreList({
                     {item.title}
                   </h3>
 
-                  <p className="mt-2 text-[15px] leading-relaxed text-gray-600">
-                    {item.text}
-                  </p>
+                  {item.text && (
+                    <p className="mt-2 text-[15px] leading-relaxed text-gray-600">
+                      {item.text}
+                    </p>
+                  )}
                 </div>
               </div>
             </motion.div>

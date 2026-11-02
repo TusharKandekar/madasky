@@ -181,6 +181,8 @@ export default async function TurnkeyFactoryProjectsPage() {
           { label: 'Workforce Readiness & Key Talent Support', href: '/workforce-readiness-talent-support' },
           { label: 'Home Textiles', href: '/industries/home-textiles' },
           { label: 'Apparel', href: '/industries/apparel' },
+          { label: 'Textiles', href: '/industries/textiles' },
+          { label: 'Technical Textiles', href: '/industries/technical-textiles' },
         ]}
       />
 

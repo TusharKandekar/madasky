@@ -21,8 +21,8 @@ export async function generateMetadata(): Promise<Metadata> {
 //   console.log("Metaas: ", PageMetadata);
 
   return {
-    title: PageMetadata.data.meta_title,
-    description: PageMetadata.data.meta_desc,
+    title: "Manufacturing Insights & Case Studies | Madasky Consulting",
+    description: "Manufacturing insights on factory performance, Home Textiles, Apparel, digital manufacturing and execution-led transformation.",
     keywords: PageMetadata.data.meta_keyword,
     authors: {
       name: `${PageMetadata?.data?.author || 'Madasky'}`,
@@ -66,6 +66,15 @@ export default async function Blog() {
         id: string;
     }
 
+    const allBlogs: BlogItem[] = Array.isArray(blogs?.data) ? blogs.data : [];
+    const manufacturingTopic = /manufactur|factory|textile|apparel|garment|fabric|sewing|production|industrial|MES|shopfloor|material flow|operations excellence|planning|quality|capacity/i;
+    const featuredBlogs = allBlogs.filter((blog) => manufacturingTopic.test(`${blog.blog_title} ${blog.blog_desc}`));
+    const otherBlogs = allBlogs.filter((blog) => !manufacturingTopic.test(`${blog.blog_title} ${blog.blog_desc}`));
+    const blogGroups = [
+      { heading: "Manufacturing Insights", items: featuredBlogs },
+      { heading: featuredBlogs.length > 0 ? "More Insights" : "Latest Insights", items: otherBlogs },
+    ].filter((group) => group.items.length > 0);
+
     return (
         <>
             <AboutNavbar />
@@ -81,19 +90,22 @@ export default async function Blog() {
                         </Link>
                     </div>
 
-                    <h1 className="font-serif font-extrabold text-gray-700 text-7xl mb-7 max-md:text-5xl">
-                        New at MADASKY Blog
+                    <h1 className="font-serif font-extrabold text-[#0E2C53] text-6xl mb-7 max-md:text-4xl">
+                        Manufacturing Insights & Case Studies
                     </h1>
                     <p className="mb-8 text-xl text-gray-600">
-                        A collection of stories about our people, our capabilities,
-                        our research, and the ever-changing face of our firm.
+                        Ideas, factory-floor learning and verified project outcomes for Home Textile, Apparel and wider manufacturing teams.
                     </p>
+                    <div className="mb-8 flex flex-wrap gap-4">
+                        <Link href="/case-studies" className="rounded-md bg-[#0E2C53] px-5 py-3 font-semibold text-white hover:bg-[#193f72]">View Case Studies</Link>
+                        <Link href="/factory-diagnostic" className="rounded-md border border-[#0E2C53] px-5 py-3 font-semibold text-[#0E2C53] hover:bg-white">Factory Diagnostic</Link>
+                    </div>
                     <div className="border-2 border-slate-300"></div>
-                    <div className='grid grid-cols-3 gap-8 pt-8 max-md:grid max-md:grid-cols-1 max-md:h-auto'>
-
-
-                        {Array.isArray(blogs?.data) &&
-                            blogs.data.map((blog: BlogItem, index: number) => (
+                    {blogGroups.map((group) => (
+                      <section key={group.heading} className="py-9">
+                        <h2 className="mb-6 font-baskervville text-3xl font-bold text-[#0E2C53]">{group.heading}</h2>
+                        <div className='grid grid-cols-3 gap-8 max-md:grid-cols-1'>
+                        {group.items.map((blog: BlogItem, index: number) => (
 
                                 
                                 <BlogCards
@@ -112,8 +124,9 @@ export default async function Blog() {
                                     index={index}
                                 />
                             ))}
-
-                    </div>
+                        </div>
+                      </section>
+                    ))}
                 </div>
             </div>
             <Footer />

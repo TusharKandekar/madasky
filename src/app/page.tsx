@@ -169,31 +169,31 @@ export default async function Home() {
   const steps = [
     {
       number: "01/",
-      title: "Business Health Insights",
+      title: "Factory Performance Diagnostic",
       description:
-        "Uncover the true health of your business in just a few clicks. This executive business report pinpoints hidden friction across capital, operations, and growth initiatives. Completing this quick scan opens direct scheduling with a senior consultant for a 15-minute opportunity mapping session-designed to reveal what's slowing growth and where your next performance boost lies.",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSfnp6RAyZqotE5wLbFUEaNjYnfk-u-MsLeDIVMHbTcXFFNcoA/viewform?usp=header"
+        "Understand factory capacity, operating losses, delivery performance and cost before deciding where to intervene.",
+      link: "/factory-diagnostic"
     },
     {
       number: "02/",
-      title: "Sales Quick Sprint",
+      title: "Turnkey Factory Project Review",
       description:
-        "Reignite your revenue engine for scalable growth. This sprint aligns your sales strategy with your delivery capacity and reveals pipeline gaps and conversion accelerators. You'll also explore real case studies and receive a tactical sales realignment plan to drive consistent results through an exclusive report and 15 minutes opportunity mapping session.",
-      link: "https://forms.gle/vHm46D53kn37GUNh6"
+        "Bring capacity, process, layout, engineering and operational readiness together before a new factory project is frozen.",
+      link: "/turnkey-factory-projects"
     },
     {
       number: "03/",
-      title: "Cash and Finance Quick Sprint",
+      title: "Production Planning Health Check",
       description:
-        "Your business may have ₹1-5 crore in trapped capital-let's help you find it. This focused sprint analyzes your cash flow systems, working capital cycles, and financial rhythms. Start with a simple revenue intake and receive a clear map of cash unlock opportunities in the form of an exclusive report and 15 minutes opportunity mapping session.",
-      link: "https://forms.gle/CoYj2ZfUcEYmqybD8"
+        "Identify schedule instability caused by capacity, material, master data and operating decisions.",
+      link: "/production-planning-scheduling"
     },
     {
       number: "04/",
-      title: "Operations Quick Sprint",
+      title: "Digital Factory Readiness",
       description:
-        "Identify every delay, waste point, and capacity gap that's limiting throughput. This rapid diagnostic visualizes your end-to-end process efficiency and creates an action-ready blueprint to enhance performance. It's not just analysis-it's a direct path to leaner operations in a form of an exclusive report and 15 minutes opportunity mapping session.",
-      link: "https://forms.gle/cq7cB4wjaAM5EksP8"
+        "Select shopfloor visibility and manufacturing intelligence priorities around real operating decisions.",
+      link: "/ai-manufacturing-intelligence"
     },
   ];
 
@@ -424,7 +424,7 @@ export default async function Home() {
                 Industries We Focus On
               </h2>
               <p className="hidden max-w-xl text-lg leading-relaxed text-gray-600 max-md:text-justify">
-                You're not a startup struggling with basics. You lead an established company that has achieved growth, now faces complexity, and demands sustainable high performance. We partner with organizations that understand scale brings both opportunity and unique challenges.              </p>
+                We partner with Home Textile and Apparel factory leaders to improve capacity, fabric utilization, productivity, delivery reliability and operational readiness.              </p>
             </div>
 
             {/* PARTNERS LIST (tall content for scrolling) */}
@@ -478,11 +478,16 @@ export default async function Home() {
       {/* Client review: stories stay in normal document flow without an offset overlay. */}
       <section id="case-studies" className="w-full bg-[#f5f5f6] py-12 sm:py-16">
         <OurCoreCapabilitiesImageSection />
+        <div className="mx-auto mt-6 max-w-7xl px-6 text-center">
+          <a href="/case-studies" className="inline-flex rounded-md bg-[#0E2C53] px-6 py-3 font-semibold text-white hover:bg-[#193f72]">
+            View Manufacturing Case Studies
+          </a>
+        </div>
       </section>
 
       <section className="bg-[#f5f5f6] py-12">
         <div className="mx-auto flex max-w-7xl flex-col items-start gap-6 px-6 sm:px-8 lg:px-10">
-          <p className="max-w-3xl text-lg leading-relaxed text-[#0E2C53]">Ready to transform growth constraints into competitive advantages? Let’s map your path to predictable, scalable performance.</p>
+          <p className="max-w-3xl text-lg leading-relaxed text-[#0E2C53]">Planning a new factory or improving an existing one? Let’s identify the manufacturing constraints, priorities and measurable outcomes that matter most.</p>
           <Button text="Unlock Your Next Chapter" />
         </div>
       </section>

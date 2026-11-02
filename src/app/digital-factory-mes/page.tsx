@@ -11,6 +11,7 @@ import FaqComponent from "@/components/FaqComponent";
 import BaseUrl from "@/components/BaseUrl";
 import LegacyInternalLinks from "@/components/LegacyInternalLinks";
 import { fetchMetaDataByPageName, getDataByPageName, getImageAltText, getImageData } from "@/common/api";
+import type { Blog, Video, Gallery } from "@/common/types";
 
 const PAGE_NAME = "Digital Factory & MES";
 const PAGE_PATH = "/digital-factory-mes";
@@ -47,9 +48,9 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function DigitalFactoryMESPage() {
-  let blogData: any = { data: [] };
-  let videoData: any = { data: [] };
-  let galleryData: any = { data: [] };
+  let blogData: { data: Blog[] } = { data: [] };
+  let videoData: { data: Video[] } = { data: [] };
+  let galleryData: { data: Gallery[] } = { data: [] };
   let imgAltText: string[] = [];
 
   try {

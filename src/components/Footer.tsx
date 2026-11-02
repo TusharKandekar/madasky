@@ -34,8 +34,7 @@ const footerGroups = [
         { title: "Technical Textiles", link: "/industries/technical-textiles" },
     ] },
     { label: "Resources", links: [
-        // No standalone case-studies route in the provided source. Use existing homepage section.
-        { title: "Case Studies", link: "/#case-studies" },
+        { title: "Case Studies", link: "/case-studies" },
         { title: "Insights", link: "/blog" },
         { title: "Factory Diagnostic", link: "/factory-diagnostic" },
     ] },

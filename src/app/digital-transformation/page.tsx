@@ -85,8 +85,8 @@ export default async function GrowthMarketingAndSales() {
 
 
             <ConsultingNavbar3
-                url={'/digital-transformation'}
-                title={'Digital Transformation'}
+                url={'/ai-manufacturing-intelligence'}
+                title={'AI-Enabled Manufacturing Intelligence'}
                 navItems={[
                     // { title: '', link: '/' },
                     { title: 'Generic Digital Transformation', link: 'target-section1' },

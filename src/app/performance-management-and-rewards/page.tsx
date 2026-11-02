@@ -85,8 +85,8 @@ export default async function GrowthMarketingAndSales() {
 
 
             <ConsultingNavbar
-                url={'/people-and-organisational-performance-consulting'}
-                title={'People & Organisational Performance'}
+                url={'/workforce-readiness-talent-support'}
+                title={'Workforce Readiness & Key Talent Support'}
                 navItems={[
                     { title: 'Leadership Development & Talent Management', link: '/leadership-development-and-talent-management' },
                     { title: "Organization Design - Position, Reporting", link: '/organization-design' },
