@@ -62,7 +62,7 @@ export default function AboutVideo({ vid1, title, des, color = "white", h1, h2, 
 
                     </h1>
                     {h2 && <h2 className={consistentHero ? "mt-4 max-w-[900px] font-baskervville text-xl font-semibold leading-snug text-white max-md:text-base" : `text-2xl font-baskervville text-white ${color} font-bold max-md:text-xl mt-4 max-md:w-full max-md:font-thin max-md:pt-4 max-md:pb-8`}>{h2}</h2>}
-                    {des && <p className="text-lg">{des}</p>}
+                    {des && <p className={consistentHero ? "mt-3 max-w-[900px] text-base leading-relaxed text-white/95 md:text-lg" : "text-lg"}>{des}</p>}
                     {children && <div className="w-full max-w-[900px]">{children}</div>}
                 </div>
             </div>

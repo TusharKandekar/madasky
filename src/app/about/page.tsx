@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import AboutNavbar from "@/components/Header/AboutNavbar";
 import AboutVideo from "@/components/AboutVideo";
+import HeroSupportingMessage from "@/components/HeroSupportingMessage";
 import Button from "@/components/Button";
 import HelpYou from "@/components/HelpYou";
 import Footer from "@/components/Footer";
@@ -38,9 +39,11 @@ export default function AboutPage() {
       <AboutVideo
         vid1="/assets/videos/HomePageWebsite.mp4"
         title={null}
-        des="Madasky Consulting works with owners and manufacturing leaders who need more than recommendations. Our work sits where factory design, operations, engineering, technology and people meet."
+        des=""
         h1="Manufacturing Experience. Execution Discipline. Smarter Factories."
+        consistentHero
       />
+      <HeroSupportingMessage lead="Madasky Consulting works with owners and manufacturing leaders who need more than recommendations." secondary="Our work sits where factory design, operations, engineering, technology and people meet." />
 
       <main className="mx-auto w-[80vw] max-w-7xl bg-white max-md:w-full max-md:px-5">
         {/* Our Manufacturing Background */}

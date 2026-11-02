@@ -1,5 +1,6 @@
 import AboutNavbar from '@/components/Header/AboutNavbar';
 import AboutVideo from '@/components/AboutVideo';
+import HeroSupportingMessage from '@/components/HeroSupportingMessage';
 import Jewellery from '@/components/Jewellery';
 import CapabilitiesMainCard from '@/components/CapabilitiesMainCard';
 import CapabilitiesMainCardSecond from '@/components/CapabilitiesMainCardSecond';
@@ -62,10 +63,12 @@ export default async function HomeTextilesCompo({
       <AboutVideo
         vid1="/assets/videos/364.mp4"
         title="Home Textiles"
-        des="Build, improve and digitize Home Textile factories with a team that understands the complete manufacturing system."
+        des=""
         pageName="Home Textiles"
         h1={h1 || 'Manufacturing Transformation for Home Textiles'}
+        consistentHero
       />
+      <HeroSupportingMessage lead="Build, improve and digitize Home Textile factories with a team that understands the complete manufacturing system." />
 
       <div className="mx-auto max-w-8xl max-md:px-0">
         

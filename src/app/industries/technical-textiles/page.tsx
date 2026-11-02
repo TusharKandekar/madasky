@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import AboutNavbar from "@/components/Header/AboutNavbar";
 import AboutVideo from "@/components/AboutVideo";
+import HeroSupportingMessage from "@/components/HeroSupportingMessage";
 import TechnicalTextilesIndustrySections from "@/components/TechnicalTextilesIndustrySections";
 import FAQ from "@/components/Faq";
 import VideoSliderWrapper from "@/components/VideoSliderWrapper";
@@ -164,9 +165,11 @@ export default async function TechnicalTextilesIndustryPage() {
         vid1="/assets/videos/Automation in Manufacturing.mp4"
         title="Technical Textiles"
         h1="Factory & Operations Expertise for Technical Textiles"
-        des="Integrate facility, engineering, operations and digital systems around specialized Technical Textile processes."
+        consistentHero
+        des=""
         pageName={pageName}
       />
+      <HeroSupportingMessage lead="Integrate facility, engineering, operations and digital systems around specialized Technical Textile processes." />
 
       <TechnicalTextilesIndustrySections
         industryImageUrl={`${BaseUrl().imgurl}${industryImageName}`}

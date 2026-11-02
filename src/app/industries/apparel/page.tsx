@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import AboutNavbar from "@/components/Header/AboutNavbar";
 import AboutVideo from "@/components/AboutVideo";
+import HeroSupportingMessage from "@/components/HeroSupportingMessage";
 import ApparelIndustrySections from "@/components/ApparelIndustrySections";
 import FAQ from "@/components/Faq";
 import VideoSliderWrapper from "@/components/VideoSliderWrapper";
@@ -166,11 +167,13 @@ export default async function ApparelIndustryPage() {
 
       <AboutVideo
         vid1="/assets/videos/364.mp4"
-        title={null}
+        title="Apparel"
         h1="Manufacturing Transformation for Apparel"
-        des="Improve the complete Apparel operating system - from cutting and sewing to planning, digital visibility, workforce and factory projects."
+        consistentHero
+        des=""
         pageName={pageName}
       />
+      <HeroSupportingMessage lead="Improve the complete Apparel operating system - from cutting and sewing to planning, digital visibility, workforce and factory projects." />
 
       <ApparelIndustrySections
         apparelImageUrl={`${BaseUrl().imgurl}${apparelImageName}`}

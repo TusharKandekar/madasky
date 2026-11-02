@@ -1,5 +1,6 @@
 import AboutNavbar from '@/components/Header/AboutNavbar';
 import AboutVideo from '@/components/AboutVideo';
+import HeroSupportingMessage from '@/components/HeroSupportingMessage';
 import Jewellery from '@/components/Jewellery';
 import CapabilitiesMainCard from '@/components/CapabilitiesMainCard';
 import CapabilitiesMainCardSecond from '@/components/CapabilitiesMainCardSecond';
@@ -59,11 +60,13 @@ export default async function TextilesCompo({ h1 }: TextilesCompoProps) {
 
       <AboutVideo
         vid1="/assets/videos/364.mp4"
-        title={null}
-        des="Apply Madasky’s project, operations and digital manufacturing capability to selected Textile manufacturing requirements."
+        title="Textiles"
+        des=""
         pageName="Textiles"
         h1={h1 || 'Extended Manufacturing Capability Across Textiles'}
+        consistentHero
       />
+      <HeroSupportingMessage lead="Apply Madasky’s project, operations and digital manufacturing capability to selected Textile manufacturing requirements." />
 
       <div className="mx-auto max-w-8xl max-md:px-0 mb-10  ">
         
