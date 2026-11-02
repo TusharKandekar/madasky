@@ -99,21 +99,21 @@ export default function ProductionPlanningSections({
           <Image src="/assets/images/shape-2.png" alt="" fill className="object-contain" />
         </motion.div>
 
-        <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-14 px-6 sm:px-8 lg:grid-cols-[0.94fr_1.06fr] lg:px-10 max-lg:gap-10">
-          <div className="relative min-h-[470px] overflow-hidden rounded-2xl bg-[#eef4fb] shadow-xl max-md:min-h-[320px]">
+        <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-14 px-6 sm:px-8 lg:grid-cols-[1.1fr_1fr] lg:px-10 max-lg:gap-10">
+          <div className="relative aspect-[2/1] w-full overflow-hidden rounded-2xl bg-[#eef4fb] shadow-xl">
             <Image
-              src="/assets/images/Production Planning Control Room.png"
-              alt={planningImageAlt}
+              src="/assets/images/production-planning-scheduling-client.png"
+              alt="Production planners reviewing production schedules on a digital dashboard inside an apparel factory"
               fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 45vw"
+              className="object-contain"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#07182e]/80 via-[#07182e]/10 to-transparent" />
-            <div className="absolute bottom-0 left-0 p-7 text-white max-md:p-5">
+            <div className="absolute bottom-0 left-0 right-0 p-4 text-white sm:p-5">
               <p className="mb-2 text-sm font-semibold uppercase tracking-[0.18em] text-white/75">
                 Constraint-aware planning
               </p>
-              <p className="max-w-lg text-2xl font-bold leading-snug font-baskervville max-md:text-xl">
+              <p className="max-w-lg text-base font-bold leading-snug font-baskervville sm:text-lg lg:text-xl">
                 Build a plan around the constraints the factory must actually manage.
               </p>
             </div>

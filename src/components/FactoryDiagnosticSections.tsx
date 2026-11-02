@@ -15,7 +15,6 @@ import {
   Scissors,
   Search,
   ShieldCheck,
-  Sparkles,
   Target,
   UsersRound,
   Workflow,
@@ -55,8 +54,8 @@ const outputs = [
     icon: BarChart3,
   },
   {
-    title: "Prioritized opportunity map",
-    text: "Rank opportunities by business impact, urgency, evidence and implementation practicality.",
+    title: "Prioritized opportunity & digital/AI map",
+    text: "Rank opportunities by business impact, urgency, evidence and implementation practicality, including where better visibility, data, automation or AI may improve a measurable manufacturing decision.",
     icon: Target,
   },
   {
@@ -78,11 +77,6 @@ const outputs = [
     title: "Pilot / deeper-study recommendations",
     text: "Identify the areas that deserve a contained pilot or a deeper technical study before a larger commitment.",
     icon: Search,
-  },
-  {
-    title: "Digital / AI opportunity map",
-    text: "Highlight where better visibility, data, automation or AI may improve a measurable manufacturing decision.",
-    icon: Sparkles,
   },
 ];
 

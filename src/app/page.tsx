@@ -461,32 +461,15 @@ export default async function Home() {
               </div>
             </div>
 
-            {/* Additional text & CTA */}
-            <p className="max-w-xl mt-6 text-lg leading-relaxed text-gray-600 max-md:text-justify">
-              We've delivered results for export houses, pharmaceutical
-              manufacturers, fast‑growing retail chains, and multi‑unit
-              operations where scale creates both challenges and competitive
-              advantages.
-            </p>
 
-            {/* <button className="bg-[#E1340D] hover:bg-[#C02A0B] text-white font-bold px-6 py-3 rounded-md shadow self-start transition">
-              Book Your Free Strategy Call
-            </button> */}
-
-            <Button text={"Book Your Free Strategy Call"} />
           </div>
         </div>
       </section>
 
-      {/* Client Success Stories  */}
-      <div id="case-studies" className="bg-[#9a9a9a] w-full h-[40vh] mt-60 relative max-md:mt-20">
-
-        <div className="relative -top-40">
-
-          <OurCoreCapabilitiesImageSection />
-        </div>
-
-      </div>
+      {/* Client review: stories stay in normal document flow without an offset overlay. */}
+      <section id="case-studies" className="w-full bg-[#f5f5f6] py-12 sm:py-16">
+        <OurCoreCapabilitiesImageSection />
+      </section>
 
       {/* Your Next Strategic Move  */}
       <section className="bg-[#f5f5f6] ">

@@ -166,7 +166,7 @@ export default async function ApparelIndustryPage() {
 
       <AboutVideo
         vid1="/assets/videos/364.mp4"
-        title="Explore Related Services"
+        title={null}
         h1="Manufacturing Transformation for Apparel"
         des="Improve the complete Apparel operating system - from cutting and sewing to planning, digital visibility, workforce and factory projects."
         pageName={pageName}

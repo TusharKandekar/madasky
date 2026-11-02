@@ -37,8 +37,7 @@ const challengeItems = [
   { title: "Excess WIP", icon: Boxes },
   { title: "Poor feeding", icon: Workflow },
   { title: "Planning changes", icon: CalendarClock },
-  { title: "High absenteeism impact", icon: UsersRound },
-  { title: "Skill mismatch", icon: UsersRound },
+  { title: "Workforce availability & skill mismatch", icon: UsersRound },
   { title: "Rework", icon: CheckCircle2 },
   { title: "Finishing / packing bottlenecks", icon: Layers3 },
   { title: "Limited live visibility", icon: Cpu },
@@ -78,8 +77,7 @@ const solutionItems = [
 ];
 
 const connectedAreas = [
-  "Industrial engineering",
-  "Planning",
+  "Industrial engineering & planning",
   "Fabric",
   "Skills",
   "Digital visibility",
@@ -186,7 +184,7 @@ export default function ApparelIndustrySections({
             </p>
           </div>
 
-          <div className="grid grid-cols-4 gap-4 mt-12 max-xl:grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1">
+          <div className="grid grid-cols-5 gap-4 mt-12 max-xl:grid-cols-2 max-md:grid-cols-1">
             {challengeItems.map((item, index) => {
               const Icon = item.icon;
               return (
