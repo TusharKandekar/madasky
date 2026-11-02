@@ -174,6 +174,7 @@ export default async function ProductionPlanningSchedulingPage() {
         vid1="/assets/videos/OPERATIONS-PRODUCTIVITY-IMPROVEMENT69.mp4"
         title={pageName}
         h1="Create plans the factory can actually execute."
+        consistentHero
         des=""
         pageName={pageName}
       />

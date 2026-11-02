@@ -136,9 +136,9 @@ export default async function FabricRawMaterialOptimizationPage() {
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#07172d]/95 via-[#0b2748]/80 to-[#0b2748]/35" />
         <div className="relative mx-auto w-full max-w-7xl px-6 pb-14 pt-24 sm:px-8 sm:pb-20 lg:px-10 lg:pb-24">
-          <div className="mb-6 h-1 w-16 rounded-full bg-[#e63818]" aria-hidden="true" />
-          <h1 className="max-w-4xl font-baskervville text-[clamp(2.35rem,5vw,4.5rem)] font-bold leading-[1.12] tracking-tight text-white">
-            Fabric &amp; Raw Material Optimization
+          <p className="mb-4 text-[clamp(1rem,1.65vw,1.65rem)] font-medium leading-snug text-white">Fabric &amp; Raw Material Optimization</p>
+          <h1 className="max-w-[1100px] font-baskervville text-[clamp(2rem,3.6vw,3.6rem)] font-bold leading-[1.12] text-white">
+            Reduce fabric loss through smarter cutting decisions.
           </h1>
         </div>
       </section>

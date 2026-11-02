@@ -172,8 +172,9 @@ export default async function AIManufacturingIntelligencePage() {
 
       <AboutVideo
         vid1="/assets/videos/Digital Tansformation.mp4"
-        title={null}
-        h1={pageName}
+        title={pageName}
+        h1="Make better manufacturing decisions with AI and real-time intelligence."
+        consistentHero
         des=""
         compactHeroTitle
         pageName={pageName}

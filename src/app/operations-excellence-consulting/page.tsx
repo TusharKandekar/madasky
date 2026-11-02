@@ -137,9 +137,9 @@ export default async function OperationsExcellencePage() {
 
       <AboutVideo
         vid1="/assets/videos/OPERATIONS-PRODUCTIVITY-IMPROVEMENT69.mp4"
-        title=""
-        h1="Operations Excellence"
-        h2="Improve the performance of the factory you already own."
+        title="Operations Excellence"
+        h1="Improve the performance of the factory you already own."
+        consistentHero
         des=""
       />
 

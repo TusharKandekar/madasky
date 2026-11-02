@@ -170,6 +170,7 @@ export default async function WorkforceReadinessTalentSupportPage() {
         compactHeroTitle
         title={pageName}
         h1="A factory is not ready at commissioning if the operating team is not ready."
+        consistentHero
         des=""
         pageName={pageName}
       />

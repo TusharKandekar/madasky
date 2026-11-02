@@ -18,10 +18,12 @@ interface AboutVideoProps {
     children?: ReactNode;
     /** Homepage only: anchor its heading and CTAs near the video footer without affecting other pages. */
     alignContentToBottom?: boolean;
+    /** Opt in to the standardized Batch 1/2 hero typography. */
+    consistentHero?: boolean;
 
 
 }
-export default function AboutVideo({ vid1, title, des, color = "white", h1, h2, heroImageSrc, heroImageAlt, compactHeroTitle = false, children, alignContentToBottom = false }: AboutVideoProps) {
+export default function AboutVideo({ vid1, title, des, color = "white", h1, h2, heroImageSrc, heroImageAlt, compactHeroTitle = false, children, alignContentToBottom = false, consistentHero = false }: AboutVideoProps) {
     return (
         <div className="relative flex flex-col items-center justify-center w-full h-auto mt-20">
 
@@ -50,8 +52,8 @@ export default function AboutVideo({ vid1, title, des, color = "white", h1, h2, 
                     )}
                 </div>
                 <div className={`absolute top-0 max-md:top-[4vh] left-0 z-30 flex flex-col items-start justify-end w-full h-full p-20 text-white max-md:p-3 ${children ? (alignContentToBottom ? "!justify-end md:pr-[28%] max-md:!top-0 max-md:!pb-10" : "!justify-center md:pr-[28%] max-md:!top-0") : ""}`}>
-                    <span className={`text-3xl max-md:text-5xl ${color} ${compactHeroTitle ? "max-md:!text-lg" : ""}`}>{title}</span>
-                    <h1 className={`text-6xl font-baskervville text-white ${color} font-bold max-md:text-xl mt-4 max-md:w-full max-md:font-thin max-md:pt-4 max-md:pb-8 ${compactHeroTitle ? "!max-w-[900px] !text-[clamp(1.8rem,3.1vw,3.25rem)] !leading-[1.13] max-md:!text-[1.7rem] max-md:!font-semibold max-md:!pt-0 max-md:!pb-0 break-words" : ""} ${children ? "max-w-[900px] !text-[clamp(2rem,3.6vw,3.6rem)] !leading-[1.12] max-md:!text-[1.85rem] max-md:!font-semibold max-md:!pt-0 max-md:!pb-0" : ""}`}>
+                    {title && <span className={consistentHero ? "text-[clamp(1rem,1.65vw,1.65rem)] font-medium leading-snug text-white" : `text-3xl max-md:text-5xl ${color} ${compactHeroTitle ? "max-md:!text-lg" : ""}`}>{title}</span>}
+                    <h1 className={consistentHero ? `max-w-[1100px] font-baskervville text-[clamp(2rem,3.6vw,3.6rem)] font-bold leading-[1.12] text-white ${title ? "mt-4" : ""} max-md:text-[1.85rem] max-md:font-semibold` : `text-6xl font-baskervville text-white ${color} font-bold max-md:text-xl mt-4 max-md:w-full max-md:font-thin max-md:pt-4 max-md:pb-8 ${compactHeroTitle ? "!max-w-[900px] !text-[clamp(1.8rem,3.1vw,3.25rem)] !leading-[1.13] max-md:!text-[1.7rem] max-md:!font-semibold max-md:!pt-0 max-md:!pb-0 break-words" : ""} ${children ? "max-w-[900px] !text-[clamp(2rem,3.6vw,3.6rem)] !leading-[1.12] max-md:!text-[1.85rem] max-md:!font-semibold max-md:!pt-0 max-md:!pb-0" : ""}`}>
                         {/* {des} */}
                         {h1}
 
@@ -59,7 +61,7 @@ export default function AboutVideo({ vid1, title, des, color = "white", h1, h2, 
 
 
                     </h1>
-                    <h2 className={`text-2xl font-baskervville text-white  ${color} font-bold max-md:text-xl mt-4 max-md:w-full max-md:font-thin max-md:pt-4 max-md:pb-8`}> {h2}</h2>
+                    {h2 && <h2 className={consistentHero ? "mt-4 max-w-[900px] font-baskervville text-xl font-semibold leading-snug text-white max-md:text-base" : `text-2xl font-baskervville text-white ${color} font-bold max-md:text-xl mt-4 max-md:w-full max-md:font-thin max-md:pt-4 max-md:pb-8`}>{h2}</h2>}
                     {des && <p className="text-lg">{des}</p>}
                     {children && <div className="w-full max-w-[900px]">{children}</div>}
                 </div>

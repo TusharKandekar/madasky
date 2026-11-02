@@ -206,6 +206,7 @@ export default async function Home() {
         title="Madasky"
         des=""
         h1="Build Better Factories. Run Them Smarter."
+        consistentHero
         alignContentToBottom
       >
         <div className="mt-7 flex flex-wrap items-center gap-3 sm:gap-4">

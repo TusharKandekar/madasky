@@ -150,6 +150,7 @@ export default async function TurnkeyFactoryProjectsPage() {
         vid1="/assets/videos/Projects.mp4"
         title={pageName}
         h1="From concept to operational handover."
+        consistentHero
         des=""
         pageName={pageName}
       />

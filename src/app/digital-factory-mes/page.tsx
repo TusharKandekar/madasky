@@ -88,9 +88,10 @@ export default async function DigitalFactoryMESPage() {
       <ConsultingNavbar2 url={PAGE_PATH} title={PAGE_TITLE} />
       <AboutVideo
         vid1={HERO_VIDEO}
+        title={PAGE_TITLE}
         des=""
-        h1={PAGE_TITLE}
-        h2="Turn shopfloor data into faster action."
+        h1="Turn shopfloor data into faster action."
+        consistentHero
       />
 
       {/* Client feedback (Point 7): show the approved supporting copy BELOW the hero video. */}
