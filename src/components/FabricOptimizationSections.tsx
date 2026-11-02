@@ -128,7 +128,7 @@ export default function FabricSections({imageAlt}:{imageAlt?:string}) {
       </motion.div>
     </section>
 
-    <WhyMadaskySection title="Why Madasky for Fabric & Raw Material Optimization" items={reasons.map(text => ({ text }))} />
+    <WhyMadaskySection title="Why Madasky for Fabric & Raw Material Optimization" items={reasons.map(text => ({ text }))} layout="five-column" />
 
     <section className="relative bg-white py-20 max-md:py-14">
       <motion.div {...reveal} className={`${wrap} max-w-6xl`}>

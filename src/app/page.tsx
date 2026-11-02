@@ -24,7 +24,6 @@ import OurCoreCapabilitiesImageSection from "@/components/OurCoreCapabilitiesIma
 // import axios from "axios";
 import Button from "@/components/Button";
 import FaqComponent from "@/components/FaqComponent";
-import WhyMadaskySection from "@/components/WhyMadaskySection";
 import LegacyInternalLinks from "@/components/LegacyInternalLinks";
 import Button2 from "@/components/Button2";
 import Image from "next/image";
@@ -481,15 +480,6 @@ export default async function Home() {
         <OurCoreCapabilitiesImageSection />
       </section>
 
-      {/* Consistent Why Madasky presentation; approved copy preserved. */}
-      <WhyMadaskySection
-        title="Why Madasky"
-        items={[
-          { title: "We Execute, Not Just Recommend", text: "Our work continues into implementation, project coordination, operating routines, commissioning or benefit tracking depending on the assignment." },
-          { title: "Manufacturing Problem First", text: "We do not begin with a software product or a machine. We begin with the constraint, economics and operating requirement." },
-          { title: "One Integrated View", text: "Factory design, flow, planning, material, people and digital systems are treated as one manufacturing system rather than separate consulting topics." },
-        ]}
-      />
       <section className="bg-[#f5f5f6] py-12">
         <div className="mx-auto flex max-w-7xl flex-col items-start gap-6 px-6 sm:px-8 lg:px-10">
           <p className="max-w-3xl text-lg leading-relaxed text-[#0E2C53]">Ready to transform growth constraints into competitive advantages? Let’s map your path to predictable, scalable performance.</p>

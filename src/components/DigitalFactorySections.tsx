@@ -123,7 +123,7 @@ export default function DigitalFactorySections({ imageAlt }: { imageAlt?: string
         </motion.div>
       </section>
 
-      <WhyMadaskySection title="Digital Factory Built Around Manufacturing Decisions" items={reasons.map(text => ({ text }))} />
+      <WhyMadaskySection title="Digital Factory Built Around Manufacturing Decisions" items={reasons.map(text => ({ text }))} layout="five-column" />
 
       <section className="relative bg-white py-20 max-md:py-14">
         <motion.div {...reveal} className={`${wrap} max-w-6xl`}>

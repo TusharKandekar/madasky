@@ -364,7 +364,7 @@ export default function OperationsExcellenceSections({
         </div>
       </motion.section>
 
-      <WhyMadaskySection title="Why Partner with Madasky" items={whyItems} />
+      <WhyMadaskySection title="Why Partner with Madasky" items={whyItems} layout="five-column" />
 
       <motion.section {...reveal} className="bg-[#f5f6f8] py-20 max-md:py-14">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
