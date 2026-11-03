@@ -33,7 +33,7 @@ const CapabilitiesContent2 = ({ details1, border }: { details1: details1, border
 
             <div className='flex flex-col w-full gap-8'>
 
-                <div className='text-black font-bold text-4xl leading-[1] max-md:text-3xl'>
+                <div className='capitalize text-black font-bold text-4xl leading-[1] max-md:text-3xl'>
                     <h2 className=''>{details1.heading1}</h2>
 
                 </div>

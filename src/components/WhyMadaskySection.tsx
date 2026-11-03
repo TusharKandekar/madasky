@@ -32,7 +32,7 @@ export default function WhyMadaskySection({
       <div className={`mx-auto max-w-7xl px-6 sm:px-8 lg:px-10 ${stacked ? "lg:grid lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-12" : ""}`}>
         <div className={compactFive ? "mx-auto mb-10 max-w-4xl text-center" : stacked ? "" : "mb-9 max-w-4xl"}>
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[#9DD5F0]">Why Madasky</p>
-          <h2 className="font-baskervville text-3xl font-bold leading-tight text-white sm:text-4xl">{title}</h2>
+          <h2 className="capitalize font-baskervville text-3xl font-bold leading-tight text-white sm:text-4xl">{title}</h2>
           {description && <div className="mt-5 max-w-3xl text-[17px] leading-relaxed text-[#D1DDEA]">{description}</div>}
         </div>
         {items.length > 0 && (

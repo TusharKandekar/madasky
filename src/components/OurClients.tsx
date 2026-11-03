@@ -10,7 +10,7 @@ export default function OurClient() {
   return (
     <section className="bg-white py-5 sm:py-6" aria-label="Client logos">
       <h2 className="mx-auto mb-1 sm:mb-2 max-w-7xl px-6 text-center font-baskervville text-3xl font-bold leading-tight text-[#0E2C53] sm:px-8 sm:text-4xl">
-        Trusted Across Manufacturing and Industry
+        Trusted Across Manufacturing And Industry
       </h2>
 
       {/*

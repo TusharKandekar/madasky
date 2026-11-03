@@ -155,7 +155,7 @@ export default async function GrowthMarketingAndSales() {
 
 
                     <CapabilitiesContent2 details1={{
-                        heading1: "Key Challenges Faced by the Manufacturing Industry",
+                        heading1: "Key Challenges Faced By The Manufacturing Industry",
                         // heading2: "Manufacturers often encounter hurdles that impede efficiency and impact overall business performance. Below are some of the most common challenges our clients face:",
 
 

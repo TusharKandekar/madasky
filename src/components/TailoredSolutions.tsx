@@ -49,7 +49,7 @@ const TailoredSolutions = ({ details, border }: { details: details, border: stri
     return (
         <div>
             <div className="px-4 py-12 mx-auto text-gray-800 w-[100%]">
-                <h1 className="mb-6 text-3xl font-bold text-center md:text-4xl">
+                <h1 className="mb-6 text-3xl font-bold text-center md:text-4xl capitalize">
                     {details.heading1}
                 </h1>
                 <p className="mb-12 text-lg text-center">

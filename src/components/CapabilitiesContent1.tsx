@@ -23,8 +23,8 @@ const CapabilitiesContent1 = ({ details1, border }: { details1: details1, border
     return (
         <div className={`flex flex-col space-y-8 w-full pb-8 mt-20 ${border} border-gray-300 max-md:flex max-md:flex-col`}>
 
-            <div className='text-black font-bold text-4xl max-md:text-3xl leading-[1]'>
-                <h2>{details1.heading1}</h2>
+            <div className='capitalize text-black font-bold text-4xl max-md:text-3xl leading-[1]'>
+                <h2 className='capitallize'>{details1.heading1}</h2>
             </div>
 
             <div className='flex w-full'>

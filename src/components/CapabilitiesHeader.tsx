@@ -24,7 +24,7 @@ const CapabilitiesHeader = ({ details1, border } : { details1: details1, border:
             }
 
 
-            <div className='text-4xl font-bold text-black max-md:text-3xl'>
+            <div className='text-4xl font-bold text-black max-md:text-3xl capitalize'>
                 <h2>{details1.heading1}</h2>
             </div>
             {/* style={{ fontFamily: "Helvetica, Arial, sans-serif" }} */}

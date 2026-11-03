@@ -19,7 +19,7 @@ export default function HomepageExperience({ image, altText }: HomepageExperienc
           />
         </div>
         <div>
-          <h2 id="homepage-experience-heading" className="font-baskervville text-3xl font-bold leading-tight text-[#102e55] md:text-4xl">
+          <h2 id="homepage-experience-heading" className="capitallize font-baskervville text-3xl font-bold leading-tight text-[#102e55] md:text-4xl">
             Experience That Connects Strategy to the Factory Floor
           </h2>
           <p className="mt-7 text-lg leading-relaxed text-slate-700">

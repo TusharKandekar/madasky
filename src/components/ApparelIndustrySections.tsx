@@ -115,7 +115,7 @@ export default function ApparelIndustrySections({
             <p className="mb-3 text-sm font-bold tracking-[0.18em] uppercase text-[#D72B0D]">
               Manufacturing Context
             </p>
-            <h2 className="text-4xl font-bold leading-tight text-[#0E2C53] font-baskervville max-md:text-3xl">
+            <h2 className="capitalize text-4xl font-bold leading-tight text-[#0E2C53] font-baskervville max-md:text-3xl">
               Apparel Performance Depends on the Whole Operations System
             </h2>
             <p className="mt-7 text-lg leading-relaxed text-gray-600 max-md:text-[17px]">
@@ -306,7 +306,7 @@ export default function ApparelIndustrySections({
               <p className="mb-3 text-sm font-bold tracking-[0.18em] uppercase text-[#D72B0D]">
                 Apparel Transformation
               </p>
-              <h2 className="text-4xl font-bold leading-tight text-[#0E2C53] font-baskervville max-md:text-3xl">
+              <h2 className="capitalize text-4xl font-bold leading-tight text-[#0E2C53] font-baskervville max-md:text-3xl">
                 If growth is adding complexity faster than performance
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-gray-600 max-md:text-[17px]">

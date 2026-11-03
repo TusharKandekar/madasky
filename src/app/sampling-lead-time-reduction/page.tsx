@@ -111,7 +111,7 @@ export default async function GrowthMarketingAndSales() {
                     }} border={"border-b"} />
 
                     <CapabilitiesContent1 details1={{
-                        heading1: "Key Challenges Faced by the Manufacturing Industry in Sampling",
+                        heading1: "Key Challenges Faced By The Manufacturing Industry In Sampling",
                         // paragraph1: "If these challenges resonate with your experience, our Delivery Performance Program is designed to transform these obstacles into opportunities for growth and excellence.",
 
 

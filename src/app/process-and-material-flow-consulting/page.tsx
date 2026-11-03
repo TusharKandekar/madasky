@@ -183,7 +183,7 @@ export default async function ProcessAndMaterialFlow() {
 
                         <div className='flex flex-col w-full gap-8'>
 
-                            <div className='text-black font-bold text-4xl max-md:text-3xl leading-[1]'>
+                            <div className='capitalize text-black font-bold text-4xl max-md:text-3xl leading-[1]'>
                                 <h2>Tailored Solutions by Madasky Consulting</h2>
 
                             </div>

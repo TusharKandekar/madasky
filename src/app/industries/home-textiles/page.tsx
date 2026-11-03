@@ -100,7 +100,7 @@ export default async function HomeTextilesPage() {
       />
       <section className="mx-auto w-[80vw] py-14 max-md:w-full max-md:px-5">
         <div className="flex flex-col gap-5 border-b border-gray-300 py-10">
-          <h2 className="text-4xl font-bold text-black max-md:text-3xl">
+          <h2 className="text-4xl font-bold text-black max-md:text-3xl capitalize">
             Planning a Home Textile facility or trying to improve an existing one?
           </h2>
           <p className="text-[18px] leading-relaxed text-gray-700">

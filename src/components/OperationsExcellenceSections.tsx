@@ -181,7 +181,7 @@ export default function OperationsExcellenceSections({
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-[#D72B0D]">
               Factory Performance
             </p>
-            <h2 className="font-baskervville text-4xl font-bold leading-tight text-[#0E2C53] max-md:text-3xl">
+            <h2 className="capitallize font-baskervville text-4xl font-bold leading-tight text-[#0E2C53] max-md:text-3xl">
               Busy Is Not the Same as Productive
             </h2>
             <div className="mt-7 space-y-5 text-lg leading-relaxed text-gray-600 max-md:text-[17px]">
@@ -326,7 +326,7 @@ export default function OperationsExcellenceSections({
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#0E2C53] text-white">
                   <Boxes size={26} />
                 </div>
-                <h2 className="mt-6 font-baskervville text-4xl font-bold leading-tight text-[#0E2C53] max-md:text-3xl">
+                <h2 className="capitallize mt-6 font-baskervville text-4xl font-bold leading-tight text-[#0E2C53] max-md:text-3xl">
                   Before You Add Capex, Find the Missing Capacity
                 </h2>
               </div>
@@ -341,7 +341,7 @@ export default function OperationsExcellenceSections({
               <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#D72B0D]">
                 Home Textiles
               </p>
-              <h3 className="mt-3 font-baskervville text-3xl font-bold text-[#0E2C53]">
+              <h3 className="capitallize mt-3 font-baskervville text-3xl font-bold text-[#0E2C53]">
                 Operations Excellence for Home Textiles
               </h3>
               <p className="mt-5 text-[17px] leading-relaxed text-gray-600">
@@ -353,7 +353,7 @@ export default function OperationsExcellenceSections({
               <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#D72B0D]">
                 Apparel
               </p>
-              <h3 className="mt-3 font-baskervville text-3xl font-bold text-[#0E2C53]">
+              <h3 className="capitallize mt-3 font-baskervville text-3xl font-bold text-[#0E2C53]">
                 Operations Excellence for Apparel
               </h3>
               <p className="mt-5 text-[17px] leading-relaxed text-gray-600">

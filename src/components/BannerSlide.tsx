@@ -46,8 +46,8 @@ export default function BannerSlide() {
   return (
     <section id="diagnostics" className="overflow-hidden bg-[#f5f5f6] py-14 md:py-20" aria-labelledby="diagnostic-title">
       <div className="mx-auto mb-10 max-w-7xl px-6 text-center">
-        <h2 id="diagnostic-title" className="font-baskervville text-3xl font-bold text-[#102e55] md:text-4xl">
-          Start with the Right Diagnostic
+        <h2 id="diagnostic-title" className="capitalize font-baskervville text-3xl font-bold text-[#102e55] md:text-4xl">
+          Start With The Right Diagnostic
         </h2>
       </div>
       <div

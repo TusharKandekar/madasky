@@ -210,7 +210,7 @@ export default function TurnkeyFactorySections({
             <p className="mb-3 text-sm font-bold tracking-[0.18em] uppercase text-[#D72B0D]">
               Integrated Project Delivery
             </p>
-            <h2 className="text-4xl font-bold leading-tight text-[#0E2C53] font-baskervville max-md:text-3xl">
+            <h2 className="capitalize text-4xl font-bold leading-tight text-[#0E2C53] font-baskervville max-md:text-3xl">
               One Team from Factory Concept to Production Ramp-Up
             </h2>
             <div className="mt-7 space-y-5 text-lg leading-relaxed text-gray-600 max-md:text-[17px]">
@@ -380,7 +380,7 @@ export default function TurnkeyFactorySections({
             <p className="mb-3 text-sm font-bold tracking-[0.18em] uppercase text-[#D72B0D]">
               Delivery Method
             </p>
-            <h2 className="text-4xl font-bold leading-tight text-[#0E2C53] font-baskervville max-md:text-3xl">
+            <h2 className="capitalize text-4xl font-bold leading-tight text-[#0E2C53] font-baskervville max-md:text-3xl">
               How the Turnkey Project Runs
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-gray-600 max-md:text-[17px]">
@@ -449,7 +449,7 @@ export default function TurnkeyFactorySections({
                   <p className="relative z-10 mt-6 text-xs font-bold tracking-[0.17em] uppercase text-[#D72B0D]">
                     {item.eyebrow}
                   </p>
-                  <h3 className="relative z-10 mt-2 text-2xl font-bold leading-snug text-[#0E2C53] font-baskervville">
+                  <h3 className="capitalize relative z-10 mt-2 text-2xl font-bold leading-snug text-[#0E2C53] font-baskervville">
                     {item.title}
                   </h3>
                   <p className="relative z-10 mt-4 text-[16px] leading-relaxed text-gray-600">
@@ -479,7 +479,7 @@ export default function TurnkeyFactorySections({
               <p className="mb-3 text-sm font-bold tracking-[0.18em] uppercase text-[#D72B0D]">
                 Start Before Decisions Are Frozen
               </p>
-              <h2 className="text-4xl font-bold leading-tight text-[#0E2C53] font-baskervville max-md:text-3xl">
+              <h2 className="text-4xl capitalize font-bold leading-tight text-[#0E2C53] font-baskervville max-md:text-3xl">
                 Planning a New Factory or Major Expansion?
               </h2>
               <p className="max-w-3xl mt-5 text-lg leading-relaxed text-gray-600 max-md:text-[17px]">
