@@ -138,10 +138,10 @@ export default function InvestmentValueSimple() {
 
             <div className="space-y-3 text-lg leading-relaxed text-slate-600">
               <p>
-                These audits help owners see their business without filters. They bring hidden issues to the surface before they become crises. They create clarity on what to fix first, so you're not wasting energy on the wrong priorities.
+                These Diagnostics help owners see their business without filters. They bring hidden issues to the surface before they become crises. They create clarity on what to fix first, so you're not wasting energy on the wrong priorities.
               </p>
               <p>
-                Good audits align teams with clear responsibilities. They improve margins and cashflow by eliminating waste. They strengthen daily decision-making with better data.
+                Good Diagnostics align teams with clear responsibilities. They improve margins and cashflow by eliminating waste. They strengthen daily decision-making with better data.
               </p>
               <p className="font-semibold text-[#152869]">
                 Most importantly, they build a predictable, scalable organization that doesn't depend on the owner to solve every problem.
@@ -179,12 +179,12 @@ export default function InvestmentValueSimple() {
             {/* Right: Text Content */}
             <div className="order-1 lg:order-2">
               <h2 className="text-3xl md:text-4xl font-bold text-[#152869] mb-2 leading-tight">
-                After the Audit
+                After the Diagnostic
               </h2>
               <div className="w-16 h-1 bg-[#e63410] mb-4"></div>
 
               <p className="mb-3 text-lg leading-relaxed text-slate-600">
-                The audit is step one. Execution support follows. We provide the structure you need to drive real improvement.
+                The Diagnostic is step one. Execution support follows. We provide the structure you need to drive real improvement.
               </p>
 
               {/* Clean List */}

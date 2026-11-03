@@ -117,7 +117,7 @@ const AuditScopeMatrix: React.FC = () => {
                     Scope & Depth Across Tiers
                 </h2>
                 <p className="text-lg leading-relaxed text-center text-gray-600">
-                    Understanding what each tier covers helps you choose wisely. This matrix shows how audit depth and coverage expand as you move from Rapid Diagnostic to Deep-Dive Enterprise. Notice how foundational audits like Sales and Finance appear across all tiers, while specialized assessments like GTM Strategy and Automation are reserved for higher tiers.
+                    Understanding what each tier covers helps you choose wisely. This matrix shows how Diagnostic depth and coverage expand as you move from Rapid Diagnostic to Deep-Dive Enterprise. Notice how foundational Diagnostics like Sales and Finance appear across all tiers, while specialized assessments like GTM Strategy and Automation are reserved for higher tiers.
                 </p>
             </div>
 
@@ -129,13 +129,13 @@ const AuditScopeMatrix: React.FC = () => {
                     <thead className="sticky top-0 z-10 text-red-700 bg-red-50">
                         <tr>
                             <th scope="col" className="max-md:sticky max-md:left-0 max-md:bg-red-50 px-6 py-4 text-left text-sm font-semibold tracking-wider w-1/5 min-w-[200px] border-r border-red-300">
-                                Audit Type
+                                Diagnostic Type
                             </th>
                             <th scope="col" className="px-4 py-4 text-center text-sm font-semibold tracking-wider min-w-[150px]">
                                 <span className="text-base font-normal">Free Rapid Diagnostic</span>
                             </th>
                             <th scope="col" className="px-4 py-4 text-center text-sm font-semibold tracking-wider min-w-[150px]">
-                                <span className="text-base font-normal">Dept Audit</span>
+                                <span className="text-base font-normal">Dept Diagnostic</span>
                             </th>
                             <th scope="col" className="px-4 py-4 text-center text-sm font-semibold tracking-wider min-w-[150px]">
                                 <span className="text-base font-normal">3-Dept Bundle</span>

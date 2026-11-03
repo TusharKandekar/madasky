@@ -18,7 +18,7 @@ import Image from "next/image";
 
 // Data object reflecting the Sales Process Audit image and your new prop structure
 const salesProcessData = {
-  title: "Sales Process Audit",
+  title: "Sales Process Diagnostic",
   heading: `Your sales process either drives growth or holds it back. We examine every stage to identify where opportunities are being lost and where improvements will have the biggest impact.`,
   imgSrc: "/assets/images/sales_process_audit.png", // Use your actual image path
   list: [
@@ -56,7 +56,7 @@ const page = () => {
         <div
           className="flex flex-col py-0"
         >
-          <h2 className="my-20 text-4xl font-semibold text-center text-gray-800 max-md:mt-10">Audit Series</h2>
+          <h2 className="my-20 text-4xl font-semibold text-center text-gray-800 max-md:mt-10">Diagnostic Series</h2>
 
           <NewCard></NewCard>
         </div>
@@ -150,7 +150,7 @@ const page = () => {
                   <h3
                     className="mb-2 text-lg font-semibold text-gray-900 "
                   >
-                    Choose Your Audit Tier
+                    Choose Your Diagnostic Tier
                   </h3>
                   <p
                     className="text-lg leading-relaxed text-gray-600 max-md:text-justify"
@@ -189,7 +189,7 @@ const page = () => {
                     We'll have a brief conversation to understand your business
                     goals, current challenges, and desired outcomes. This helps
                     us confirm the right scope and prepare our team for maximum
-                    impact during the audit.
+                    impact during the Diagnostic.
                   </p>
                 </div>
 
@@ -212,7 +212,7 @@ const page = () => {
                   <h3
                     className="mb-2 text-lg font-semibold text-gray-900 "
                   >
-                    Start the Audit Within 7–10 Days
+                    Start the Diagnostic Within 7–10 Days
                   </h3>
                   <p
                     className="text-lg leading-relaxed text-gray-600 max-md:text-justify"
@@ -247,7 +247,7 @@ const page = () => {
                   <p
                     className="text-lg leading-relaxed text-gray-600 max-md:text-justify"
                   >
-                    Within one week of completing the audit, you'll receive a
+                    Within one week of completing the Diagnostic, you'll receive a
                     clear, practical report that identifies strengths, gaps,
                     opportunities, and priorities.
                   </p>

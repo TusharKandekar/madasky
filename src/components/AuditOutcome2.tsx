@@ -169,7 +169,7 @@ const WorkProcessPage: React.FC = () => {
                             />
                         </div>
 
-                        <p className='text-lg text-gray-800 w-[80%] max-md:w-[90%] mx-auto mt-10 text-justify'>Every audit delivers a comprehensive diagnostic report with actionable insights you can use immediately. We don't just identify problems - we show you exactly what to do about them.</p>
+                        <p className='text-lg text-gray-800 w-[80%] max-md:w-[90%] mx-auto mt-10 text-justify'>Every Diagnostic delivers a comprehensive diagnostic report with actionable insights you can use immediately. We don't just identify problems - we show you exactly what to do about them.</p>
 
                         {/* Optional decorative background element behind the image box */}
                         {/* <div className="absolute inset-0 z-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20 opacity-30 blur-3xl"></div> */}

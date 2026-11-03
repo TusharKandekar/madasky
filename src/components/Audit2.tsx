@@ -25,22 +25,22 @@ import {
 const features = [
   {
     iconKey: "sales",
-    title: "Sales Process Audit",
+    title: "Sales Process Diagnostic",
     description: "Strengthen your sales engine and close revenue leaks",
   },
   {
     iconKey: "finance",
-    title: "Finance & Cashflow Audit",
+    title: "Finance & Cashflow Diagnostic",
     description: "Free blocked money and improve financial control",
   },
   {
     iconKey: "operations",
-    title: "Operations Excellence Audit",
+    title: "Operations Excellence Diagnostic",
     description: "Analyze systems and flow to optimize capacity and delivery.",
   },
   {
     iconKey: "marketing",
-    title: "Go-to-Marketing Audit",
+    title: "Go-to-Marketing Diagnostic",
     description: "Sharpen positioning and route-to-market",
   },
   {
@@ -137,7 +137,7 @@ const BusinessHero: React.FC = () => {
   const features = [
     {
       iconKey: "search",
-      title: "Sales Process Audit",
+      title: "Sales Process Diagnostic",
       description: "Identify where opportunities are being lost.",
     },
     {
@@ -147,17 +147,17 @@ const BusinessHero: React.FC = () => {
     },
     {
       iconKey: "finance",
-      title: "Finance & Cashflow Audit",
+      title: "Finance & Cashflow Diagnostic",
       description: "Free blocked money and eliminate waste.",
     },
     {
       iconKey: "operations",
-      title: "Operations Excellence Audit",
+      title: "Operations Excellence Diagnostic",
       description: "Lift output and reduce rework.",
     },
     {
       iconKey: "marketing",
-      title: "Go-To-Market Audit",
+      title: "Go-To-Market Diagnostic",
       description: "Evaluate product-market fit and strategy.",
     },
     {
@@ -167,12 +167,12 @@ const BusinessHero: React.FC = () => {
     },
     {
       iconKey: "people",
-      title: "People & Org Audit",
+      title: "People & Org Diagnostic",
       description: "Align structure and clarify roles.",
     },
     {
       iconKey: "productivity",
-      title: "Productivity Audit",
+      title: "Productivity Diagnostic",
       description: "Increase output without adding headcount.",
     },
   ];
@@ -209,7 +209,7 @@ const BusinessHero: React.FC = () => {
             <h2
               className="text-4xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl"
             >
-              Why These Audits{" "}
+              Why These Diagnostics{" "}
               <span
                 className="text-[#152869] "
               >
@@ -240,7 +240,7 @@ const BusinessHero: React.FC = () => {
               <p
                 className="text-lg italic font-medium text-slate-900"
               >
-                "Leaders want clarity, not assumptions. These audits give you
+                "Leaders want clarity, not assumptions. These Diagnostics give you
                 that clarity."
               </p>
             </div>
@@ -284,7 +284,7 @@ const BusinessHero: React.FC = () => {
             >
               <img
                 src="/assets/images/AuditMatter.png"
-                alt="Audit Review"
+                alt="Diagnostic Review"
                 className="object-cover w-full h-full "
               />
             </div>
@@ -310,13 +310,13 @@ const BusinessHero: React.FC = () => {
             <h3
               className="mb-6 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
             >
-              Our Complete Suite of Audits
+              Our Complete Suite of Diagnostics
             </h3>
             <p
               className="text-lg leading-relaxed text-slate-600"
             >
-              We offer eight specialized audits designed to address the specific
-              challenges manufacturing companies face. Each audit provides
+              We offer eight specialized Diagnostics designed to address the specific
+              challenges manufacturing companies face. Each Diagnostic provides
               actionable insights tailored to your operational reality.
             </p>
           </div>

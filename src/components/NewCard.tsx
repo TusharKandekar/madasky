@@ -80,7 +80,7 @@ export default function NewCard() {
             >
               01.
             </span>{" "}
-            Sales Process Audit
+            Sales Process Diagnostic
           </h2>
 
           <div
@@ -271,7 +271,7 @@ export default function NewCard() {
                         rounded-lg w-fit
                       "
                 >
-                  Free Audit
+                  Free Diagnostic
                 </button>
               </div>
             </div>
@@ -503,7 +503,7 @@ export default function NewCard() {
                         rounded-lg w-fit
                       "
                 >
-                  Free Audit
+                  Free Diagnostic
                 </button>
               </div>
             </div>
@@ -537,7 +537,7 @@ export default function NewCard() {
             >
               03.
             </span>{" "}
-            Finance & Cashflow Audit
+            Finance & Cashflow Diagnostic
           </h2>
 
           <div
@@ -772,7 +772,7 @@ export default function NewCard() {
                   rounded-lg
                 "
           >
-            Free Audit
+            Free Diagnostic
           </button>
         </motion.div>
 
@@ -802,7 +802,7 @@ export default function NewCard() {
               >
                 04.
               </span>{" "}
-              Operations Excellence Audit
+              Operations Excellence Diagnostic
             </h2>
 
             <div
@@ -1008,7 +1008,7 @@ export default function NewCard() {
                        rounded-lg
                      "
                   >
-                    Free Audit
+                    Free Diagnostic
                   </button>
                 </div>
               </div>
@@ -1042,7 +1042,7 @@ export default function NewCard() {
             >
               05.
             </span>{" "}
-            Go-To-Market (GTM) Audit
+            Go-To-Market (GTM) Diagnostic
           </h2>
 
           <div
@@ -1609,7 +1609,7 @@ export default function NewCard() {
             >
               07.
             </span>{" "}
-            People & Organization Performance Audit
+            People & Organization Performance Diagnostic
           </h2>
 
           <div
@@ -1628,7 +1628,7 @@ export default function NewCard() {
               >
                 Your people drive everything. When structure is unclear, roles
                 overlap, or accountability is weak, even talented teams
-                underperform. This audit examines how your organization is
+                underperform. This Diagnostic examines how your organization is
                 structured and how effectively people work together.
               </p>
             </div>
@@ -1899,7 +1899,7 @@ export default function NewCard() {
             >
               08.
             </span>{" "}
-            Productivity Audit
+            Productivity Diagnostic
           </h2>
 
           <div
@@ -2174,7 +2174,7 @@ export default function NewCard() {
           </div>
           <div className="p-6">
             <h2 className="text-2xl font-bold text-[#152869] font-open mb-3">
-              <span className="mr-2 opacity-80">01.</span> Sales Process Audit
+              <span className="mr-2 opacity-80">01.</span> Sales Process Diagnostic
             </h2>
             <p className="mb-6 text-sm leading-relaxed text-slate-600">
               We examine every stage to identify where opportunities are being lost and where improvements will have the biggest impact.
@@ -2210,7 +2210,7 @@ export default function NewCard() {
               onClick={() => window.open("https://forms.gle/8KtDGCwVx9hPWDtM8", "_blank")}
               className="w-full py-3 text-white bg-[#152869] rounded-lg font-medium shadow-md active:scale-95 transition-transform"
             >
-              Free Audit
+              Free Diagnostic
             </button>
           </div>
         </div>
@@ -2262,7 +2262,7 @@ export default function NewCard() {
               onClick={() => window.open("https://forms.gle/wCL27o9zYgMJ9mjw9", "_blank")}
               className="w-full py-3 text-white bg-[#152869] rounded-lg font-medium shadow-md active:scale-95 transition-transform"
             >
-              Free Audit
+              Free Diagnostic
             </button>
           </div>
         </div>
@@ -2331,7 +2331,7 @@ export default function NewCard() {
               onClick={() => window.open("https://forms.gle/Zdz2CDrV3qnGQrcL6", "_blank")}
               className="w-full py-3 text-white bg-[#152869] rounded-lg font-medium shadow-md active:scale-95 transition-transform"
             >
-              Free Audit
+              Free Diagnostic
             </button>
           </div>
         </div>
@@ -2382,7 +2382,7 @@ export default function NewCard() {
               onClick={() => window.open("https://forms.gle/mmzNqBKKk8ruHy9C9", "_blank")}
               className="w-full py-3 text-white bg-[#152869] rounded-lg font-medium shadow-md active:scale-95 transition-transform"
             >
-              Free Audit
+              Free Diagnostic
             </button>
           </div>
         </div>
@@ -2399,7 +2399,7 @@ export default function NewCard() {
           </div>
           <div className="p-6">
             <h2 className="text-2xl font-bold text-[#152869] font-open mb-3">
-              <span className="mr-2 opacity-80">05.</span> Go-To-Market Audit
+              <span className="mr-2 opacity-80">05.</span> Go-To-Market Diagnostic
             </h2>
 
             <div className="mt-4 mb-6 space-y-4">
@@ -2561,7 +2561,7 @@ export default function NewCard() {
           </div>
           <div className="p-6">
             <h2 className="text-2xl font-bold text-[#152869] font-open mb-3">
-              <span className="mr-2 opacity-80">08.</span> Productivity Audit
+              <span className="mr-2 opacity-80">08.</span> Productivity Diagnostic
             </h2>
 
             <div className="mt-4 mb-6 space-y-4">

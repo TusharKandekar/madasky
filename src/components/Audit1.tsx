@@ -41,7 +41,7 @@ const Audit1: React.FC = () => {
 
 
     const titles = [
-        { main: 'Business Performance Audits for', short: 'Manufacturing Companies' },
+        { main: 'Business Performance Diagnostics for', short: 'Manufacturing Companies' },
         { main: 'Where Accounting Meets Innovation Build Smarter With Exrox', short: 'Smarter With Exrox' },
         { main: 'Strategic Financial Solutions For Sustainable Growth', short: 'Sustainable Growth' },
     ];
@@ -72,7 +72,7 @@ const Audit1: React.FC = () => {
         {/* CHANGED: w-full on mobile, added vertical spacing */}
         <div className="flex flex-col justify-start md:justify-center w-full md:w-2/3 h-auto md:h-full max-w-3xl z-30">
             <h2 className="text-3xl sm:text-6xl md:text-3xl lg:text-[3.5rem] font-extrabold leading-tight tracking-tight text-left">
-                Business Performance <br />Audits for
+                Business Performance <br />Diagnostics for
                 <span className="block mt-1 text-green-200 lg-[3.8rem]">
                     {currentTitle.short}
                 </span>

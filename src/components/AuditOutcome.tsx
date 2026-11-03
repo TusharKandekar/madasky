@@ -82,10 +82,10 @@ const LimpaSection: React.FC = () => {
 
                         <div className="md:w-[80%]">
                             <p className="mb-2 text-4xl max-md:text-2xl font-semibold tracking-wider text-gray-800 uppercase">
-                                Our Audit Process
+                                Our Diagnostic Process
                             </p>
                             <h2 className="mb-8 text-4xl max-md:text-lg font-medium leading-tight text-gray-900 sm:text-lg">
-                                Every audit delivers a comprehensive diagnostic report with actionable insights you can use immediately. We don't just
+                                Every Diagnostic delivers a comprehensive diagnostic report with actionable insights you can use immediately. We don't just
                                 identify problems - we show you exactly what to do about them.
                             </h2>
 

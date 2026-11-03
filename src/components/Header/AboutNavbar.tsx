@@ -32,7 +32,7 @@ const navItems: NavItem[] = [
   { title: "Home", href: "/", dropdown: false },
   { title: "About Us", key: "about", dropdown: true },
   { title: "Services", key: "services", dropdown: true },
-  { title: "Audits Series", href: "/audit", dropdown: false },
+  { title: "Diagnostic", href: "/diagnostic", dropdown: false },
   { title: "Industries", key: "industries", dropdown: true },
   { title: "Career", key: "career", dropdown: true },
   { title: "Insights", key: "insights", dropdown: true },
