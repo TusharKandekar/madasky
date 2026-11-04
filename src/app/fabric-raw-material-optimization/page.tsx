@@ -138,7 +138,7 @@ export default async function FabricRawMaterialOptimizationPage() {
         <div className="relative mx-auto w-full max-w-7xl px-6 pb-14 pt-24 sm:px-8 sm:pb-20 lg:px-10 lg:pb-24">
           <p className="mb-4 text-[clamp(1rem,1.65vw,1.65rem)] font-medium leading-snug text-white">Fabric &amp; Raw Material Optimization</p>
           <h1 className="max-w-[1100px] font-baskervville text-[clamp(2rem,3.6vw,3.6rem)] font-bold leading-[1.12] text-white">
-            Reduce fabric loss through smarter cutting decisions.
+            Reduce Fabric Loss Through Smarter Cutting Decisions.
           </h1>
         </div>
       </section>
@@ -150,7 +150,7 @@ export default async function FabricRawMaterialOptimizationPage() {
         <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
           <div className="max-w-5xl border-l-4 border-[#dc3216] pl-5 sm:pl-8">
             <p className="font-baskervville text-[clamp(1.5rem,2.8vw,2.35rem)] font-semibold leading-snug text-[#0E2C53]">
-              Reduce fabric loss by improving the decisions made before, during and after cutting.
+              Reduce Fabric Loss By Improving The Decisions Made Before, During And After Cutting.
             </p>
             <p className="mt-6 max-w-4xl text-[17px] leading-[1.85] text-[#42536a] sm:text-lg">
               Madasky connects consumption, pattern/marker logic, fabric requirement, order combination, roll selection, lay planning, cutting and remnant visibility into one optimization approach.
