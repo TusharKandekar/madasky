@@ -1,465 +1,288 @@
-// import { useState } from 'react';
-// import CloseHamburgerIcon from './CloseHamburgerIcon';
-// import LogoCombo2 from './LogoCombo2';
-// import SidebarNav from './SidebarNav';
-
-
-// export default function SidebarContent() {
-
-//     const [sidebarVisible, setSidebarVisible] = useState(true);
-
-//     return (
-//         <div className={`fixed top-0 left-0 w-full h-screen z-[9999] bg-white flex items-start justify-start ${sidebarVisible ? 'flex' : 'hidden'}`}>
-//             <div className="w-[90%] h-full flex flex-col bg-dark-blue items-center justify-center left-0">
-//                 <div className="flex w-full h-20 gap-3 border-b-2">
-//                     <button onClick={() => setSidebarVisible(!sidebarVisible)} className="flex items-center justify-center w-20 h-full border-r-2 cursor-pointer">
-//                         <CloseHamburgerIcon color="white" />
-//                     </button>
-//                     <LogoCombo2 color="white" />
-//                 </div>
-//                 <div className="flex flex-col items-start justify-start w-full h-full p-10 gap-14">
-//                     <SidebarNav title="About Us" />
-//                     <SidebarNav title="Industries" />
-//                     <SidebarNav title="Capabilities" />
-//                     <SidebarNav title="Career" />
-//                     <SidebarNav title="Insights" />
-
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }
-
-
-// ********************************************************
-
-// import { useState } from 'react';
-// import CloseHamburgerIcon from './CloseHamburgerIcon';
-// import LogoCombo2 from './LogoCombo2';
-// import SidebarNav from './SidebarNav';
-// import SidebarNav2 from './SidebarNav2';
-
-// export default function SidebarContent() {
-//     const [sidebarVisible, setSidebarVisible] = useState(true);
-//     const [currentSection, setCurrentSection] = useState(null);
-
-//     const AboutItems = [
-//         { title: 'Who we are', link: '#' },
-//         { title: 'Our Leadership and People', link: '/Our-People' },
-//         { title: 'Purpose, Mission, Vision and Values', link: '/purpose-vision' },
-//         { title: 'Our History', link: '/history' },
-//         { title: 'Our Aspiration', link: '/aspiration' },
-//         { title: 'How We Work', link: '/how-we-work' }
-//     ];
-
-//     const sections = {
-//         about: AboutItems,
-//         industries: [
-//             { title: 'Manufacturing Industries', link: '/manufacturing', img: "/assets/images/339.png" },
-//             { title: 'E-Commerce Industries', link: '/e-commerce', img: "/assets/images/manufacturing.png" },
-//             // Add more industries here...
-//         ],
-//         // Add more sections like career, insights, etc.
-//     };
-
-//     const handleNavClick = (sectionKey) => {
-//         setCurrentSection(sectionKey);
-//     };
-
-//     const handleBackClick = () => {
-//         setCurrentSection(null);  // Set back to null to return to the main menu
-//     };
-
-//     return (
-//         <div className={`fixed top-0 left-0 w-full h-screen z-[9999] bg-white flex items-start justify-start ${sidebarVisible ? 'flex' : 'hidden'}`}>
-//             <div className="w-[90%] h-full flex flex-col bg-dark-blue items-center justify-center left-0">
-//                 <div className="flex w-full h-20 gap-3 border-b-2">
-//                     <button onClick={() => setSidebarVisible(!sidebarVisible)} className="flex items-center justify-center w-20 h-full border-r-2 cursor-pointer">
-//                         <CloseHamburgerIcon color="white" />
-//                     </button>
-//                     <LogoCombo2 color="white" />
-//                 </div>
-//                 <div className="flex flex-col items-start justify-start w-full h-full p-10 gap-14">
-//                     {currentSection === null ? (
-//                         <>
-//                             <SidebarNav title="About Us" onClick={() => handleNavClick('about')} />
-//                             <SidebarNav title="Industries" onClick={() => handleNavClick('industries')} />
-//                             {/* Add more main navigation items here */}
-//                         </>
-//                     ) : (
-//                         <>
-//                         <div className='p-4 bg-black rounded-lg'>
-//                         <SidebarNav  title="Back" onClick={handleBackClick} />
-
-//                         </div>
-//                             {sections[currentSection].map((item, index) => (
-//                                 <SidebarNav2 key={index} title={item.title} link={item.link} />
-//                             ))}
-//                         </>
-//                     )}
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }
-
-
-
-// ******************************************************
-
-
-// import { useState } from 'react';
-// import CloseHamburgerIcon from './CloseHamburgerIcon';
-// import LogoCombo2 from './LogoCombo2';
-// import SidebarNav from './SidebarNav';
-// import SidebarNav2 from './SidebarNav2';
-
-// export default function SidebarContent() {
-//     const [sidebarVisible, setSidebarVisible] = useState(true);
-//     const [currentSection, setCurrentSection] = useState(null);
-
-//     const AboutItems = [
-//         { title: 'Who we are' },  // Heading
-//         { title: 'Our Leadership and People', link: '/Our-People' },
-//         { title: 'Purpose, Mission, Vision and Values', link: '/purpose-vision' },
-//         { title: 'Our History', link: '/history' },
-//         { title: 'Our Aspiration', link: '/aspiration' },
-//         { title: 'How We Work', link: '/how-we-work' },  // Heading
-//     ];
-
-//     const sections = {
-//         about: AboutItems,
-//         industries: [
-//             { title: 'Manufacturing Industries', link: '/manufacturing', img: "/assets/images/339.png" },
-//             { title: 'E-Commerce Industries', link: '/e-commerce', img: "/assets/images/manufacturing.png" },
-//             { title: 'Tourism', link: '/tourisum', img: "/assets/images/manufacturing.png" },
-//             { title: 'Construction', link: '/construction-consulting', img: "/assets/images/manufacturing.png" },
-//             { title: 'Real Estate', link: '/real-state', img: "/assets/images/manufacturing.png" },
-//             { title: 'Fashion & Jewellery', link: '/industries', img: "/assets/images/manufacturing.png" },
-//             { title: 'Financial Services', link: '/financial-services-consulting', img: "/assets/images/manufacturing.png" },
-//             { title: 'Trading & Wholesale', link: '/tranding-wholesale', img: "/assets/images/manufacturing.png" },
-//             // Add more industries here...
-//         ],
-//         career: [
-//             { title: 'Home', link: '/careers-home' },
-//             { title: 'Explore', link: '/careers-explore' },
-//             { title: 'Jobs', link: '/careers-jobs' },
-//         ],
-//         insights: [
-//             { title: 'Blogs', link: '/blog' },
-//             { title: 'Events', link: '/events' },
-//             { title: 'Gallery', link: '/gallery' },
-//             { title: 'Videos', link: '/video' },
-//         ]
-//     };
-
-//     const handleNavClick = (sectionKey) => {
-//         setCurrentSection(sectionKey);
-//     };
-
-//     const handleBackClick = () => {
-//         setCurrentSection(null);  // Set back to null to return to the main menu
-//     };
-
-//     return (
-//         <div className={`fixed top-0 left-0 w-full h-screen z-[9999] bg-white flex items-start justify-start ${sidebarVisible ? 'flex' : 'hidden'}`}>
-//             <div className="w-[90%] h-full flex flex-col bg-dark-blue items-center justify-center left-0">
-//                 <div className="flex w-full h-20 gap-3 border-b-2">
-//                     <button onClick={() => setSidebarVisible(!sidebarVisible)} className="flex items-center justify-center w-20 h-full border-r-2 cursor-pointer">
-//                         <CloseHamburgerIcon color="white" />
-//                     </button>
-//                     <LogoCombo2 color="white" />
-//                 </div>
-//                 <div className="flex flex-col items-start justify-start w-full h-full p-10 gap-14">
-//                     {currentSection === null ? (
-//                         <>
-//                             <SidebarNav title="About Us" onClick={() => handleNavClick('about')} />
-//                             <SidebarNav title="Industries" onClick={() => handleNavClick('industries')} />
-//                             <SidebarNav title="Career" onClick={() => handleNavClick('career')} />
-//                             <SidebarNav title="Insights" onClick={() => handleNavClick('insights')} />
-//                             {/* Add more main navigation items here */}
-//                         </>
-//                     ) : (
-//                         <>
-//                             <SidebarNav title="Back" onClick={handleBackClick} />
-//                             {sections[currentSection].map((item, index) => (
-//                                 <SidebarNav2
-//                                     key={index}
-//                                     title={item.title}
-//                                     link={item.link}
-//                                     isHeading={!item.link}  // If there's no link, treat it as a heading
-//                                 />
-//                             ))}
-//                         </>
-//                     )}
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }
-
-
-
-
-// **********************************************************
-
-// import { useState } from 'react';
-// import CloseHamburgerIcon from './CloseHamburgerIcon';
-// import LogoCombo2 from './LogoCombo2';
-// import SidebarNav from './SidebarNav';
-// import SidebarNav2 from './SidebarNav2';
-
-// export default function SidebarContent() {
-//     const [sidebarVisible, setSidebarVisible] = useState(true);
-//     const [currentSection, setCurrentSection] = useState(null);
-
-//     const AboutItems = [
-//         { title: 'Who we are' },  // Heading without link
-//         { title: 'Our Leadership and People', link: '/Our-People' },
-//         { title: 'Purpose, Mission, Vision and Values', link: '/purpose-vision' },
-//         { title: 'Our History', link: '/history' },
-//         { title: 'Our Aspiration', link: '/aspiration' },
-//         { title: 'How We Work', link: '/how-we-work', isHeadingWithLink: true },  // Heading with link
-//     ];
-
-//     const CapabilitiesItems = [
-//         { title: 'Advisory', link: '/advisory-consulting', isHeadingWithLink: true },  // Heading with link
-//         { title: 'Consulting' },  // Heading without link
-//         { title: 'Growth, Marketing And Sales', link: '/growth-marketing-sales' },
-//         { title: 'Project', link: '/project' },
-//         { title: 'Digitalisation And Automation', link: '/project' },
-//         { title: 'Operations & Productivity Improvement', link: '/project' },
-//         { title: 'People And Organizational Performance', link: '/project' },
-//         { title: 'General Management & Strategy', link: '/project' },
-//         { title: 'Financial Performance & Cash Flow Management', link: '/project' },
-//         { title: 'Solutions', link: '/solutions', isHeadingWithLink: true },  // Heading with link
-//     ];
-
-
-//     const sections = {
-//         about: AboutItems,
-//         capabilities: CapabilitiesItems,
-//         industries: [
-//             { title: 'Manufacturing Industries', link: '/manufacturing', img: "/assets/images/339.png" },
-//             { title: 'E-Commerce Industries', link: '/e-commerce', img: "/assets/images/manufacturing.png" },
-//             { title: 'Tourism', link: '/tourisum', img: "/assets/images/manufacturing.png" },
-//             { title: 'Construction', link: '/construction-consulting', img: "/assets/images/manufacturing.png" },
-//             { title: 'Real Estate', link: '/real-state', img: "/assets/images/manufacturing.png" },
-//             { title: 'Fashion & Jewellery', link: '/industries', img: "/assets/images/manufacturing.png" },
-//             { title: 'Financial Services', link: '/financial-services-consulting', img: "/assets/images/manufacturing.png" },
-//             { title: 'Trading & Wholesale', link: '/tranding-wholesale', img: "/assets/images/manufacturing.png" },
-
-//         ],
-//         career: [
-//             { title: 'Home', link: '/careers-home' },
-//             { title: 'Explore', link: '/careers-explores' },
-//             { title: 'Jobs', link: '/careers-jobs' },
-//         ],
-//         insights: [
-//             { title: 'Blogs', link: '/blog' },
-//             { title: 'Events', link: '/events' },
-//             { title: 'Gallery', link: '/gallery' },
-//             { title: 'Videos', link: '/video' },
-//         ]
-//     };
-
-//     const handleNavClick = (sectionKey) => {
-//         setCurrentSection(sectionKey);
-//     };
-
-//     const handleBackClick = () => {
-//         setCurrentSection(null);  // Set back to null to return to the main menu
-//     };
-
-//     return (
-//         <div className={`fixed top-0 left-0 w-full h-screen z-[9999] bg-white flex items-start justify-start ${sidebarVisible ? 'flex' : 'hidden'}`}>
-//             <div className="w-[90%] h-full flex flex-col bg-gray-800 items-center justify-center left-0">
-//                 <div className="flex w-full h-20 gap-3 border-b-2">
-//                     <button onClick={() => setSidebarVisible(!sidebarVisible)} className="flex items-center justify-center w-20 h-full border-r-2 cursor-pointer">
-//                         <CloseHamburgerIcon color="white" />
-//                     </button>
-//                     <LogoCombo2 color="white" />
-//                 </div>
-//                 <div className="flex flex-col items-start justify-start w-full h-full p-10 gap-14">
-//                     {currentSection === null ? (
-//                         <>
-//                             <SidebarNav title="About Us" onClick={() => handleNavClick('about')} />
-//                             <SidebarNav title="Capabilities" onClick={() => handleNavClick('capabilities')} />
-//                             <SidebarNav title="Industries" onClick={() => handleNavClick('industries')} />
-//                             <SidebarNav title="Career" onClick={() => handleNavClick('career')} />
-//                             <SidebarNav title="Insights" onClick={() => handleNavClick('insights')} />
-//                             {/* Add more main navigation items here */}
-//                         </>
-//                     ) : (
-//                         <>
-//                             <SidebarNav title="Back" onClick={handleBackClick} />
-//                             {sections[currentSection].map((item, index) => (
-//                                 <SidebarNav2
-//                                     key={index}
-//                                     title={item.title}
-//                                     link={item.link}
-//                                     isHeading={!item.link}  // If there's no link, treat it as a heading
-//                                     isHeadingWithLink={item.isHeadingWithLink}  // Heading with a link
-//                                 />
-//                             ))}
-//                         </>
-//                     )}
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }
-
-
-// ***************************************
 "use client";
-import { useState } from 'react';
-import CloseHamburgerIcon from './CloseHamburgerIcon';
-import LogoCombo2 from './LogoCombo2';
-import SidebarNav from './SidebarNav';
-import SidebarNav2 from './SidebarNav2';
-// import { Link } from "react-router-dom";
-import Link from 'next/link';
-import { RiArrowDownSLine } from "react-icons/ri";
 
-type SubItem = {
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import CloseHamburgerIcon from "./CloseHamburgerIcon";
+import LogoCombo2 from "./LogoCombo2";
+import { FaArrowLeftLong } from "react-icons/fa6";
+
+type MenuLink = {
   title: string;
-  link: string;
+  href: string;
 };
 
-type SectionItem = {
+type ServiceGroup = {
   title: string;
-  link?: string;
-  subItems?: SubItem[];
-  isHeadingWithLink?: boolean;
-  img?: string;
+  href: string;
+  links: MenuLink[];
 };
 
-type SectionsType = {
-  [key: string]: SectionItem[];
+type SectionKey = "about" | "services" | "industries" | "career" | "insights";
+
+type SidebarContentProps = {
+  onClose: () => void;
 };
 
-export default function SidebarContent() {
-  const [sidebarVisible, setSidebarVisible] = useState(true);
-  const [currentSection, setCurrentSection] = useState<string | null>(null);
-
-  const AboutItems: SectionItem[] = [
-    { title: 'About Madasky', link: '/about' },
-    {
-      title: 'Who we are',
-      subItems: [
-        { title: 'Our Leadership and People', link: '/our-people' },
-        { title: 'Purpose, Mission, Vision and Values', link: '/purpose-vision' },
-        { title: 'Our History', link: '/history' },
-        { title: 'Our Aspiration', link: '/aspiration' }
-      ]
-    },
-    { title: 'How We Work', link: '/how-we-work', isHeadingWithLink: true },
-  ];
-
-  const CapabilitiesItems: SectionItem[] = [
-    {
-      title: 'Manufacturing Solutions',
-      subItems: [
-        { title: 'Turnkey Factory Projects', link: '/turnkey-factory-projects' },
-        { title: 'Operations Excellence', link: '/operations-excellence-consulting' },
-        { title: 'AI-Enabled Manufacturing Intelligence', link: '/ai-manufacturing-intelligence' },
-        { title: 'Workforce Readiness & Key Talent Support', link: '/workforce-readiness-talent-support' },
-      ]
-    },
-    {
-      title: 'Intelligence Solutions',
-      subItems: [
-        { title: 'Fabric & Raw Material Optimization', link: '/fabric-raw-material-optimization' },
-        { title: 'Production Planning & Scheduling', link: '/production-planning-scheduling' },
-        { title: 'Digital Factory & MES', link: '/digital-factory-mes' },
-      ]
-    },
-    {
-      title: 'Factory & Diagnostic Support',
-      subItems: [
-        { title: 'Plant Layout', link: '/plant-layout-consulting' },
-        { title: 'Process & Material Flow', link: '/process-and-material-flow-consulting' },
-        { title: 'Factory Diagnostic', link: '/factory-diagnostic' },
-      ]
-    },
-  ];
-
-  const sections: SectionsType = {
-    about: AboutItems,
-    capabilities: CapabilitiesItems,
-    industries: [
-      { title: 'Home Textiles', link: '/industries/home-textiles' },
-      { title: 'Apparel', link: '/industries/apparel' },
-      { title: 'Textiles', link: '/industries/textiles' },
-      { title: 'Technical Textiles', link: '/industries/technical-textiles' },
+const serviceGroups: ServiceGroup[] = [
+  {
+    title: "Operations Excellence",
+    href: "/operations-excellence-consulting",
+    links: [
+      { title: "Productivity & Efficiency Improvement", href: "/productivity-and-efficiency-improvement" },
+      { title: "Implementation Support", href: "/implementation-support" },
+      { title: "Delivery Performance & Lead Time Reduction", href: "/delivery-performance-and-lead-time-reduction-program" },
+      { title: "Sampling – Lead Time Reduction", href: "/sampling-lead-time-reduction" },
     ],
-    career: [
-      { title: 'Home', link: '/careers-home' },
-      { title: 'Explore', link: '/careers-explore' },
-      { title: 'Our Experts - ProXperts', link: '/pro-experts' },
-      { title: 'Jobs', link: '/careers-jobs' },
+  },
+  {
+    title: "Turnkey Factory Projects",
+    href: "/turnkey-factory-projects",
+    links: [
+      { title: "Plant Layout", href: "/plant-layout-consulting" },
+      { title: "Technical Consulting", href: "/technical-consulting" },
+      { title: "Manpower Planning", href: "/manpower-planning-consulting" },
+      { title: "Process & Material Flow", href: "/process-and-material-flow-consulting" },
     ],
-    insights: [
-      { title: 'Insights', link: '/blog' },
-      { title: 'Case Studies', link: '/case-studies' },
-      { title: 'Factory Diagnostic', link: '/factory-diagnostic' },
-      { title: 'Events', link: '/events' },
-      { title: 'Gallery', link: '/gallery' },
-      { title: 'Videos', link: '/video' },
-    ]
-  };
+  },
+  {
+    title: "AI-Enabled Manufacturing Intelligence",
+    href: "/ai-manufacturing-intelligence",
+    links: [
+      { title: "Fabric & Raw Material Optimization", href: "/fabric-raw-material-optimization" },
+      { title: "Production Planning & Scheduling", href: "/production-planning-scheduling" },
+      { title: "Digital Factory & MES", href: "/digital-factory-mes" },
+    ],
+  },
+  {
+    title: "Workforce Readiness & Key Talent Support",
+    href: "/workforce-readiness-talent-support",
+    links: [
+      { title: "Talent Acquisition", href: "/talent-acquisition-consulting" },
+      { title: "People Skilling", href: "/people-skilling-consulting" },
+      { title: "Leadership Development & Talent Management", href: "/leadership-development-and-talent-management" },
+    ],
+  },
+];
 
-  const handleNavClick = (sectionKey: string) => {
-    setCurrentSection(sectionKey);
-  };
+const sections: Record<SectionKey, { title: string; href?: string; children?: MenuLink[] }[]> = {
+  about: [
+    { title: "About Madasky", href: "/about" },
+    { title: "Our Leadership and People", href: "/our-people" },
+    { title: "Purpose, Mission, Vision and Values", href: "/purpose-vision" },
+    { title: "Our History", href: "/history" },
+    { title: "Our Aspiration", href: "/aspiration" },
+    { title: "How We Work", href: "/how-we-work" },
+  ],
+  services: serviceGroups.map((group) => ({
+    title: group.title,
+    href: group.href,
+    children: group.links,
+  })),
+  industries: [
+    { title: "Home Textiles", href: "/industries/home-textiles" },
+    { title: "Apparel", href: "/industries/apparel" },
+    { title: "Textiles", href: "/industries/textiles" },
+    { title: "Technical Textiles", href: "/industries/technical-textiles" },
+  ],
+  career: [
+    { title: "Home", href: "/careers-home" },
+    { title: "Explore", href: "/careers-explore" },
+    { title: "Our Experts - ProXperts", href: "/pro-experts" },
+    { title: "Jobs", href: "/careers-jobs" },
+  ],
+  insights: [
+    { title: "Insights", href: "/blog" },
+    { title: "Case Studies", href: "/case-studies" },
+    { title: "Factory Diagnostic", href: "/factory-diagnostic" },
+    { title: "Events", href: "/events" },
+    { title: "Gallery", href: "/gallery" },
+    { title: "Videos", href: "/video" },
+  ],
+};
 
-  const handleBackClick = () => {
-    setCurrentSection(null);
+const mainMenu: { title: string; href?: string; section?: SectionKey }[] = [
+  { title: "Home", href: "/" },
+  { title: "About Us", section: "about" },
+  { title: "Services", section: "services" },
+  { title: "Diagnostic", href: "/diagnostic" },
+  { title: "Industries", section: "industries" },
+  { title: "Career", section: "career" },
+  { title: "Insights", section: "insights" },
+];
+
+export default function SidebarContent({ onClose }: SidebarContentProps) {
+  const [currentSection, setCurrentSection] = useState<SectionKey | null>(null);
+  const [expandedService, setExpandedService] = useState<string | null>(null);
+
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [onClose]);
+
+  const handleSectionOpen = (section: SectionKey) => {
+    setCurrentSection(section);
+    setExpandedService(null);
   };
 
   return (
-    <div className={`fixed top-0 left-0 w-full h-screen z-[9999] bg-white flex items-start justify-start ${sidebarVisible ? 'flex' : 'hidden'}`}>
-      <div className="w-[90%] h-full flex flex-col bg-gray-800 items-center justify-center left-0">
-        <div className="flex w-full h-20 gap-3 border-b-2 border-white">
-          <button onClick={() => setSidebarVisible(!sidebarVisible)} className="flex items-center justify-center w-20 h-full border-r-2 border-white cursor-pointer">
+    <div
+      className="fixed inset-0 z-[9999] flex justify-start bg-black/45 xl:hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile navigation"
+      onClick={onClose}
+    >
+      <div
+        className="flex h-[100dvh] w-[min(90%,420px)] flex-col bg-[#202b3b] text-white shadow-2xl"
+        onClick={(event) => event.stopPropagation()}
+      >
+        <div className="flex h-20 shrink-0 items-center gap-3 border-b border-white/20 px-4">
+          <button
+            type="button"
+            aria-label="Close navigation menu"
+            onClick={onClose}
+            className="flex h-12 w-12 shrink-0 items-center justify-center border-r border-white/20"
+          >
             <CloseHamburgerIcon color="white" />
           </button>
           <LogoCombo2 color="white" />
         </div>
 
-        <div className="flex flex-col items-start justify-start w-full h-full gap-6 p-10 overflow-y-scroll">
+        <div className="flex-1 overflow-y-auto px-6 py-7">
           {currentSection === null ? (
             <>
-              <SidebarNav title="Home" onClick={() => window.location.href = '/'} />
-              <SidebarNav title="About Us" onClick={() => handleNavClick('about')} />
-              <SidebarNav title="Services" onClick={() => handleNavClick('capabilities')} />
-              <SidebarNav title="Audit Series" onClick={() => window.location.href = '/audit'} />
-              <SidebarNav title="Industries" onClick={() => handleNavClick('industries')} />
+              <nav className="flex flex-col gap-1" aria-label="Main navigation">
+                {mainMenu.map((item) =>
+                  item.href ? (
+                    <Link
+                      key={item.title}
+                      href={item.href}
+                      onClick={onClose}
+                      className="flex min-h-12 items-center border-b border-white/10 py-3 text-lg font-medium text-white transition hover:text-orange-400"
+                    >
+                      {item.title}
+                    </Link>
+                  ) : (
+                    <button
+                      key={item.title}
+                      type="button"
+                      onClick={() => item.section && handleSectionOpen(item.section)}
+                      className="flex min-h-12 w-full items-center justify-between border-b border-white/10 py-3 text-left text-lg font-medium text-white transition hover:text-orange-400"
+                    >
+                      <span>{item.title}</span>
+                      <span aria-hidden="true" className="text-2xl text-white/60">›</span>
+                    </button>
+                  )
+                )}
+              </nav>
 
-              <SidebarNav title="Career" onClick={() => handleNavClick('career')} />
-              <SidebarNav title="Insights" onClick={() => handleNavClick('insights')} />
+              <div className="mt-7 flex flex-col gap-3">
+                <Link
+                  href="/contact-us"
+                  onClick={onClose}
+                  className="rounded-md border border-white/40 px-4 py-3 text-center font-semibold text-white"
+                >
+                  Contact Us
+                </Link>
+                <a
+                  href="https://calendar.app.google/UMVkRH1hG1f5nNcV7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={onClose}
+                  className="rounded-md bg-[#152869] px-4 py-3 text-center font-semibold text-white"
+                >
+                  Book An Appointment
+                </a>
+              </div>
             </>
           ) : (
-            <>
-              <SidebarNav title="Back" onClick={handleBackClick} />
-              {sections[currentSection]?.map((item, index) => (
-                <SidebarNav2
-                  key={index}
-                  title={item.title}
-                  link={item.link}
-                  isHeading={!item.link}
-                  subItems={item.subItems}
-                />
-              ))}
-            </>
-          )}
+            <div>
+              <button
+                type="button"
+                onClick={() => {
+                  setCurrentSection(null);
+                  setExpandedService(null);
+                }}
+                className="mb-5 flex items-center gap-2 text-sm font-semibold text-white/75 transition hover:text-white"
+              >
+                <FaArrowLeftLong />
+                Back to menu
+              </button>
 
-          {currentSection === null && (
-            <div className='text-[#ffffffb5] max-md:mb-16 max-md:ml-1 max-md:mt-8'>
-              <p>&copy; 2024, MADASKY. All Rights Reserved.</p>
+              <h2 className="mb-4 text-xl font-bold">
+                {currentSection === "services"
+                  ? "Services"
+                  : currentSection === "about"
+                    ? "About Us"
+                    : currentSection.charAt(0).toUpperCase() + currentSection.slice(1)}
+              </h2>
+
+              <div className="flex flex-col">
+                {sections[currentSection].map((item) => {
+                  const hasChildren = Boolean(item.children?.length);
+                  const isExpanded = expandedService === item.title;
+
+                  return (
+                    <div key={item.title} className="border-b border-white/10">
+                      <div className="flex items-center gap-2">
+                        {item.href && (
+                          <Link
+                            href={item.href}
+                            onClick={onClose}
+                            className="min-h-12 flex-1 py-3 text-base font-medium text-white transition hover:text-orange-400"
+                          >
+                            {item.title}
+                          </Link>
+                        )}
+                        {hasChildren && (
+                          <button
+                            type="button"
+                            aria-expanded={isExpanded}
+                            aria-label={`${isExpanded ? "Collapse" : "Expand"} ${item.title}`}
+                            onClick={() => setExpandedService(isExpanded ? null : item.title)}
+                            className="flex h-11 w-11 shrink-0 items-center justify-center text-2xl text-white/70"
+                          >
+                            {isExpanded ? "−" : "+"}
+                          </button>
+                        )}
+                      </div>
+
+                      {hasChildren && isExpanded && (
+                        <ul className="mb-3 ml-3 border-l border-white/20 pl-4">
+                          {item.children?.map((child) => (
+                            <li key={child.href}>
+                              <Link
+                                href={child.href}
+                                onClick={onClose}
+                                className="block py-2.5 text-sm leading-5 text-white/75 transition hover:text-orange-400"
+                              >
+                                {child.title}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           )}
+        </div>
+
+        <div className="shrink-0 border-t border-white/15 px-6 py-4 text-xs text-white/55">
+          © {new Date().getFullYear()}, MADASKY. All Rights Reserved.
         </div>
       </div>
     </div>

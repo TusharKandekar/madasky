@@ -159,7 +159,7 @@ export default function AboutNavbar({ position = "fixed" }: { position?: "fixed"
                 <div key={group.href} className="min-w-0">
                   <Link
                     href={group.href}
-                    className="inline-flex items-center gap-2 text-lg font-semibold text-gray-900 transition-colors hover:text-[#e33512]"
+                    className="inline-flex items-center gap-2 font-semibold text-gray-900 transition-colors hover:text-[#e33512]"
                   >
                     <span>{group.title}</span>
                     <FontAwesomeIcon icon={faArrowRightLong} className="text-sm text-blue-500" />
